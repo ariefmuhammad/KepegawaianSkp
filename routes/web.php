@@ -146,9 +146,9 @@ Route::group(['prefix' => 'admin', 'middleware'=>['auth','checkRole:TU']], funct
 
 
 
-
+Route::resource('it/admin','adminDashboardController');
 Route::group(['prefix' => 'it', 'middleware'=>['auth','checkRole:ADMIN']], function () {
-    Route::resource('/','adminDashboardController');
+
     Route::get('/pegawai/{id}/skp','adminPegawaiController@skp');
     Route::post('/pegawai/{id}/skp','adminPegawaiController@skp_filter');
     Route::resource('/pegawai','adminPegawaiController');

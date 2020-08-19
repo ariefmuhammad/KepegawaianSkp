@@ -7,3 +7,5 @@
 <link href="/iniTemplate/dist/bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css" rel="stylesheet">
 <link href="/iniTemplate/dist/bower_components/slick-carousel/slick/slick.css" rel="stylesheet">
 <link href="/iniTemplate/dist/css/main.css?version=4.5.0" rel="stylesheet">
+<link href="/iniTemplate/dist/icon_fonts_assets/batch-icons/style.css" rel="stylesheet">
+<link href="/css/masariumanCss.css" rel="stylesheet">
