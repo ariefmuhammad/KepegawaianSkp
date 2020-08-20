@@ -37,3 +37,5 @@
     ga('create', 'UA-XXXXXXXX-9', 'auto');
     ga('send', 'pageview');
 </script>
+
+@stack('js')
