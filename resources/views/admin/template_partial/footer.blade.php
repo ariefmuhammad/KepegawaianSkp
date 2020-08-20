@@ -8,7 +8,7 @@
         </li>
         <li>|</li>
         <li>
-            <a href="http://masariuman.com/">Arif Setiawan <i class="fa fa-gg"></i></a>
+            <a href="http://masariuman.com/" target="_blank">Arif Setiawan <i class="fa fa-gg"></i></a>
         </li>
         <li>All Right Reserved</li>
     </ul>

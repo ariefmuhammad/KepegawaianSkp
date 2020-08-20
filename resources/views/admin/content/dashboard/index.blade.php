@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="top-menu-controls">
-            <button class="mr-2 mb-2 btn btn-outline-secondary" type="button"><i class="batch-icon-bulb-2"></i> PETUNJUK <i class="batch-icon-bulb"></i></button>
+            <button class="mr-2 mb-2 btn btn-outline-primary" type="button"><i class="batch-icon-bulb-2"></i> PETUNJUK <i class="batch-icon-bulb"></i></button>
         </div>
     </div>
     <ul class="breadcrumb">
