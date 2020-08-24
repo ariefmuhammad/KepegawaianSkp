@@ -40,6 +40,5 @@
         @include('admin.template_partial.js')
         @include('admin.template_partial.routeAjax')
     </body>
+    @yield('modal')
 </html>
-
-@yield('modal')
