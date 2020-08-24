@@ -98,7 +98,7 @@
                             <a href="layouts_menu_side_full.html">Pegawai</a>
                         </li>
                         <li>
-                            <a href="/it/ruangan">Ruangan</a>
+                            <a href="/it/ruangan" onclick="routeToRuangan()">Ruangan</a>
                         </li>
                     </ul>
                 </div>
