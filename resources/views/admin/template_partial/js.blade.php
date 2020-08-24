@@ -26,6 +26,7 @@
 <script src="/iniTemplate/dist/bower_components/bootstrap/js/dist/tab.js"></script>
 <script src="/iniTemplate/dist/bower_components/bootstrap/js/dist/tooltip.js"></script>
 <script src="/iniTemplate/dist/bower_components/bootstrap/js/dist/popover.js"></script>
+<script src="/iniTemplate/dist/js/dataTables.bootstrap4.min.js"></script>
 <script src="/iniTemplate/dist/js/demo_customizer.js?version=4.5.0"></script>
 <script src="/iniTemplate/dist/js/main.js?version=4.5.0"></script>
 <script>

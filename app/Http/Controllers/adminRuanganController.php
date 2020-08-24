@@ -17,7 +17,7 @@ class adminRuanganController extends Controller
     {
         //
         $data['ruangan'] = Ruangan::where('active','1')->orderBy('id','DESC')->get();
-        return view('admin/ruangan/index',$data);
+        return view('admin/content/ruangan/index',$data);
     }
 
     /**

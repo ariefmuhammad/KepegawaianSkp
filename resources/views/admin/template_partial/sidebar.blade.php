@@ -69,10 +69,10 @@
                 <div class="sub-menu-i">
                     <ul class="sub-menu">
                         <li>
-                            <a href="layouts_menu_side_full.html">Pengaturan Aplikasi</a>
+                            <a href="layouts_menu_side_full.html">Skp</a>
                         </li>
                         <li>
-                            <a href="layouts_menu_side_full_dark.html">Pengaturan Buka Kunci</a>
+                            <a href="layouts_menu_side_full_dark.html">Pengaturan SKP</a>
                         </li>
                     </ul>
                 </div>
@@ -98,7 +98,7 @@
                             <a href="layouts_menu_side_full.html">Pegawai</a>
                         </li>
                         <li>
-                            <a href="layouts_menu_side_full_dark.html">Ruangan</a>
+                            <a href="/it/ruangan">Ruangan</a>
                         </li>
                     </ul>
                 </div>
