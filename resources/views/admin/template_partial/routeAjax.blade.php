@@ -4,7 +4,7 @@
         const CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content')
 
         $.ajax({
-            url:"/test",
+            url:"/ruanganDeta",
             type:'get',
             data:{
                 CSRF_TOKEN
