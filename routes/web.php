@@ -146,7 +146,7 @@ Route::group(['prefix' => 'admin', 'middleware'=>['auth','checkRole:TU']], funct
 
 
 
-Route::get('/ruanganDeta','adminRuanganControllerr@deta')
+Route::get('/ruanganDeta','adminRuanganController@deta');
 Route::group(['prefix' => 'it'], function () {
     Route::resource('/','adminDashboardController');
     Route::get('/pegawai/{id}/skp','adminPegawaiController@skp');
