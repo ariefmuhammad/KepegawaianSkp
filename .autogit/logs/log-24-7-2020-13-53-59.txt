@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Mon Aug 24 2020 13:53:59 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/template.blade.php
+* resources/views/admin/template_partial/routeAjax.blade.php
+
+
+Created files:
+* .autogit/logs/log-24-7-2020-13-51-54.txt
+
+
+Deleted files:
+
+
+Renamed files:
