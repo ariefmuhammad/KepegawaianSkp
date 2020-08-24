@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Mon Aug 24 2020 11:59:48 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* .autogit/autogit.json
+* app/Http/Controllers/adminRuanganController.php
+* resources/views/admin/template_partial/js.blade.php
+* resources/views/admin/template_partial/sidebar.blade.php
+* routes/web.php
+
+
+Created files:
+* resources/views/admin/content/ruangan/index.blade.php
+
+
+Deleted files:
+
+
+Renamed files:
