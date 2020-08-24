@@ -10,8 +10,8 @@
 <script src="/iniTemplate/dist/bower_components/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
 <script src="/iniTemplate/dist/bower_components/dropzone/dist/dropzone.js"></script>
 <script src="/iniTemplate/dist/bower_components/editable-table/mindmup-editabletable.js"></script>
-<script src="/iniTemplate/dist/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="/iniTemplate/dist/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+{{-- <script src="/iniTemplate/dist/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="/iniTemplate/dist/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script> --}}
 <script src="/iniTemplate/dist/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
 <script src="/iniTemplate/dist/bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
 <script src="/iniTemplate/dist/bower_components/tether/dist/js/tether.min.js"></script>
@@ -26,7 +26,7 @@
 <script src="/iniTemplate/dist/bower_components/bootstrap/js/dist/tab.js"></script>
 <script src="/iniTemplate/dist/bower_components/bootstrap/js/dist/tooltip.js"></script>
 <script src="/iniTemplate/dist/bower_components/bootstrap/js/dist/popover.js"></script>
-<script src="/iniTemplate/dist/js/dataTables.bootstrap4.min.js"></script>
+{{-- <script src="/iniTemplate/dist/js/dataTables.bootstrap4.min.js"></script> --}}
 <script src="/iniTemplate/dist/js/demo_customizer.js?version=4.5.0"></script>
 <script src="/iniTemplate/dist/js/main.js?version=4.5.0"></script>
 <script>
