@@ -111,4 +111,11 @@ class adminRuanganController extends Controller
 
         return back();
     }
+
+    public function store(Request $request)
+    {
+        //
+        $data = Ruangan::all();
+        return view('admin/content/ruangan/index',$data);
+    }
 }
