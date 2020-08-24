@@ -40,3 +40,5 @@
     @include('admin.template_partial.js')
   </body>
 </html>
+
+@yield('modal')
