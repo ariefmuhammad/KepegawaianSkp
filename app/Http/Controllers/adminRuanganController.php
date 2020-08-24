@@ -112,7 +112,7 @@ class adminRuanganController extends Controller
         return back();
     }
 
-    public function deta(Request $request)
+    public function deta()
     {
         //
         $data = Ruangan::all();
