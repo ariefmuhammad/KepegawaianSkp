@@ -87,3 +87,8 @@
         } );
     </script>
 @endpush
+
+
+@push('modal')
+
+@endpush
