@@ -37,8 +37,8 @@
                 </div>
             </div>
         </div>
-        @include('admin.template_partial.js')
         @include('admin.template_partial.routeAjax')
+        @include('admin.template_partial.js')
     </body>
 </html>
 
