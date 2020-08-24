@@ -10,7 +10,8 @@
                 CSRF_TOKEN
             },
             success:function (data) {
-                $("html").html(data)
+                console.log(data)
+                // $("html").html(data)
             }
         })
     }

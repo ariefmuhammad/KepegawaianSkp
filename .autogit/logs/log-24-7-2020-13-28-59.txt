@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Mon Aug 24 2020 13:28:59 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/adminRuanganController.php
+
+
+Created files:
+* .autogit/logs/log-24-7-2020-13-26-54.txt
+
+
+Deleted files:
+
+
+Renamed files:
