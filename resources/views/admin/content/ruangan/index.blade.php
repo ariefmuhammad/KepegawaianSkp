@@ -16,8 +16,8 @@
             <div class="os-icon os-icon-layout"></div>
             </div>
             <div class="masariuman-textleft">
-                <span class="masariuman-bold">BERANDA</span> <br/>
-                <small>ini adalah beranda</small>
+                <span class="masariuman-bold">RUANGAN</span> <br/>
+                <small>Manajemen Ruangan</small>
             </div>
         </div>
         <div class="top-menu-controls">
@@ -26,10 +26,10 @@
     </div>
     <ul class="breadcrumb">
         <li class="breadcrumb-item">
-            <a href="index.html">Home</a>
+            <a href="/it/ruangan">Ruangan</a>
         </li>
         <li class="breadcrumb-item">
-            <span>Beranda</span>
+            <span>Ruangan</span>
         </li>
     </ul>
 @endsection
@@ -38,11 +38,14 @@
 @section('content')
 <h5 class="form-header">
     Master Ruangan
-  </h5>
-  <div class="form-desc">
+</h5>
+ <div class="form-desc">
     Manajemen Data Ruangan
-  </div>
-  <div class="table-responsive">
+</div>
+<div>
+    <button class="mr-2 mb-2 btn btn-primary" type="button">Tambah Ruangan Baru</button>
+</div>
+<div class="table-responsive">
     <table id="tabeldata" width="100%" class="table table-striped table-lightfont">
         <thead>
             <tr>
