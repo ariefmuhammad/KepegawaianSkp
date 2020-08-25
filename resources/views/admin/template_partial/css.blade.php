@@ -10,6 +10,19 @@
 <link href="/iniTemplate/dist/bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css" rel="stylesheet">
 <link href="/iniTemplate/dist/bower_components/slick-carousel/slick/slick.css" rel="stylesheet">
 <link href="/iniTemplate/dist/css/main.css?version=4.5.0" rel="stylesheet">
+
+<link href="/iniTemplate/dist/icon_fonts_assets/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+<link href="/iniTemplate/dist/icon_fonts_assets/feather/style.css" rel="stylesheet">
+<link href="/iniTemplate/dist/icon_fonts_assets/themefy/themify-icons.css" rel="stylesheet">
+<link href="/iniTemplate/dist/icon_fonts_assets/picons-thin/style.css" rel="stylesheet">
+<link href="/iniTemplate/dist/icon_fonts_assets/eightyshades/style.css" rel="stylesheet">
+<link href="/iniTemplate/dist/icon_fonts_assets/entypo/style.css" rel="stylesheet">
+<link href="/iniTemplate/dist/icon_fonts_assets/foundation-icon-font/foundation-icons.css" rel="stylesheet">
+<link href="/iniTemplate/dist/icon_fonts_assets/metrize-icons/style.css" rel="stylesheet">
+<link href="/iniTemplate/dist/icon_fonts_assets/picons-social/style.css" rel="stylesheet">
+<link href="/iniTemplate/dist/icon_fonts_assets/dashicons/dashicons.css" rel="stylesheet">
+<link href="/iniTemplate/dist/icon_fonts_assets/typicons/typicons.css" rel="stylesheet">
+<link href="/iniTemplate/dist/icon_fonts_assets/weather-icons/css/weather-icons.min.css" rel="stylesheet">
 <link href="/iniTemplate/dist/icon_fonts_assets/batch-icons/style.css" rel="stylesheet">
 <link href="/iniTemplate/dist/icon_fonts_assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <link href="/iniTemplate/dist/icon_fonts_assets/dripicons/webfont.css" rel="stylesheet">
