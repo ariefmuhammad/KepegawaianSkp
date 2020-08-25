@@ -89,6 +89,27 @@
             });
         } );
     </script>
+    <script>
+        $(document).ready(function() {
+            $('"addform"').on('submit',function(e) {
+                e.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "/it/ruangan",
+                    data: $('$addform').serialize(),
+                    success: function (response) {
+                        console.log(response)
+                        $("#addstudentmodal").modal('hide')
+                        alert("Data Saved");
+                    },
+                    error: function(error) {
+                        console.log(error)
+                        alert("data not saved");
+                    }
+                });
+            });
+        });
+    </script>
 @endpush
 
 
