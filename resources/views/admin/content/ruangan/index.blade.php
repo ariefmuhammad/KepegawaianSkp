@@ -59,9 +59,9 @@
                     <td id="{{ $data->id }}">{{ $no+1 }}</td>
                     <td>{{ $data->ruangan }}</td>
                     <td>
-                        <button class="mr-2 mb-2 btn btn-warning editButton" type="button">Ubah</button>
+                        <button class="mr-2 mb-2 btn btn-warning editButton" type="button" data="{{ $data }}">Ubah</button>
                         |
-                        <button class="mr-2 mb-2 btn btn-danger deleteButton" type="button">Hapus</button>
+                        <button class="mr-2 mb-2 btn btn-danger deleteButton" type="button" data="{{ $data }}">Hapus</button>
                     </td>
                 </tr>
             @endforeach
@@ -124,15 +124,9 @@
         $(document).ready(function() {
             $('.editButton').on('click',function() {
                 $('#editModal').modal('show');
-                $tr = $(this).closest('tr');
-                var id = $tr.children("td").map(function() {
-                    return $(this).id;
-                });
-                var data = $tr.children("td").map(function() {
-                    return $(this).text();
-                }).get();
-                $("#inputEditId").val(id['prevObject'][0]['id']);
-                $("#inputEditRuangan").val(data[1]);
+                var data = JSON.parse($(this).attr("data"));
+                $("#inputEditId").val(data.id);
+                $("#inputEditRuangan").val(data.ruangan);
             });
 
             $('#editForm').on('submit',function(e) {
@@ -166,14 +160,9 @@
             $('.deleteButton').on('click',function() {
                 $('#deleteModal').modal('show');
                 $tr = $(this).closest('tr');
-                var id = $tr.children("td").map(function() {
-                    return $(this).id;
-                });
-                var data = $tr.children("td").map(function() {
-                    return $(this).text();
-                }).get();
-                $("#inputDeleteId").val(id['prevObject'][0]['id']);
-                $("#namaDeleteRuangan").html(data[1]);
+                var data = JSON.parse($(this).attr("data"));
+                $("#inputDeleteId").val(data.id);
+                $("#namaDeleteRuangan").html(data.ruangan);
             });
 
             $('#deleteForm').on('submit',function(e) {
