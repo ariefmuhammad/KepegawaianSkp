@@ -45,3 +45,10 @@
 .masariuman-minheight100vh {
     min-height: 100vh;
 }
+
+
+.masariuman-deleteRuangan {
+    font-weight: bold;
+    color: red;
+    font-size: xx-large;
+}

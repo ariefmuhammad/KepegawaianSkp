@@ -42,11 +42,6 @@ class adminRuanganController extends Controller
         Ruangan::create([
             'ruangan' => $request->ruangan
         ]);
-        $pesan = 'Ruangan <b>'.$request->ruangan.'</b> berhasil dibuat.';
-
-        Session::flash('Berhasil', $pesan);
-
-        return back();
     }
 
     /**
@@ -85,11 +80,6 @@ class adminRuanganController extends Controller
         $data->update([
             'ruangan' => $request->ruangan
         ]);
-        $pesan = 'Nama Ruangan berhasil diubah.';
-
-        Session::flash('Berhasil', $pesan);
-
-        return back();
     }
 
     /**
@@ -105,17 +95,12 @@ class adminRuanganController extends Controller
         $data->update([
             'active' => "0"
         ]);
-        $pesan = 'Ruangan berhasil dihapus.';
-
-        Session::flash('Berhasil', $pesan);
-
-        return back();
     }
 
     public function deta()
     {
         //
-        $data = Ruangan::all();
-        return view('admin/content/ruangan/index',$data);
+        $data['ruangan'] = Ruangan::where('active','1')->orderBy('id','DESC')->get();
+        return view('admin/content/ruangan/data',$data);
     }
 }
