@@ -238,7 +238,7 @@
                 </div>
                 <div class="col-sm-12">
                     <div class="form-group">
-                        <input name="tanggal_lahir" id="inputAddTanggalLahir" placeholder="Masukkan Tanggal Lahir.." type="date" class="form-control" />
+                        <input name="tanggal_lahir" id="inputAddTanggalLahir" placeholder="Masukkan Tanggal Lahir.." type="text" onfocus="(this.type='date')" class="form-control" />
                     </div>
                 </div>
                 <div class="col-sm-12">
