@@ -105,7 +105,7 @@
             </div>
         </li>
         <li class=" has-sub-menu">
-            <a href="layouts_menu_top_image.html">
+            <a {{ Request::is('it/setting') ? 'masariuman-active' : Request::is('it/setting/*') ? 'masariuman-active' : '' }}>
                 <div class="icon-w">
                     <div class="os-icon os-icon-ui-46"></div>
                 </div>
