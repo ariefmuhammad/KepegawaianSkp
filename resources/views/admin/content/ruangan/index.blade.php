@@ -103,6 +103,7 @@
                     data: $('#addForm').serialize(),
                     success: function (response) {
                         $("#tambahModal").modal('hide')
+                        $("#inputAddRuangan").val('')
                         swal("SUKSES !", "Data ruangan baru berhasil ditambahkan !", "success");
                         const xhttp = new XMLHttpRequest();
                         xhttp.onreadystatechange = function() {
@@ -216,7 +217,7 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="form-group">
-                        <input name="ruangan" placeholder="Masukkan Nama Ruangan Baru.." type="text" class="form-control" />
+                        <input name="ruangan" id="inputAddRuangan" placeholder="Masukkan Nama Ruangan Baru.." type="text" class="form-control" />
                     </div>
                   </div>
                   <div class="col-sm-12">
