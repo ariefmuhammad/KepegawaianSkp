@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Wed Aug 26 2020 14:51:14 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/adminPegawaiController.php
+* resources/views/admin/template_partial/sidebar.blade.php
+
+
+Created files:
+* resources/views/admin/content/pegawai/data.blade.php
+* resources/views/admin/content/pegawai/index.blade.php
+
+
+Deleted files:
+
+
+Renamed files:

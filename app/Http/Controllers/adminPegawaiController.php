@@ -34,6 +34,15 @@ class adminPegawaiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function deta()
+    {
+        //
+        $data['ruangan'] = Ruangan::where('active','1')->get();
+        $data['pegawai'] = Pegawai::where('active','1')->orderBy('id','DESC')->get();
+        return view('admin/content/pegawai/data',$data);
+    }
+
     public function index()
     {
         //

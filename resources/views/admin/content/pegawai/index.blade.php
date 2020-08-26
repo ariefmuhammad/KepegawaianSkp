@@ -5,7 +5,7 @@
 
 
 @section('title')
-    Ruangan
+    Pegawai
 @endsection
 
 
@@ -13,11 +13,11 @@
     <div class="top-bar color-scheme-transparent masariuman-height103px">
         <div class="top-menu-controls masariuman-marginleft30px">
             <div class="icon-w top-icon masariuman-titlecontent">
-            <div class="os-icon os-icon-layout"></div>
+            <div class="fa fa-users"></div>
             </div>
             <div class="masariuman-textleft">
-                <span class="masariuman-bold">RUANGAN</span> <br/>
-                <small>Manajemen Ruangan</small>
+                <span class="masariuman-bold">PEGAWAI</span> <br/>
+                <small>Manajemen Pegawai</small>
             </div>
         </div>
         <div class="top-menu-controls">
@@ -43,26 +43,32 @@
     Manajemen Data Ruangan
 </div>
 <div>
-    <button class="mr-2 mb-2 btn btn-primary" data-target="#tambahModal" data-toggle="modal" type="button">Tambah Ruangan Baru</button>
+    <button class="mr-2 mb-2 btn btn-primary" data-target="#tambahModal" data-toggle="modal" type="button">Tambah Pegawai Baru</button>
 </div>
-<div class="table-responsive" id="ruanganTable">
+<div class="table-responsive" id="pegawaiTable">
     <table id="tabeldata" width="100%" class="table table-striped table-lightfont">
         <thead>
             <tr>
-                <th>NO</th>
-                <th>Ruangan</th>
-                <th>Aksi</th>
+                <th class="width40 text-center">No</th>
+                <th class="width200 text-center">NIP</th>
+                <th class="text-center">Nama</th>
+                <th class="width200 text-center">Jabatan</th>
+                <th class="width100px text-center">Ruangan</th>
+                <th class="text-center">Aksi</th>
             </tr>
         <tbody>
-            @foreach ( $ruangan as $no => $data )
+            @foreach ($pegawai as $no => $item)
                 <tr>
-                    <td id="{{ $data->id }}">{{ $no+1 }}</td>
-                    <td>{{ $data->ruangan }}</td>
-                    <td>
-                        <button class="mr-2 mb-2 btn btn-warning editButton" type="button" data="{{ $data }}">Ubah</button>
-                        |
-                        <button class="mr-2 mb-2 btn btn-danger deleteButton" type="button" data="{{ $data }}">Hapus</button>
-                    </td>
+                    <th class="text-center">{{$no+1}}</th>
+                    <td class="text-center">{{$item->nip_baru}}</td>
+                    <td>{{$item->user->name}}</td>
+                    <td>{{$item->nama_jabatan}}</td>
+                    <td class="text-center">{{$item->ruangan->ruangan}}</td>
+                    @if(auth()->user()->level == 'ADMIN')
+                        <td class="text-center"><a href="/it/pegawai/{{$item->id}}"><button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info"><i class="fa fa-eye"></i></button></a></td>
+                    @else
+                        <td class="text-center"><a href="/admin/pegawai/{{$item->id}}"><button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info"><i class="fa fa-eye"></i></button></a></td>
+                    @endif
                 </tr>
             @endforeach
         </tbody>
