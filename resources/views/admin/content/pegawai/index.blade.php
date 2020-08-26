@@ -213,22 +213,42 @@
             </div>
             <div class="onboarding-content with-gradient">
               <h4 class="onboarding-title">
-                Tambah Ruangan Baru
+                Tambah Pegawai Baru
               </h4>
               <div class="onboarding-text">
-                Masukkan nama ruangan baru yang ingin ditambahkan kedalam aplikasi.
+                Masukkan data dasar yang dibutuhkan untuk membuat data pegawai baru di bawah ini.
               </div>
               <form id="addForm">
                 @csrf
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="form-group">
-                        <input name="ruangan" placeholder="Masukkan Nama Ruangan Baru.." type="text" class="form-control" />
+                        <input name="gelar_depan" id="inputAddGelarDepan" placeholder="Masukkan Gelar Depan.." type="text" class="form-control" />
                     </div>
                   </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <input name="nama" id="inputAddNama" placeholder="Masukkan Nama.." type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <input name="gelar_belakang" id="inputAddGelarBelakang" placeholder="Masukkan Gelar Belakang.." type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <input name="tanggal_lahir" id="inputAddTanggalLahir" placeholder="Masukkan Tanggal Lahir.." type="date" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <input name="email" id="inputAddEmail" placeholder="Masukkan Email.." type="email" class="form-control" />
+                    </div>
+                </div>
                   <div class="col-sm-12">
                     <div class="form-group text-center">
-                        <button class="mr-2 mb-2 btn btn-primary" data-target="#onboardingWideFormModal" data-toggle="modal" type="submit">Tambah Ruangan Baru</button>
+                        <button class="mr-2 mb-2 btn btn-primary" data-target="#onboardingWideFormModal" data-toggle="modal" type="submit">Tambah Pegawai Baru</button>
                     </div>
                   </div>
                 </div>
