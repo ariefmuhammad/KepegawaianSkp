@@ -45,7 +45,7 @@
     </div>
     <ul class="main-menu">
         <li class="selected has-sub-menu">
-            <a class ="masariuman-active" href="#">
+            <a class ="{{ Request::is('it') ? 'masariuman-active' : '' }}" href="#">
                 <div class="icon-w">
                     <div class="os-icon os-icon-layout"></div>
                 </div>
@@ -53,7 +53,7 @@
             </a>
         </li>
         <li class=" has-sub-menu">
-            <a href="layouts_menu_top_image.html">
+            <a class="{{ Request::is('it/skp') ? 'masariuman-active' : Request::is('it/skp/*') ? 'masariuman-active' : '' }}">
                 <div class="icon-w">
                     <div class="dripicons-graph-pie"></div>
                 </div>
@@ -79,7 +79,7 @@
             </div>
         </li>
         <li class=" has-sub-menu">
-            <a href="layouts_menu_top_image.html">
+            <a class="{{ Request::is('it/ruangan') ? 'masariuman-active' : Request::is('it/ruangan/*') ? 'masariuman-active' : Request::is('it/pegawai') ? 'masariuman-active' : Request::is('it/pegawai/*') ? 'masariuman-active' : '' }}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-layers"></div>
                 </div>
