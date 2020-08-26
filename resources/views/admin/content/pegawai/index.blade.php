@@ -37,10 +37,10 @@
 
 @section('content')
 <h5 class="form-header">
-    Master Ruangan
+    Master Pegawai
 </h5>
  <div class="form-desc">
-    Manajemen Data Ruangan
+    Manajemen Data Pegawai
 </div>
 <div>
     <button class="mr-2 mb-2 btn btn-primary" data-target="#tambahModal" data-toggle="modal" type="button">Tambah Pegawai Baru</button>
@@ -109,6 +109,7 @@
                     data: $('#addForm').serialize(),
                     success: function (response) {
                         $("#tambahModal").modal('hide')
+                        $("#inputAddRuangan").val('')
                         swal("SUKSES !", "Data ruangan baru berhasil ditambahkan !", "success");
                         const xhttp = new XMLHttpRequest();
                         xhttp.onreadystatechange = function() {
