@@ -78,7 +78,7 @@
                 "language": {
                     "search" : "Cari Data: ",
                     "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
-                    "emptyTable": "Data Tidak Ada",
+                    "emptyTable": "Tidak Ada Data Ruangan",
                     "infoEmpty": "Menampilkan 0 sampai 0 dari 0 data",
                     "infoFiltered": "(Dicari dari _MAX_ total data)",
                     "lengthMenu": "Menampilkan _MENU_ Data",
