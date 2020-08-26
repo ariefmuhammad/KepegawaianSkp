@@ -39,7 +39,7 @@ class adminPegawaiController extends Controller
         //
         $data['ruangan'] = Ruangan::where('active','1')->get();
         $data['pegawai'] = Pegawai::where('active','1')->orderBy('id','DESC')->get();
-        return view('admin/pegawai/index',$data);
+        return view('admin/content/pegawai/index',$data);
     }
 
     /**

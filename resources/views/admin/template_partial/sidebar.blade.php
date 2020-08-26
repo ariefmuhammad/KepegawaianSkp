@@ -95,7 +95,7 @@
                 <div class="sub-menu-i">
                     <ul class="sub-menu">
                         <li>
-                            <a href="layouts_menu_side_full.html">Pegawai</a>
+                            <a href="/it/pegawai">Pegawai</a>
                         </li>
                         <li>
                             <a href="/it/ruangan" onclick="routeToRuangan()">Ruangan</a>
