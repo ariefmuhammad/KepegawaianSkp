@@ -20,7 +20,7 @@
     </tbody>
 </table>
 
-
+{{-- js --}}
     <script>
         $(document).ready(function() {
             $('#tabeldata').DataTable({
@@ -149,6 +149,10 @@
             });
         });
     </script>
+{{-- end js --}}
+
+
+{{-- modal --}}
     {{-- modal tambah --}}
     <div aria-hidden="true" class="onboarding-modal modal fade animated" id="tambahModal" role="dialog" tabindex="-1">
       <div class="modal-dialog modal-lg modal-centered" role="document">
@@ -266,3 +270,4 @@
         </div>
       </div>
       {{-- end modal edit --}}
+{{-- end modal --}}
