@@ -137,7 +137,8 @@
             $('#editForm').on('submit',function(e) {
                 e.preventDefault();
                 if($("#inputEditRuangan").val().length === 0) {
-                    swal("GAGAL !", "Nama Ruangan Tidak Boleh Kosong !", "error");
+                    swal("GAGAL !", "Nama Ruangan Tidak Boleh Kosong !", "error")
+                    $("#inputEditRuangan").focus();
                 } else {
                     var id = $('#inputEditId').val();
                     $.ajax({
