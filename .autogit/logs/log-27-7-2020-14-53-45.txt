@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Thu Aug 27 2020 14:53:45 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/content/pegawai/index.blade.php
+
+
+Created files:
+* .autogit/logs/log-27-7-2020-14-43-38.txt
+
+
+Deleted files:
+
+
+Renamed files:

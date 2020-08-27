@@ -49,6 +49,11 @@
                 if($("#inputAddRuangan").val().length === 0) {
                     swal("GAGAL !", "Nama Ruangan Tidak Boleh Kosong !", "error")
                     $("#inputAddRuangan").addClass('border-danger');
+                    if ($("#inputAddRuangan").val().length === 0) {
+                        $("#inputAddRuangan").addClass('border-danger');
+                    } else {
+                        $("#inputAddRuangan").removeClass('border-danger');
+                    }
                 } else {
                     $.ajax({
                         type: "POST",
@@ -89,6 +94,11 @@
                 if($("#inputEditRuangan").val().length === 0) {
                     swal("GAGAL !", "Nama Ruangan Tidak Boleh Kosong !", "error")
                     $("#inputEditRuangan").addClass('border-danger');
+                    if ($("#inputEditRuangan").val().length === 0) {
+                        $("#inputEditRuangan").addClass('border-danger');
+                    } else {
+                        $("#inputEditRuangan").removeClass('border-danger');
+                    }
                 } else {
                     var id = $('#inputEditId').val();
                     $.ajax({

@@ -100,8 +100,32 @@
             $('#addForm').on('submit',function(e) {
                 e.preventDefault();
                 if($("#inputAddGelarDepan").val().length === 0 || $("#inputAddNama").val().length === 0 || $("#inputAddGelarBelakang").val().length === 0 || $("#inputAddTanggalLahir").val().length === 0 || $("#inputAddEmail").val().length === 0) {
-                    swal("GAGAL !", "Nama Ruangan Tidak Boleh Kosong !", "error")
-                    $("#inputAddRuangan").addClass('border-danger');
+                    swal("GAGAL !", "Terdapat data yang kosong !", "error")
+                    if ($("#inputAddGelarDepan").val().length === 0) {
+                        $("#inputAddGelarDepan").addClass('border-danger');
+                    } else {
+                        $("#inputAddGelarDepan").removeClass('border-danger');
+                    }
+                    if ($("#inputAddNama").val().length === 0) {
+                        $("#inputAddNama").addClass('border-danger');
+                    } else {
+                        $("#inputAddNama").removeClass('border-danger');
+                    }
+                    if ($("#inputAddGelarBelakang").val().length === 0) {
+                        $("#inputAddGelarBelakang").addClass('border-danger');
+                    } else {
+                        $("#inputAddGelarBelakang").removeClass('border-danger');
+                    }
+                    if ($("#inputAddTanggalLahir").val().length === 0) {
+                        $("#inputAddTanggalLahir").addClass('border-danger');
+                    } else {
+                        $("#inputAddTanggalLahir").removeClass('border-danger');
+                    }
+                    if ($("#inputAddEmail").val().length === 0) {
+                        $("#inputAddEmail").addClass('border-danger');
+                    } else {
+                        $("#inputAddEmail").removeClass('border-danger');
+                    }
                 } else {
                     $.ajax({
                         type: "POST",
