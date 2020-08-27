@@ -108,7 +108,7 @@
                         $("#inputAddGelarDepan").val('')
                         $("#inputAddNama").val('')
                         $("#inputAddGelarBelakang").val('')
-                        $("#inputAddTanggalLahir").type('text')
+                        $("#inputAddTanggalLahir").prop("type", "text")
                         $("#inputAddTanggalLahir").val('')
                         $("#inputAddEmail").val('')
                         swal("SUKSES !", "Data Pegawai baru berhasil ditambahkan !", "success");
