@@ -99,103 +99,37 @@
         $(document).ready(function() {
             $('#addForm').on('submit',function(e) {
                 e.preventDefault();
-                $.ajax({
-                    type: "POST",
-                    url: "/it/pegawai",
-                    data: $('#addForm').serialize(),
-                    success: function (response) {
-                        $("#tambahModal").modal('hide')
-                        $("#inputAddGelarDepan").val('')
-                        $("#inputAddNama").val('')
-                        $("#inputAddGelarBelakang").val('')
-                        $("#inputAddTanggalLahir").prop("type", "text")
-                        $("#inputAddTanggalLahir").val('')
-                        $("#inputAddEmail").val('')
-                        swal("SUKSES !", "Data Pegawai baru berhasil ditambahkan !", "success");
-                        const xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function() {
-                            if (this.readyState == 4 && this.status == 200) {
-                                $("#pegawaiTable").html(this.responseText);
-                            }
-                        };
-                        xhttp.open("GET", "/pegawaiDeta", true);
-                        xhttp.send();
-                    },
-                    error: function(error) {
-                        swal("GAGAL !", "Terdapat kesalahan pada server. Silahkan hubungi pihak IT", "error");
-                    }
-                });
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $('.editButton').on('click',function() {
-                $('#editModal').modal('show');
-                var data = JSON.parse($(this).attr("data"));
-                $("#inputEditId").val(data.id);
-                $("#inputEditRuangan").val(data.ruangan);
-            });
-
-            $('#editForm').on('submit',function(e) {
-                e.preventDefault();
-                var id = $('#inputEditId').val();
-                $.ajax({
-                    type: "POST",
-                    url: "/it/ruangan/"+id,
-                    data: $('#editForm').serialize(),
-                    success: function (response) {
-                        $("#editModal").modal('hide')
-                        swal("SUKSES !", "Nama ruangan berhasil diubah !", "success");
-                        const xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function() {
-                            if (this.readyState == 4 && this.status == 200) {
-                                $("#ruanganTable").html(this.responseText);
-                            }
-                        };
-                        xhttp.open("GET", "/ruanganDeta", true);
-                        xhttp.send();
-                    },
-                    error: function(error) {
-                        swal("GAGAL !", "Terdapat kesalahan pada server. Silahkan hubungi pihak IT", "error");
-                    }
-                });
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $('.deleteButton').on('click',function() {
-                $('#deleteModal').modal('show');
-                $tr = $(this).closest('tr');
-                var data = JSON.parse($(this).attr("data"));
-                $("#inputDeleteId").val(data.id);
-                $("#namaDeleteRuangan").html(data.ruangan);
-            });
-
-            $('#deleteForm').on('submit',function(e) {
-                e.preventDefault();
-                var id = $('#inputDeleteId').val();
-                $.ajax({
-                    type: "POST",
-                    url: "/it/ruangan/"+id,
-                    data: $('#deleteForm').serialize(),
-                    success: function (response) {
-                        $("#deleteModal").modal('hide')
-                        swal("SUKSES !", "Data ruangan berhasil dihapus !", "success");
-                        const xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function() {
-                            if (this.readyState == 4 && this.status == 200) {
-                                $("#ruanganTable").html(this.responseText);
-                            }
-                        };
-                        xhttp.open("GET", "/ruanganDeta", true);
-                        xhttp.send();
-                    },
-                    error: function(error) {
-                        swal("GAGAL !", "Terdapat kesalahan pada server. Silahkan hubungi pihak IT", "error");
-                    }
-                });
+                if($("#inputAddGelarDepan").val().length === 0 || $("#inputAddNama").val().length === 0 || $("#inputAddGelarBelakang").val().length === 0 || $("#inputAddTanggalLahir").val().length === 0 || $("#inputAddEmail").val().length === 0) {
+                    swal("GAGAL !", "Nama Ruangan Tidak Boleh Kosong !", "error")
+                    $("#inputAddRuangan").addClass('border-danger');
+                } else {
+                    $.ajax({
+                        type: "POST",
+                        url: "/it/pegawai",
+                        data: $('#addForm').serialize(),
+                        success: function (response) {
+                            $("#tambahModal").modal('hide')
+                            $("#inputAddGelarDepan").val('')
+                            $("#inputAddNama").val('')
+                            $("#inputAddGelarBelakang").val('')
+                            $("#inputAddTanggalLahir").prop("type", "text")
+                            $("#inputAddTanggalLahir").val('')
+                            $("#inputAddEmail").val('')
+                            swal("SUKSES !", "Data Pegawai baru berhasil ditambahkan !", "success");
+                            const xhttp = new XMLHttpRequest();
+                            xhttp.onreadystatechange = function() {
+                                if (this.readyState == 4 && this.status == 200) {
+                                    $("#pegawaiTable").html(this.responseText);
+                                }
+                            };
+                            xhttp.open("GET", "/pegawaiDeta", true);
+                            xhttp.send();
+                        },
+                        error: function(error) {
+                            swal("GAGAL !", "Terdapat kesalahan pada server. Silahkan hubungi pihak IT", "error");
+                        }
+                    });
+                }
             });
         });
     </script>
