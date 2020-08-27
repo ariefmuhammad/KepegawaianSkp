@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Thu Aug 27 2020 14:03:16 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/content/ruangan/index.blade.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

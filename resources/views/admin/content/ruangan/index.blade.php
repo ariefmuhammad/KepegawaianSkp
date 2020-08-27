@@ -98,30 +98,29 @@
             $('#addForm').on('submit',function(e) {
                 e.preventDefault();
                 if($("#inputAddRuangan").val().length === 0) {
-                    console.log("ruangan kosong");
+                    swal("GAGAL !", "Nama Ruangan Tidak Boleh Kosong !", "error");
                 } else {
-                    console.log('ruangan ada');
-                    // $.ajax({
-                    //     type: "POST",
-                    //     url: "/it/ruangan",
-                    //     data: $('#addForm').serialize(),
-                    //     success: function (response) {
-                    //         $("#tambahModal").modal('hide')
-                    //         $("#inputAddRuangan").val('')
-                    //         swal("SUKSES !", "Data ruangan baru berhasil ditambahkan !", "success");
-                    //         const xhttp = new XMLHttpRequest();
-                    //         xhttp.onreadystatechange = function() {
-                    //             if (this.readyState == 4 && this.status == 200) {
-                    //                 $("#ruanganTable").html(this.responseText);
-                    //             }
-                    //         };
-                    //         xhttp.open("GET", "/ruanganDeta", true);
-                    //         xhttp.send();
-                    //     },
-                    //     error: function(error) {
-                    //         swal("GAGAL !", "Terdapat kesalahan pada server. Silahkan hubungi pihak IT", "error");
-                    //     }
-                    // });
+                    $.ajax({
+                        type: "POST",
+                        url: "/it/ruangan",
+                        data: $('#addForm').serialize(),
+                        success: function (response) {
+                            $("#tambahModal").modal('hide')
+                            $("#inputAddRuangan").val('')
+                            swal("SUKSES !", "Data ruangan baru berhasil ditambahkan !", "success");
+                            const xhttp = new XMLHttpRequest();
+                            xhttp.onreadystatechange = function() {
+                                if (this.readyState == 4 && this.status == 200) {
+                                    $("#ruanganTable").html(this.responseText);
+                                }
+                            };
+                            xhttp.open("GET", "/ruanganDeta", true);
+                            xhttp.send();
+                        },
+                        error: function(error) {
+                            swal("GAGAL !", "Terdapat kesalahan pada server. Silahkan hubungi pihak IT", "error");
+                        }
+                    });
                 }
             });
         });
@@ -137,27 +136,31 @@
 
             $('#editForm').on('submit',function(e) {
                 e.preventDefault();
-                var id = $('#inputEditId').val();
-                $.ajax({
-                    type: "POST",
-                    url: "/it/ruangan/"+id,
-                    data: $('#editForm').serialize(),
-                    success: function (response) {
-                        $("#editModal").modal('hide')
-                        swal("SUKSES !", "Nama ruangan berhasil diubah !", "success");
-                        const xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function() {
-                            if (this.readyState == 4 && this.status == 200) {
-                                $("#ruanganTable").html(this.responseText);
-                            }
-                        };
-                        xhttp.open("GET", "/ruanganDeta", true);
-                        xhttp.send();
-                    },
-                    error: function(error) {
-                        swal("GAGAL !", "Terdapat kesalahan pada server. Silahkan hubungi pihak IT", "error");
-                    }
-                });
+                if($("#inputEditRuangan").val().length === 0) {
+                    swal("GAGAL !", "Nama Ruangan Tidak Boleh Kosong !", "error");
+                } else {
+                    var id = $('#inputEditId').val();
+                    $.ajax({
+                        type: "POST",
+                        url: "/it/ruangan/"+id,
+                        data: $('#editForm').serialize(),
+                        success: function (response) {
+                            $("#editModal").modal('hide')
+                            swal("SUKSES !", "Nama ruangan berhasil diubah !", "success");
+                            const xhttp = new XMLHttpRequest();
+                            xhttp.onreadystatechange = function() {
+                                if (this.readyState == 4 && this.status == 200) {
+                                    $("#ruanganTable").html(this.responseText);
+                                }
+                            };
+                            xhttp.open("GET", "/ruanganDeta", true);
+                            xhttp.send();
+                        },
+                        error: function(error) {
+                            swal("GAGAL !", "Terdapat kesalahan pada server. Silahkan hubungi pihak IT", "error");
+                        }
+                    });
+                }
             });
         });
     </script>
