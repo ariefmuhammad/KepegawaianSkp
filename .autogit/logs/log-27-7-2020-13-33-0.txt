@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Thu Aug 27 2020 13:33:00 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* database/migrations/2020_06_03_080720_create_table_pegawai.php
+* database/migrations/2020_06_03_082559_create_table_dasar.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

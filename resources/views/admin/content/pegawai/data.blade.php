@@ -1,20 +1,22 @@
 <table id="tabeldata" width="100%" class="table table-striped table-lightfont">
     <thead>
         <tr>
-            <th>NO</th>
-            <th>Ruangan</th>
-            <th>Aksi</th>
+            <th class="width40 text-center">No</th>
+            <th class="width200 text-center">NIP</th>
+            <th class="text-center">Nama</th>
+            <th class="width200 text-center">Jabatan</th>
+            <th class="width100px text-center">Ruangan</th>
+            <th class="text-center">Aksi</th>
         </tr>
     <tbody>
-        @foreach ( $ruangan as $no => $data )
+        @foreach ($pegawai as $no => $item)
             <tr>
-                <td id="{{ $data->id }}">{{ $no+1 }}</td>
-                    <td>{{ $data->ruangan }}</td>
-                    <td>
-                        <button class="mr-2 mb-2 btn btn-warning editButton" type="button" data="{{ $data }}">Ubah</button>
-                        |
-                        <button class="mr-2 mb-2 btn btn-danger deleteButton" type="button" data="{{ $data }}">Hapus</button>
-                    </td>
+                <th class="text-center">{{$no+1}}</th>
+                <td class="text-center">{{$item->nip_baru}}</td>
+                <td>{{$item->user->name}}</td>
+                <td>{{$item->nama_jabatan}}</td>
+                <td class="text-center">{{$item->ruangan->ruangan}}</td>
+                <td class="text-center"><a href="/it/pegawai/{{$item->id}}"><button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info"><i class="fa fa-eye"></i></button></a></td>
             </tr>
         @endforeach
     </tbody>

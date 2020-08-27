@@ -247,6 +247,16 @@
                         <input name="email" id="inputAddEmail" placeholder="Masukkan Email.." type="email" class="form-control" />
                     </div>
                 </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <select class="mb-2 form-control" name="ruangan">
+                            <option selected disabled>Pilih Ruangan...</option>
+                            @foreach ($ruangan as $data)
+                                <option value="{{$data->id}}">{{$data->ruangan}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
                   <div class="col-sm-12">
                     <div class="form-group text-center">
                         <button class="mr-2 mb-2 btn btn-primary" data-target="#onboardingWideFormModal" data-toggle="modal" type="submit">Tambah Pegawai Baru</button>
