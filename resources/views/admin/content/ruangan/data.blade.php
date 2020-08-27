@@ -186,7 +186,7 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="form-group">
-                        <input name="ruangan" id="inputAddRuangan" placeholder="Masukkan Nama Ruangan Baru.." type="text" class="form-control" />
+                        <input name="ruangan" id="inputAddRuangan" title="Nama Ruangan" placeholder="Masukkan Nama Ruangan Baru.." type="text" class="form-control" />
                     </div>
                   </div>
                   <div class="col-sm-12">
@@ -226,7 +226,7 @@
                     <div class="col-sm-12">
                       <div class="form-group">
                             <input name="id" id="inputEditId" type="hidden"/>
-                            <input name="ruangan" id="inputEditRuangan" placeholder="Ubah Nama Ruangan.." type="text" class="form-control" />
+                            <input name="ruangan" id="inputEditRuangan" title="Nama Ruangan" placeholder="Ubah Nama Ruangan.." type="text" class="form-control" />
                       </div>
                     </div>
                     <div class="col-sm-12">
