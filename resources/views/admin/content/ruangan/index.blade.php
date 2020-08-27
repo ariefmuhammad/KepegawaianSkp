@@ -97,27 +97,32 @@
         $(document).ready(function() {
             $('#addForm').on('submit',function(e) {
                 e.preventDefault();
-                $.ajax({
-                    type: "POST",
-                    url: "/it/ruangan",
-                    data: $('#addForm').serialize(),
-                    success: function (response) {
-                        $("#tambahModal").modal('hide')
-                        $("#inputAddRuangan").val('')
-                        swal("SUKSES !", "Data ruangan baru berhasil ditambahkan !", "success");
-                        const xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function() {
-                            if (this.readyState == 4 && this.status == 200) {
-                                $("#ruanganTable").html(this.responseText);
-                            }
-                        };
-                        xhttp.open("GET", "/ruanganDeta", true);
-                        xhttp.send();
-                    },
-                    error: function(error) {
-                        swal("GAGAL !", "Terdapat kesalahan pada server. Silahkan hubungi pihak IT", "error");
-                    }
-                });
+                if($("#inputAddRuangan").val().length === 0) {
+                    console.log("ruangan kosong");
+                } else {
+                    console.log('ruangan ada');
+                    // $.ajax({
+                    //     type: "POST",
+                    //     url: "/it/ruangan",
+                    //     data: $('#addForm').serialize(),
+                    //     success: function (response) {
+                    //         $("#tambahModal").modal('hide')
+                    //         $("#inputAddRuangan").val('')
+                    //         swal("SUKSES !", "Data ruangan baru berhasil ditambahkan !", "success");
+                    //         const xhttp = new XMLHttpRequest();
+                    //         xhttp.onreadystatechange = function() {
+                    //             if (this.readyState == 4 && this.status == 200) {
+                    //                 $("#ruanganTable").html(this.responseText);
+                    //             }
+                    //         };
+                    //         xhttp.open("GET", "/ruanganDeta", true);
+                    //         xhttp.send();
+                    //     },
+                    //     error: function(error) {
+                    //         swal("GAGAL !", "Terdapat kesalahan pada server. Silahkan hubungi pihak IT", "error");
+                    //     }
+                    // });
+                }
             });
         });
     </script>
