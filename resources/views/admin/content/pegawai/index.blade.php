@@ -26,10 +26,10 @@
     </div>
     <ul class="breadcrumb">
         <li class="breadcrumb-item">
-            <a href="/it/ruangan">Ruangan</a>
+            <a href="/it/pegawai">Pegawai</a>
         </li>
         <li class="breadcrumb-item">
-            <span>Ruangan</span>
+            <span>Pegawai</span>
         </li>
     </ul>
 @endsection
@@ -64,11 +64,7 @@
                     <td>{{$item->user->name}}</td>
                     <td>{{$item->nama_jabatan}}</td>
                     <td class="text-center">{{$item->ruangan->ruangan}}</td>
-                    @if(auth()->user()->level == 'ADMIN')
-                        <td class="text-center"><a href="/it/pegawai/{{$item->id}}"><button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info"><i class="fa fa-eye"></i></button></a></td>
-                    @else
-                        <td class="text-center"><a href="/admin/pegawai/{{$item->id}}"><button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info"><i class="fa fa-eye"></i></button></a></td>
-                    @endif
+                    <td class="text-center"><a href="/it/pegawai/{{$item->id}}"><button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info"><i class="fa fa-eye"></i></button></a></td>
                 </tr>
             @endforeach
         </tbody>
@@ -84,7 +80,7 @@
                 "language": {
                     "search" : "Cari Data: ",
                     "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
-                    "emptyTable": "Tidak Ada Data Ruangan",
+                    "emptyTable": "Tidak Ada Data Pegawai",
                     "infoEmpty": "Menampilkan 0 sampai 0 dari 0 data",
                     "infoFiltered": "(Dicari dari _MAX_ total data)",
                     "lengthMenu": "Menampilkan _MENU_ Data",
@@ -105,19 +101,24 @@
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: "/it/ruangan",
+                    url: "/it/pegawai",
                     data: $('#addForm').serialize(),
                     success: function (response) {
                         $("#tambahModal").modal('hide')
-                        $("#inputAddRuangan").val('')
-                        swal("SUKSES !", "Data ruangan baru berhasil ditambahkan !", "success");
+                        $("#inputAddGelarDepan").val('')
+                        $("#inputAddNama").val('')
+                        $("#inputAddGelarBelakang").val('')
+                        $("#inputAddTanggalLahir").type('text')
+                        $("#inputAddTanggalLahir").val('')
+                        $("#inputAddEmail").val('')
+                        swal("SUKSES !", "Data Pegawai baru berhasil ditambahkan !", "success");
                         const xhttp = new XMLHttpRequest();
                         xhttp.onreadystatechange = function() {
                             if (this.readyState == 4 && this.status == 200) {
-                                $("#ruanganTable").html(this.responseText);
+                                $("#pegawaiTable").html(this.responseText);
                             }
                         };
-                        xhttp.open("GET", "/ruanganDeta", true);
+                        xhttp.open("GET", "/pegawaiDeta", true);
                         xhttp.send();
                     },
                     error: function(error) {

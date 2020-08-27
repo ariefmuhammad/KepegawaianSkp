@@ -97,12 +97,6 @@ class adminPegawaiController extends Controller
             'ruangan_id' => $request->ruangan
         ]);
 
-        $pesan = 'User baru telah dibuat. Silahkan memberitahu pegawai untuk login dengan email <b>'.$newuser->email.'</b> dan dengan password tanggal lahir(<b>'.$lahir.'</b>) untuk melengkapi data dasar.';
-
-        Session::flash('Berhasil', $pesan);
-
-        return back();
-
     }
 
     /**
