@@ -104,7 +104,11 @@
                 const xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
-                        $("#benda").html(this.responseText);
+                        var data = this.responseText
+                        $("#benda").fadeOut(400, function() {
+                            $("#benda").html(data);
+                            $("#benda").fadeIn(400);
+                        }) ;
                     }
                 };
                 xhttp.open("GET", "/dasarDeta", true);
@@ -118,9 +122,11 @@
                 const xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
-                        $("#benda").fadeOut(400);
-                        $("#benda").html(this.responseText);
-                        $("#benda").fadeIn(400);
+                        var data = this.responseText
+                        $("#benda").fadeOut(400, function() {
+                            $("#benda").html(data);
+                            $("#benda").fadeIn(400);
+                        }) ;
                     }
                 };
                 xhttp.open("GET", "/riwayatPendidikanFormalDeta", true);

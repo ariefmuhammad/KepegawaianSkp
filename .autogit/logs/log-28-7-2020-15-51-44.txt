@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Fri Aug 28 2020 15:51:44 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/adminPegawaiController.php
+* resources/views/admin/content/pegawai/show.blade.php
+* resources/views/admin/content/pegawai/show_partial/dasar.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-28-7-2020-15-41-38.txt
+
+
+Deleted files:
+
+
+Renamed files:
+* [object Object]

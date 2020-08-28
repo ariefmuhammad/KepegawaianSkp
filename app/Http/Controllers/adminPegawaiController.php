@@ -38,7 +38,7 @@ class adminPegawaiController extends Controller
     public function dasarDeta()
     {
         //
-        return view('admin/content/pegawai/dasar');
+        return view('admin/content/pegawai/show_partial/dasar');
     }
 
     public function riwayatPendidikanFormalDeta()
