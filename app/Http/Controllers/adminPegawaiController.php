@@ -517,7 +517,7 @@ class adminPegawaiController extends Controller
             }
         }
 
-        return view('admin/pegawai/content/show',$data);
+        return view('admin/content/pegawai/show',$data);
     }
 
     /**
