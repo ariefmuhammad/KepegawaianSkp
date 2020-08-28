@@ -60,8 +60,34 @@
     <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info">SKP</button>
 </div>
 <div>
-    <div class="float-left">awd</div>
-    <div class="float-right">asdaw</div>
+    <table>
+        <tr>
+            <td>
+                awd
+            </td>
+            <td>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id diam non elit pretium vehicula. Nullam pellentesque dictum leo in vestibulum. Nunc quis lectus tempus nisi sodales hendrerit eget et quam. Nam eleifend arcu ornare, dignissim velit cursus, venenatis augue. Maecenas pretium elit ac nisl vehicula vulputate. Nulla urna diam, auctor sed ultrices in, semper in sem. Nullam maximus justo et risus aliquet, pellentesque luctus lectus rutrum.
+
+                    Sed nunc lectus, facilisis a dapibus ut, lacinia non ligula. Aenean in accumsan quam. Nunc et tortor ut purus tincidunt bibendum ullamcorper id risus. Aenean quis metus in ex elementum finibus a eget turpis. Vivamus rutrum orci eget dolor pharetra, eu finibus velit vestibulum. Etiam vitae arcu dignissim sem ultrices molestie. Nunc ornare tempus erat, vel gravida nulla mollis vel. Quisque at risus urna. Vivamus placerat tincidunt ultrices. Morbi dui ligula, egestas vitae ex in, sodales lacinia eros. Duis bibendum lacus in neque accumsan efficitur. Nunc rhoncus arcu et ante pharetra fermentum.
+
+                    Mauris mollis dui at mauris euismod, sit amet euismod tellus fringilla. Vivamus nunc urna, viverra id volutpat sit amet, commodo ac tellus. Cras nec euismod metus. Vivamus tempus ultrices tempus. Morbi semper enim a vulputate vulputate. Nulla suscipit purus massa, et pharetra sapien dapibus sit amet. Mauris tempus turpis pellentesque auctor placerat. Sed porta neque risus. Duis et ante est. Etiam ex nisi, viverra ut faucibus bibendum, faucibus nec ipsum. Suspendisse euismod mollis tortor id feugiat. Ut volutpat non lorem sed placerat. Sed blandit vel quam at porta. Suspendisse ullamcorper nunc ut metus efficitur, ac posuere erat iaculis. Suspendisse lorem magna, consequat sit amet purus at, posuere luctus enim.
+
+                    Curabitur augue nisl, vestibulum at molestie eget, vestibulum non purus. Integer eget nulla non ligula mollis lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris at dolor tincidunt, maximus enim eget, tristique lacus. Proin ut condimentum diam. Cras quis urna in enim venenatis tristique consequat vel arcu. Nunc metus ligula, elementum sed ipsum et, eleifend feugiat lacus. Mauris fermentum orci dictum tellus pretium, nec eleifend velit ultricies. Morbi sed nisl vulputate, rutrum tellus sit amet, congue risus. Curabitur ut dictum arcu, ac pellentesque orci. Ut pulvinar nisi felis, et tempus velit ultricies at. Donec finibus lorem sit amet sem laoreet, vitae sollicitudin metus aliquet.
+
+                    Nam dictum lorem at dui venenatis ultricies. Proin vehicula vel nulla at dictum. Integer suscipit imperdiet metus, ut fermentum eros venenatis sed. Nunc tempor id tellus eu dictum. Morbi pretium blandit ipsum tristique aliquet. Fusce vel imperdiet ex. Donec quis mollis diam, mollis mollis orci.
+
+                    Cras bibendum ac purus non volutpat. Proin vel lobortis lorem. Duis sed elit ac urna commodo suscipit. Cras tincidunt velit eu accumsan pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc magna ipsum, congue fringilla enim sit amet, pharetra sagittis lacus. Nunc eu sem sed nibh pulvinar feugiat non nec arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis metus turpis, consectetur quis scelerisque eget, ultricies vel mauris. Fusce viverra metus a faucibus maximus. Etiam bibendum tellus ex, et hendrerit diam ultricies a.
+
+                    Nulla at nunc tellus. Vestibulum eros quam, tincidunt at fringilla eu, ultricies viverra orci. In id accumsan neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse convallis fringilla elit tempor congue. Maecenas imperdiet diam nunc, nec rutrum purus vulputate quis. Nam quis turpis sit amet quam hendrerit mollis vel quis dolor. Quisque finibus, tellus sed mattis pretium, lectus neque semper tortor, non tincidunt risus erat ac nibh. Mauris ornare aliquet sem et maximus. Sed id magna vestibulum, scelerisque nisi at, porttitor erat. Pellentesque congue, leo ac iaculis mollis, ex libero tempor ex, a dictum est nulla et arcu. Maecenas ac urna vel quam pretium dapibus a at nisi. Fusce sollicitudin augue in faucibus rhoncus. Ut vitae consectetur odio. Praesent gravida vel ex vehicula fermentum.
+
+                    In posuere nisl tortor, sed lobortis mauris fermentum id. Cras eu ex vel velit tristique elementum vel sit amet massa. Duis ac purus dictum, aliquet metus in, cursus nisl. Proin auctor porta massa in condimentum. Suspendisse id justo eu metus viverra pulvinar a sit amet dolor. Mauris interdum, est vel pulvinar venenatis, lectus tortor imperdiet lorem, vel ultrices justo libero vitae libero. In et mattis turpis. Nam condimentum dolor et augue elementum, eu posuere lorem dapibus. Morbi id vestibulum ante.
+
+                    Nam nulla ligula, hendrerit vitae eleifend et, vulputate at leo. Sed purus justo, finibus in pretium a, lacinia vel libero. Mauris sem ante, blandit vitae dignissim et, interdum sed dui. Duis sed nibh vitae neque volutpat suscipit. In bibendum quis felis et facilisis. Vestibulum sed risus eu erat consequat facilisis. Quisque consequat eros a odio ullamcorper rhoncus.
+
+                    Curabitur et mi non ex bibendum fringilla. Nullam enim nibh, vulputate eget ipsum in, rhoncus imperdiet lectus. Curabitur imperdiet, massa id tristique tempus, odio eros tincidunt purus, nec suscipit felis risus in quam. Donec imperdiet sem eget semper rhoncus. Sed in ex velit. Ut lobortis turpis eget euismod iaculis. Duis vestibulum ex non est sollicitudin tempor.
+            </td>
+        </tr>
+    </table>
 </div>
 @endsection
 
