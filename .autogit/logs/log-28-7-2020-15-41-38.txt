@@ -1,0 +1,31 @@
+-------------------- Auto-Git Log --------------------
+		Fri Aug 28 2020 15:41:38 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/logs/log-28-7-2020-15-31-32.txt
+* resources/views/admin/content/pegawai/show_partial/anak.blade.php
+* resources/views/admin/content/pegawai/show_partial/dasar.blade.php
+* resources/views/admin/content/pegawai/show_partial/hukuman.blade.php
+* resources/views/admin/content/pegawai/show_partial/jasa.blade.php
+* resources/views/admin/content/pegawai/show_partial/keluarga.blade.php
+* resources/views/admin/content/pegawai/show_partial/organinasi.blade.php
+* resources/views/admin/content/pegawai/show_partial/pasangan.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatDiklatFungsional.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatDiklatKepangkatan.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatDiklatPenjenjangan.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatDiklatTeknis.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatJabatanFungsional.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatJabatanStruktural.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatJabatanTeknis.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatPendidikanNormal.blade.php
+* resources/views/admin/content/pegawai/show_partial/seminar.blade.php
+
+
+Deleted files:
+
+
+Renamed files:

@@ -35,6 +35,18 @@ class adminPegawaiController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function dasarDeta()
+    {
+        //
+        return view('admin/content/pegawai/dasar');
+    }
+
+    public function riwayatPendidikanFormalDeta()
+    {
+        //
+        return view('admin/content/pegawai/show_partial/riwayatPendidikanFormal');
+    }
+
     public function deta()
     {
         //
