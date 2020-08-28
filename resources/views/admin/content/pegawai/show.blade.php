@@ -5,7 +5,7 @@
 
 
 @section('title')
-    Pegawai
+    {{$pegawai->user->name}}
 @endsection
 
 
@@ -29,7 +29,7 @@
             <a href="/it/pegawai">Pegawai</a>
         </li>
         <li class="breadcrumb-item">
-            <span>Pegawai</span>
+            <span>{{$pegawai->user->name}}</span>
         </li>
     </ul>
 @endsection
