@@ -62,7 +62,7 @@
 <div>
     <table>
         <tr>
-            <td>
+            <td class="masariuman-width30percent">
                 awd
             </td>
             <td>
