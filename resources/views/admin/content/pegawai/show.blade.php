@@ -38,25 +38,25 @@
 @section('content')
 <div class="text-center">
     <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info active" id="dasarB" data="{{$pegawai}}">Dasar</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_pendidikan_formalB">Riwayat Pendidikan Formal</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_diklat_fungsionalB">Riwayat Diktal Fungsional</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_diklat_teknisB">Riwayat Diklat Teknis</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_diklat_penjenjanganB">Riwayat Diklat Penjenjangan</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_kepangkatanB">Riwayat Kepangkatan</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_jabatan_strukturalB">Riwayat Jabatan Struktural</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_jabatan_fungsionalB">Riwayat Jabatan Fungsional</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_pekerjaanB">Riwayat Pekerjaan/Jabatan Teknis</button>
+    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_pendidikan_formalB" data="{{$pegawai}}">Riwayat Pendidikan Formal</button>
+    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_diklat_fungsionalB" data="{{$pegawai}}">Riwayat Diktal Fungsional</button>
+    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_diklat_teknisB" data="{{$pegawai}}">Riwayat Diklat Teknis</button>
+    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_diklat_penjenjanganB" data="{{$pegawai}}">Riwayat Diklat Penjenjangan</button>
+    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_kepangkatanB" data="{{$pegawai}}">Riwayat Kepangkatan</button>
+    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_jabatan_strukturalB" data="{{$pegawai}}">Riwayat Jabatan Struktural</button>
+    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_jabatan_fungsionalB" data="{{$pegawai}}">Riwayat Jabatan Fungsional</button>
+    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_pekerjaanB" data="{{$pegawai}}">Riwayat Pekerjaan/Jabatan Teknis</button>
     @if ($pegawai->jenis_kelamin === 'W')
-        <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="pasanganB">Suami</button>
+        <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="pasanganB" data="{{$pegawai}}">Suami</button>
     @else
-        <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="pasanganB">Istri</button>
+        <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="pasanganB" data="{{$pegawai}}">Istri</button>
     @endif
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="anakB">Anak</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="seminarB">Seminar/Lokakarya/Simposium</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="jasaB">Tanda Jasa/Penghargaan</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="hukumB">Hukuman Disiplin</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="organisasiB">Keanggotaan Organisasi</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="keluargaB">Keluarga</button>
+    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="anakB" data="{{$pegawai}}">Anak</button>
+    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="seminarB" data="{{$pegawai}}">Seminar/Lokakarya/Simposium</button>
+    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="jasaB" data="{{$pegawai}}">Tanda Jasa/Penghargaan</button>
+    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="hukumB" data="{{$pegawai}}">Hukuman Disiplin</button>
+    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="organisasiB" data="{{$pegawai}}">Keanggotaan Organisasi</button>
+    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="keluargaB" data="{{$pegawai}}">Keluarga</button>
     <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info">SKP</button>
 </div>
 <hr />

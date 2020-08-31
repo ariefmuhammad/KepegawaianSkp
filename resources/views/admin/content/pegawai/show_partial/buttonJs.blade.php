@@ -36,6 +36,7 @@
 <script>
     $(document).ready(function() {
         $('#riwayat_pendidikan_formalB').on('click',function() {
+            var data = JSON.parse($(this).attr("data"));
             $('#dasarB').removeClass('active');
             $('#riwayat_pendidikan_formalB').addClass('active');
             $('#riwayat_diklat_fungsionalB').removeClass('active');
@@ -62,7 +63,7 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/riwayatPendidikanFormalDeta", true);
+            xhttp.open("GET", "/riwayatPendidikanFormalDeta/"+data.id, true);
             xhttp.send();
         });
     });
@@ -70,6 +71,7 @@
 <script>
     $(document).ready(function() {
         $('#riwayat_diklat_fungsionalB').on('click',function() {
+            var data = JSON.parse($(this).attr("data"));
             $('#dasarB').removeClass('active');
             $('#riwayat_pendidikan_formalB').removeClass('active');
             $('#riwayat_diklat_fungsionalB').addClass('active');
@@ -96,7 +98,7 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/riwayatDiklatFungsionalDeta", true);
+            xhttp.open("GET", "/riwayatDiklatFungsionalDeta/"+data.id, true);
             xhttp.send();
         });
     });
@@ -104,6 +106,7 @@
 <script>
     $(document).ready(function() {
         $('#riwayat_diklat_teknisB').on('click',function() {
+            var data = JSON.parse($(this).attr("data"));
             $('#dasarB').removeClass('active');
             $('#riwayat_pendidikan_formalB').removeClass('active');
             $('#riwayat_diklat_fungsionalB').removeClass('active');
@@ -130,7 +133,7 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/riwayatDiklatTeknisDeta", true);
+            xhttp.open("GET", "/riwayatDiklatTeknisDeta/"+data.id, true);
             xhttp.send();
         });
     });
@@ -138,6 +141,7 @@
 <script>
     $(document).ready(function() {
         $('#riwayat_diklat_penjenjanganB').on('click',function() {
+            var data = JSON.parse($(this).attr("data"));
             $('#dasarB').removeClass('active');
             $('#riwayat_pendidikan_formalB').removeClass('active');
             $('#riwayat_diklat_fungsionalB').removeClass('active');
@@ -164,7 +168,7 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/riwayatDiklatPenjenjanganDeta", true);
+            xhttp.open("GET", "/riwayatDiklatPenjenjanganDeta/"+data.id, true);
             xhttp.send();
         });
     });
@@ -172,6 +176,7 @@
 <script>
     $(document).ready(function() {
         $('#riwayat_kepangkatanB').on('click',function() {
+            var data = JSON.parse($(this).attr("data"));
             $('#dasarB').removeClass('active');
             $('#riwayat_pendidikan_formalB').removeClass('active');
             $('#riwayat_diklat_fungsionalB').removeClass('active');
@@ -198,7 +203,7 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/riwayatKepangkatanDeta", true);
+            xhttp.open("GET", "/riwayatKepangkatanDeta/"+data.id, true);
             xhttp.send();
         });
     });
@@ -206,6 +211,7 @@
 <script>
     $(document).ready(function() {
         $('#riwayat_jabatan_strukturalB').on('click',function() {
+            var data = JSON.parse($(this).attr("data"));
             $('#dasarB').removeClass('active');
             $('#riwayat_pendidikan_formalB').removeClass('active');
             $('#riwayat_diklat_fungsionalB').removeClass('active');
@@ -232,7 +238,7 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/riwayatJabatanStrukturalDeta", true);
+            xhttp.open("GET", "/riwayatJabatanStrukturalDeta/"+data.id, true);
             xhttp.send();
         });
     });
@@ -240,6 +246,7 @@
 <script>
     $(document).ready(function() {
         $('#riwayat_jabatan_fungsionalB').on('click',function() {
+            var data = JSON.parse($(this).attr("data"));
             $('#dasarB').removeClass('active');
             $('#riwayat_pendidikan_formalB').removeClass('active');
             $('#riwayat_diklat_fungsionalB').removeClass('active');
@@ -266,7 +273,7 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/riwayatJabatanFungsionalDeta", true);
+            xhttp.open("GET", "/riwayatJabatanFungsionalDeta/"+data.id, true);
             xhttp.send();
         });
     });
@@ -274,6 +281,7 @@
 <script>
     $(document).ready(function() {
         $('#riwayat_pekerjaanB').on('click',function() {
+            var data = JSON.parse($(this).attr("data"));
             $('#dasarB').removeClass('active');
             $('#riwayat_pendidikan_formalB').removeClass('active');
             $('#riwayat_diklat_fungsionalB').removeClass('active');
@@ -300,7 +308,7 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/riwayatPekerjaanDeta", true);
+            xhttp.open("GET", "/riwayatPekerjaanDeta/"+data.id, true);
             xhttp.send();
         });
     });
@@ -309,6 +317,7 @@
     $(document).ready(function() {
         $('#pasanganB').on('click',function() {
             $('#dasarB').removeClass('active');
+            var data = JSON.parse($(this).attr("data"));
             $('#riwayat_pendidikan_formalB').removeClass('active');
             $('#riwayat_diklat_fungsionalB').removeClass('active');
             $('#riwayat_diklat_teknisB').removeClass('active');
@@ -334,7 +343,7 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/pasanganDeta", true);
+            xhttp.open("GET", "/pasanganDeta/"+data.id, true);
             xhttp.send();
         });
     });
@@ -342,6 +351,7 @@
 <script>
     $(document).ready(function() {
         $('#anakB').on('click',function() {
+            var data = JSON.parse($(this).attr("data"));
             $('#dasarB').removeClass('active');
             $('#riwayat_pendidikan_formalB').removeClass('active');
             $('#riwayat_diklat_fungsionalB').removeClass('active');
@@ -368,7 +378,7 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/anakDeta", true);
+            xhttp.open("GET", "/anakDeta/"+data.id, true);
             xhttp.send();
         });
     });
@@ -376,6 +386,7 @@
 <script>
     $(document).ready(function() {
         $('#seminarB').on('click',function() {
+            var data = JSON.parse($(this).attr("data"));
             $('#dasarB').removeClass('active');
             $('#riwayat_pendidikan_formalB').removeClass('active');
             $('#riwayat_diklat_fungsionalB').removeClass('active');
@@ -402,7 +413,7 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/seminarDeta", true);
+            xhttp.open("GET", "/seminarDeta/"+data.id, true);
             xhttp.send();
         });
     });
@@ -410,6 +421,7 @@
 <script>
     $(document).ready(function() {
         $('#jasaB').on('click',function() {
+            var data = JSON.parse($(this).attr("data"));
             $('#dasarB').removeClass('active');
             $('#riwayat_pendidikan_formalB').removeClass('active');
             $('#riwayat_diklat_fungsionalB').removeClass('active');
@@ -436,7 +448,7 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/jasaDeta", true);
+            xhttp.open("GET", "/jasaDeta/"+data.id, true);
             xhttp.send();
         });
     });
@@ -444,6 +456,7 @@
 <script>
     $(document).ready(function() {
         $('#hukumB').on('click',function() {
+            var data = JSON.parse($(this).attr("data"));
             $('#dasarB').removeClass('active');
             $('#riwayat_pendidikan_formalB').removeClass('active');
             $('#riwayat_diklat_fungsionalB').removeClass('active');
@@ -470,7 +483,7 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/hukumDeta", true);
+            xhttp.open("GET", "/hukumDeta/"+data.id, true);
             xhttp.send();
         });
     });
@@ -478,6 +491,7 @@
 <script>
     $(document).ready(function() {
         $('#organisasiB').on('click',function() {
+            var data = JSON.parse($(this).attr("data"));
             $('#dasarB').removeClass('active');
             $('#riwayat_pendidikan_formalB').removeClass('active');
             $('#riwayat_diklat_fungsionalB').removeClass('active');
@@ -504,7 +518,7 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/organisasiDeta", true);
+            xhttp.open("GET", "/organisasiDeta/"+data.id, true);
             xhttp.send();
         });
     });
@@ -512,6 +526,7 @@
 <script>
     $(document).ready(function() {
         $('#keluargaB').on('click',function() {
+            var data = JSON.parse($(this).attr("data"));
             $('#dasarB').removeClass('active');
             $('#riwayat_pendidikan_formalB').removeClass('active');
             $('#riwayat_diklat_fungsionalB').removeClass('active');
@@ -538,7 +553,7 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/keluargaDeta", true);
+            xhttp.open("GET", "/keluargaDeta/"+data.id, true);
             xhttp.send();
         });
     });

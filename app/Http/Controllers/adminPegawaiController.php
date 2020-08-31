@@ -105,92 +105,92 @@ class adminPegawaiController extends Controller
         return view('admin/content/pegawai/show_partial/dasar',$data);
     }
 
-    public function riwayatPendidikanFormalDeta()
+    public function riwayatPendidikanFormalDeta($id)
     {
         //
         return view('admin/content/pegawai/show_partial/riwayatPendidikanFormal');
     }
 
-    public function riwayatDiklatFungsionalDeta()
+    public function riwayatDiklatFungsionalDeta($id)
     {
         //
         return view('admin/content/pegawai/show_partial/riwayatDiklatFungsional');
     }
 
-    public function riwayatDiklatTeknisDeta()
+    public function riwayatDiklatTeknisDeta($id)
     {
         //
         return view('admin/content/pegawai/show_partial/riwayatDiklatTeknis');
     }
 
-    public function riwayatDiklatPenjenjanganDeta()
+    public function riwayatDiklatPenjenjanganDeta($id)
     {
         //
         return view('admin/content/pegawai/show_partial/riwayatDiklatPenjenjangan');
     }
 
-    public function riwayatKepangkatanDeta()
+    public function riwayatKepangkatanDeta($id)
     {
         //
         return view('admin/content/pegawai/show_partial/riwayatDiklatKepangkatan');
     }
 
-    public function riwayatJabatanStrukturalDeta()
+    public function riwayatJabatanStrukturalDeta($id)
     {
         //
         return view('admin/content/pegawai/show_partial/riwayatJabatanStruktural');
     }
 
-    public function riwayatJabatanFungsionalDeta()
+    public function riwayatJabatanFungsionalDeta($id)
     {
         //
         return view('admin/content/pegawai/show_partial/riwayatJabatanFungsional');
     }
 
-    public function riwayatPekerjaanDeta()
+    public function riwayatPekerjaanDeta($id)
     {
         //
         return view('admin/content/pegawai/show_partial/riwayatJabatanTeknis');
     }
 
-    public function pasanganDeta()
+    public function pasanganDeta($id)
     {
         //
         return view('admin/content/pegawai/show_partial/pasangan');
     }
 
-    public function anakDeta()
+    public function anakDeta($id)
     {
         //
         return view('admin/content/pegawai/show_partial/anak');
     }
 
-    public function seminarDeta()
+    public function seminarDeta($id)
     {
         //
         return view('admin/content/pegawai/show_partial/seminar');
     }
 
-    public function jasaDeta()
+    public function jasaDeta($id)
     {
         //
         return view('admin/content/pegawai/show_partial/jasa');
     }
 
-    public function hukumDeta()
+    public function hukumDeta($id)
     {
         //
         return view('admin/content/pegawai/show_partial/hukuman');
     }
 
-    public function organisasiDeta()
+    public function organisasiDeta($id)
     {
         //
         return view('admin/content/pegawai/show_partial/organisasi');
     }
 
 
-    public function keluargaDeta()
+    public function keluargaDeta($id)
     {
         //
         return view('admin/content/pegawai/show_partial/keluarga');
