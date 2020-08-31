@@ -64,7 +64,7 @@
     <table>
         <tr>
             <td class="masariuman-width30percent">
-                <div class="masariuman-photoProfile"></div>
+                <div class="masariuman-photoProfile" style="background-image: url('/iniTemplate/gambar/chonk.jpg')"></div>
             </td>
             <td>
                 <div id="benda">
