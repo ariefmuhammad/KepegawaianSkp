@@ -148,22 +148,22 @@ Route::group(['prefix' => 'admin', 'middleware'=>['auth','checkRole:TU']], funct
 
 Route::get('/ruanganDeta','adminRuanganController@deta');
 Route::get('/pegawaiDeta','adminPegawaiController@deta');
-Route::get('/dasarDeta','adminPegawaiController@dasarDeta');
-Route::get('/riwayatPendidikanFormalDeta','adminPegawaiController@riwayatPendidikanFormalDeta');
-Route::get('/riwayatDiklatFungsionalDeta','adminPegawaiController@riwayatDiklatFungsionalDeta');
-Route::get('/riwayatDiklatTeknisDeta','adminPegawaiController@riwayatDiklatTeknisDeta');
-Route::get('/riwayatDiklatPenjenjanganDeta','adminPegawaiController@riwayatDiklatPenjenjanganDeta');
-Route::get('/riwayatKepangkatanDeta','adminPegawaiController@riwayatKepangkatanDeta');
-Route::get('/riwayatJabatanStrukturalDeta','adminPegawaiController@riwayatJabatanStrukturalDeta');
-Route::get('/riwayatJabatanFungsionalDeta','adminPegawaiController@riwayatJabatanFungsionalDeta');
-Route::get('/riwayatPekerjaanDeta','adminPegawaiController@riwayatPekerjaanDeta');
-Route::get('/pasanganDeta','adminPegawaiController@pasanganDeta');
-Route::get('/anakDeta','adminPegawaiController@anakDeta');
-Route::get('/seminarDeta','adminPegawaiController@seminarDeta');
-Route::get('/jasaDeta','adminPegawaiController@jasaDeta');
-Route::get('/hukumDeta','adminPegawaiController@hukumDeta');
-Route::get('/organisasiDeta','adminPegawaiController@organisasiDeta');
-Route::get('/keluargaDeta','adminPegawaiController@keluargaDeta');
+Route::get('/dasarDeta/{id}','adminPegawaiController@dasarDeta');
+Route::get('/riwayatPendidikanFormalDeta/{id}','adminPegawaiController@riwayatPendidikanFormalDeta');
+Route::get('/riwayatDiklatFungsionalDeta/{id}','adminPegawaiController@riwayatDiklatFungsionalDeta');
+Route::get('/riwayatDiklatTeknisDeta/{id}','adminPegawaiController@riwayatDiklatTeknisDeta');
+Route::get('/riwayatDiklatPenjenjanganDeta/{id}','adminPegawaiController@riwayatDiklatPenjenjanganDeta');
+Route::get('/riwayatKepangkatanDeta/{id}','adminPegawaiController@riwayatKepangkatanDeta');
+Route::get('/riwayatJabatanStrukturalDeta/{id}','adminPegawaiController@riwayatJabatanStrukturalDeta');
+Route::get('/riwayatJabatanFungsionalDeta/{id}','adminPegawaiController@riwayatJabatanFungsionalDeta');
+Route::get('/riwayatPekerjaanDeta/{id}','adminPegawaiController@riwayatPekerjaanDeta');
+Route::get('/pasanganDeta/{id}','adminPegawaiController@pasanganDeta');
+Route::get('/anakDeta/{id}','adminPegawaiController@anakDeta');
+Route::get('/seminarDeta/{id}','adminPegawaiController@seminarDeta');
+Route::get('/jasaDeta/{id}','adminPegawaiController@jasaDeta');
+Route::get('/hukumDeta/{id}','adminPegawaiController@hukumDeta');
+Route::get('/organisasiDeta/{id}','adminPegawaiController@organisasiDeta');
+Route::get('/keluargaDeta/{id}','adminPegawaiController@keluargaDeta');
 
 Route::group(['prefix' => 'it'], function () {
     Route::resource('/','adminDashboardController');

@@ -1,6 +1,7 @@
 <script>
     $(document).ready(function() {
         $('#dasarB').on('click',function() {
+            var data = JSON.parse($(this).attr("data"));
             $('#dasarB').addClass('active');
             $('#riwayat_pendidikan_formalB').removeClass('active');
             $('#riwayat_diklat_fungsionalB').removeClass('active');
@@ -27,7 +28,7 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/dasarDeta", true);
+            xhttp.open("GET", "/dasarDeta/"+data.id, true);
             xhttp.send();
         });
     });
