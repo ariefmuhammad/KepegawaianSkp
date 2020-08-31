@@ -63,7 +63,7 @@
 <div>
     <table class="masariuman-width100percent">
         <tr>
-            <td class="masariuman-width50percent">
+            <td class="masariuman-width40percent">
                 <div class="masariuman-nameNip text-center">
                     <p style="margin-bottom: 0;">{{$pegawai->user->name}}</p>
                     <p>NIP : {{$pegawai->nip_baru}}</p>
@@ -72,12 +72,20 @@
             </td>
             <td>
                 <div id="benda">
-                    <table>
-                        <tr>
-                            <td>asdsadasd</td>
-                            <td>asdsa</td>
-                        </tr>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td class="masariuman-tdBgBlack">asdsadasd</td>
+                                    <td>asdsa</td>
+                                </tr>
+                                <tr>
+                                    <td class="masariuman-tdBgBlack">asdsadasd</td>
+                                    <td>asdsa</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </td>
         </tr>
