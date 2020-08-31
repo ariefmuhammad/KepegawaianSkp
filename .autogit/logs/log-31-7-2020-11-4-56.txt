@@ -1,0 +1,28 @@
+-------------------- Auto-Git Log --------------------
+		Mon Aug 31 2020 11:04:56 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/content/pegawai/show_partial/anak.blade.php
+* resources/views/admin/content/pegawai/show_partial/hukuman.blade.php
+* resources/views/admin/content/pegawai/show_partial/jasa.blade.php
+* resources/views/admin/content/pegawai/show_partial/keluarga.blade.php
+* resources/views/admin/content/pegawai/show_partial/organinasi.blade.php
+* resources/views/admin/content/pegawai/show_partial/pasangan.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatDiklatFungsional.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatDiklatKepangkatan.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatDiklatPenjenjangan.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatDiklatTeknis.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatJabatanFungsional.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatJabatanStruktural.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatJabatanTeknis.blade.php
+* resources/views/admin/content/pegawai/show_partial/seminar.blade.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
