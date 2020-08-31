@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Mon Aug 31 2020 11:35:11 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/adminPegawaiController.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-31-7-2020-11-25-5.txt
+
+
+Deleted files:
+
+
+Renamed files:
+* [object Object]
