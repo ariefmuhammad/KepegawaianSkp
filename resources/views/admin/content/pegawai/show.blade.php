@@ -59,6 +59,7 @@
     <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="keluargaB">Keluarga</button>
     <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info">SKP</button>
 </div>
+<hr />
 <div>
     <table>
         <tr>
