@@ -1,6 +1,22 @@
 <script>
     $(document).ready(function() {
         $('#dasarB').on('click',function() {
+            $('#dasarB').addClass('active');
+            $('#riwayat_diklat_fungsionalB').removeClass('active');
+            $('#riwayat_diklat_fungsionalB').removeClass('active');
+            $('#riwayat_diklat_teknisB').removeClass('active');
+            $('#riwayat_diklat_penjenjanganB').removeClass('active');
+            $('#riwayat_kepangkatanB').removeClass('active');
+            $('#riwayat_jabatan_strukturalB').removeClass('active');
+            $('#riwayat_jabatan_fungsionalB').removeClass('active');
+            $('#riwayat_pekerjaanB').removeClass('active');
+            $('#pasanganB').removeClass('active');
+            $('#anakB').removeClass('active');
+            $('#seminarB').removeClass('active');
+            $('#jasaB').removeClass('active');
+            $('#hukumB').removeClass('active');
+            $('#organisasiB').removeClass('active');
+            $('#keluargaB').removeClass('active');
             const xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
