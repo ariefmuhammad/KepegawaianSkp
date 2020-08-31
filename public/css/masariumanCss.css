@@ -101,3 +101,22 @@
     font-size: 20px;
     width: 40%;
 }
+
+.masariuman-verticalAlignBaseline{
+    vertical-align: baseline;
+}
+
+.masariuman-titleTable {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 40px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
