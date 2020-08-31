@@ -64,7 +64,7 @@
     <table>
         <tr>
             <td class="masariuman-width30percent">
-                awd
+                <div class="masariuman-photoProfile"></div>
             </td>
             <td>
                 <div id="benda">

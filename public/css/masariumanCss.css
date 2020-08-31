@@ -62,3 +62,11 @@
 .masariuman-width30percent{
     width: 30%;
 }
+
+
+.masariuman-photoProfile {
+    border: 12px ridge #1C6EA4;
+    border-radius: 36px;
+    margin: 100px;
+    height: 500px;
+}
