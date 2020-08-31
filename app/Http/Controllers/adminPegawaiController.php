@@ -47,6 +47,92 @@ class adminPegawaiController extends Controller
         return view('admin/content/pegawai/show_partial/riwayatPendidikanFormal');
     }
 
+    public function riwayatDiklatFungsionalDeta()
+    {
+        //
+        return view('admin/content/pegawai/show_partial/riwayatDiklatFungsional');
+    }
+
+    public function riwayatDiklatTeknisDeta()
+    {
+        //
+        return view('admin/content/pegawai/show_partial/riwayatDiklatTeknis');
+    }
+
+    public function riwayatDiklatPenjenjanganDeta()
+    {
+        //
+        return view('admin/content/pegawai/show_partial/riwayatDiklatPenjenjangan');
+    }
+
+    public function riwayatKepangkatanDeta()
+    {
+        //
+        return view('admin/content/pegawai/show_partial/riwayatDiklatKepangkatan');
+    }
+
+    public function riwayatJabatanStrukturalDeta()
+    {
+        //
+        return view('admin/content/pegawai/show_partial/riwayatJabatanStruktural');
+    }
+
+    public function riwayatJabatanFungsionalDeta()
+    {
+        //
+        return view('admin/content/pegawai/show_partial/riwayatJabatanFungsional');
+    }
+
+    public function riwayatPekerjaanDeta()
+    {
+        //
+        return view('admin/content/pegawai/show_partial/riwayatJabatanTeknis');
+    }
+
+    public function pasanganDeta()
+    {
+        //
+        return view('admin/content/pegawai/show_partial/pasangan');
+    }
+
+    public function anakDeta()
+    {
+        //
+        return view('admin/content/pegawai/show_partial/anak');
+    }
+
+    public function seminarDeta()
+    {
+        //
+        return view('admin/content/pegawai/show_partial/seminar');
+    }
+
+    public function jasaDeta()
+    {
+        //
+        return view('admin/content/pegawai/show_partial/jasa');
+    }
+
+    public function hukumDeta()
+    {
+        //
+        return view('admin/content/pegawai/show_partial/hukuman');
+    }
+
+    public function organisasiDeta()
+    {
+        //
+        return view('admin/content/pegawai/show_partial/organisasi');
+    }
+
+
+    public function keluargaDeta()
+    {
+        //
+        return view('admin/content/pegawai/show_partial/keluarga');
+    }
+
+
     public function deta()
     {
         //
