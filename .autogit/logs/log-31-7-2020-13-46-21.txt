@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Mon Aug 31 2020 13:46:21 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* public/css/masariumanCss.css
+* resources/views/admin/content/pegawai/show.blade.php
+
+
+Created files:
+* .autogit/logs/log-31-7-2020-13-36-17.txt
+* public/iniTemplate/gambar/chonk.jpg
+
+
+Deleted files:
+
+
+Renamed files:

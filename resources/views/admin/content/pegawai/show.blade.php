@@ -61,14 +61,19 @@
 </div>
 <hr />
 <div>
-    <table>
+    <table class="masariuman-width100percent">
         <tr>
             <td class="masariuman-width30percent">
                 <div class="masariuman-photoProfile" style="background-image: url('/iniTemplate/gambar/chonk.jpg')"></div>
             </td>
             <td>
                 <div id="benda">
-                    dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar dasar
+                    <table>
+                        <tr>
+                            <td>asdsadasd</td>
+                            <td>asdsa</td>
+                        </tr>
+                    </table>
                 </div>
             </td>
         </tr>
