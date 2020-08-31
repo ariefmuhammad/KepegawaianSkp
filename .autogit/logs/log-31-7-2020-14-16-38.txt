@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Mon Aug 31 2020 14:16:38 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* public/css/masariumanCss.css
+* resources/views/admin/content/pegawai/show.blade.php
+
+
+Created files:
+* .autogit/logs/log-31-7-2020-14-6-31.txt
+
+
+Deleted files:
+
+
+Renamed files:

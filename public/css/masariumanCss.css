@@ -71,7 +71,7 @@
 .masariuman-photoProfile {
     border: 12px ridge #1C6EA4;
     border-radius: 36px;
-    margin: 0 100px 100px 100px;
+    margin: auto;
     height: 500px;
     width: 300px;
     background-size: cover;
