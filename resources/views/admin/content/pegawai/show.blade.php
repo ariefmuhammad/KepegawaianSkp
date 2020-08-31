@@ -63,9 +63,11 @@
 <div>
     <table class="masariuman-width100percent">
         <tr>
-            <td class="masariuman-width30percent">
-                {{$pegawai->user->name}}
-                {{$pegawai->nip_baru}}
+            <td class="masariuman-width50percent">
+                <div class="masariuman-nameNip text-center">
+                    <p style="margin-bottom: 0;">{{$pegawai->user->name}}</p>
+                    <p>NIP : {{$pegawai->nip_baru}}</p>
+                </div>
                 <div class="masariuman-photoProfile" style="background-image: url('/iniTemplate/gambar/chonk.jpg')"></div>
             </td>
             <td>
