@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Mon Aug 31 2020 11:15:02 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/content/pegawai/show.blade.php
+
+
+Created files:
+* .autogit/logs/log-31-7-2020-11-4-56.txt
+* resources/views/admin/content/pegawai/show_partial/buttonJs.blade.php
+
+
+Deleted files:
+
+
+Renamed files:

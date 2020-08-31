@@ -144,7 +144,7 @@
 </script>
 <script>
     $(document).ready(function() {
-        $('#riwayat_pendidikan_formalB').on('click',function() {
+        $('#riwayat_pekerjaanB').on('click',function() {
             const xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -155,14 +155,14 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/riwayatPendidikanFormalDeta", true);
+            xhttp.open("GET", "/riwayatPekerjaanDeta", true);
             xhttp.send();
         });
     });
 </script>
 <script>
     $(document).ready(function() {
-        $('#riwayat_pendidikan_formalB').on('click',function() {
+        $('#pasanganB').on('click',function() {
             const xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -173,14 +173,14 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/riwayatPendidikanFormalDeta", true);
+            xhttp.open("GET", "/pasanganDeta", true);
             xhttp.send();
         });
     });
 </script>
 <script>
     $(document).ready(function() {
-        $('#riwayat_pendidikan_formalB').on('click',function() {
+        $('#anakB').on('click',function() {
             const xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -191,14 +191,14 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/riwayatPendidikanFormalDeta", true);
+            xhttp.open("GET", "/anakDeta", true);
             xhttp.send();
         });
     });
 </script>
 <script>
     $(document).ready(function() {
-        $('#riwayat_pendidikan_formalB').on('click',function() {
+        $('#seminarB').on('click',function() {
             const xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -209,14 +209,14 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/riwayatPendidikanFormalDeta", true);
+            xhttp.open("GET", "/seminarDeta", true);
             xhttp.send();
         });
     });
 </script>
 <script>
     $(document).ready(function() {
-        $('#riwayat_pendidikan_formalB').on('click',function() {
+        $('#jasaB').on('click',function() {
             const xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -227,14 +227,14 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/riwayatPendidikanFormalDeta", true);
+            xhttp.open("GET", "/jasaDeta", true);
             xhttp.send();
         });
     });
 </script>
 <script>
     $(document).ready(function() {
-        $('#riwayat_pendidikan_formalB').on('click',function() {
+        $('#hukumB').on('click',function() {
             const xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -245,14 +245,14 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/riwayatPendidikanFormalDeta", true);
+            xhttp.open("GET", "/hukumDeta", true);
             xhttp.send();
         });
     });
 </script>
 <script>
     $(document).ready(function() {
-        $('#riwayat_pendidikan_formalB').on('click',function() {
+        $('#organisasiB').on('click',function() {
             const xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -263,14 +263,14 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/riwayatPendidikanFormalDeta", true);
+            xhttp.open("GET", "/organisasiDeta", true);
             xhttp.send();
         });
     });
 </script>
 <script>
     $(document).ready(function() {
-        $('#riwayat_pendidikan_formalB').on('click',function() {
+        $('#keluargaB').on('click',function() {
             const xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -281,7 +281,7 @@
                     }) ;
                 }
             };
-            xhttp.open("GET", "/riwayatPendidikanFormalDeta", true);
+            xhttp.open("GET", "/keluargaDeta", true);
             xhttp.send();
         });
     });
