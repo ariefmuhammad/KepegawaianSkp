@@ -7,8 +7,8 @@
             <thead>
                 <tr>
                     <th class="width40 text-center">No</th>
-                    <th class="text-center">Nomor Karis (Kartu Istri)</th>
-                    <th class="text-center">Nama Istri</th>
+                    <th class="text-center">Nomor {{ $pegawai->jenis_kelamin === 'W' ? 'Karsu (Kartu Suami)' : 'Karis (Kartu Istri)' }}</th>
+                    <th class="text-center">Nama {{ $pegawai->jenis_kelamin === 'W' ? 'Suami' : 'Istri' }}</th>
                     <th class="width100px text-center">Aksi</th>
                 </tr>
                 </thead>

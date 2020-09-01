@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Tue Sep 01 2020 11:14:59 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/adminPegawaiController.php
+* resources/views/admin/content/pegawai/show_partial/pasangan.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatJabatanFungsional.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatJabatanStruktural.blade.php
+* resources/views/admin/content/pegawai/show_partial/riwayatJabatanTeknis.blade.php
+
+
+Created files:
+* .autogit/logs/log-1-8-2020-11-4-54.txt
+
+
+Deleted files:
+
+
+Renamed files:
