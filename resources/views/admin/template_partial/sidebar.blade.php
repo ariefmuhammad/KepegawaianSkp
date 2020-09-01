@@ -10,7 +10,7 @@
     <div class="logged-user-w avatar-inline">
         <div class="logged-user-i">
             <div class="avatar-w">
-                <img alt="" src="/iniTemplate/gambar/chonk.jpg">
+                <img alt="" src="/iniTemplate/dist/img/avatar1.jpg">
             </div>
             <div class="logged-user-toggler-arrow">
                 <div class="os-icon os-icon-chevron-down"></div>
@@ -18,7 +18,7 @@
             <div class="logged-user-menu color-style-bright">
                 <div class="logged-user-avatar-info">
                     <div class="avatar-w">
-                        <img alt="" src="/iniTemplate/gambar/chonk.jpg">
+                        <img alt="" src="/iniTemplate/dist/img/avatar1.jpg">
                     </div>
                     <div class="logged-user-info-w">
                         <div class="logged-user-name">
