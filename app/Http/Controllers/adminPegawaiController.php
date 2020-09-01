@@ -174,20 +174,78 @@ class adminPegawaiController extends Controller
 
     public function riwayatDiklatTeknisDeta($id)
     {
-        //
-        return view('admin/content/pegawai/show_partial/riwayatDiklatTeknis');
+        //riwayat diklat teknis
+        $data['diklat_teknis'] = DiklatTeknis::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
+        foreach ($data['diklat_teknis'] as $key => $value) {
+            if ($value['tempat_belajar'] === "1") {
+                $value['tempat_belajar'] = "Dalam Negeri";
+            } else {
+                $value['tempat_belajar'] = "Luar Negeri";
+            }
+            $convertTanggal = New Carbon($value['tanggal_mulai']);
+            $value['tanggal_mulai'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tanggal_mulai'] = date("d F Y", strtotime($value['tanggal_mulai']));
+            $convertTanggal = New Carbon($value['tanggal_selesai']);
+            $value['tanggal_selesai'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tanggal_selesai'] = date("d F Y", strtotime($value['tanggal_selesai']));
+        }
+        if (empty($data['diklat_teknis'][0])) {
+            $data['ketersediaan'] = 0;
+        } else {
+            $data['ketersediaan'] = 1;
+        }
+        return view('admin/content/pegawai/show_partial/riwayatDiklatTeknis',$data);
     }
 
     public function riwayatDiklatPenjenjanganDeta($id)
     {
-        //
-        return view('admin/content/pegawai/show_partial/riwayatDiklatPenjenjangan');
+        //riwayat diklat penjenjangan
+        $data['diklat_penjenjangan'] = DiklatPenjenjangan::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
+        foreach ($data['diklat_penjenjangan'] as $key => $value) {
+            if ($value['jenis_diklat'] === "1") {
+                $value['jenis_diklat'] = "Diklatpim Tk I";
+            } else if ($value['jenis_diklat'] === "2"){
+                $value['jenis_diklat'] = "Diklatpim Tk II";
+            } else if ($value['jenis_diklat'] === "3"){
+                $value['jenis_diklat'] = "Diklatpim Tk III";
+            } else if ($value['jenis_diklat'] === "4"){
+                $value['jenis_diklat'] = "Diklatpim Tk IV";
+            } else {
+                $value['jenis_diklat'] = "Diklat Lain Yang Setara";
+            }
+            $convertTanggal = New Carbon($value['tanggal_mulai']);
+            $value['tanggal_mulai'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tanggal_mulai'] = date("d F Y", strtotime($value['tanggal_mulai']));
+            $convertTanggal = New Carbon($value['tanggal_selesai']);
+            $value['tanggal_selesai'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tanggal_selesai'] = date("d F Y", strtotime($value['tanggal_selesai']));
+        }
+        if (empty($data['diklat_penjenjangan'][0])) {
+            $data['ketersediaan'] = 0;
+        } else {
+            $data['ketersediaan'] = 1;
+        }
+        return view('admin/content/pegawai/show_partial/riwayatDiklatPenjenjangan',$data);
     }
 
     public function riwayatKepangkatanDeta($id)
     {
-        //
-        return view('admin/content/pegawai/show_partial/riwayatDiklatKepangkatan');
+        //riwayat kepangkatan
+        $data['kepangkatan'] = Kepangkatan::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
+        foreach ($data['kepangkatan'] as $key => $value) {
+            $convertTanggal = New Carbon($value['tmt_golongan']);
+            $value['tmt_golongan'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tmt_golongan'] = date("d F Y", strtotime($value['tmt_golongan']));
+            $convertTanggal = New Carbon($value['tanggal_sk']);
+            $value['tanggal_sk'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tanggal_sk'] = date("d F Y", strtotime($value['tanggal_sk']));
+        }
+        if (empty($data['kepangkatan'][0])) {
+            $data['ketersediaan'] = 0;
+        } else {
+            $data['ketersediaan'] = 1;
+        }
+        return view('admin/content/pegawai/show_partial/riwayatDiklatKepangkatan',$data);
     }
 
     public function riwayatJabatanStrukturalDeta($id)
@@ -388,56 +446,6 @@ class adminPegawaiController extends Controller
             $data['pegawai']['taspen'] = "Sudah";
         }else {
             $data['pegawai']['taspen'] = "Belum";
-        }
-
-
-        //riwayat diklat perjenjangan
-        $data['diklat_penjenjangan'] = DiklatPenjenjangan::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
-        foreach ($data['diklat_penjenjangan'] as $key => $value) {
-            if ($value['jenis_diklat'] === "1") {
-                $value['jenis_diklat'] = "Diklatpim Tk I";
-            } else if ($value['jenis_diklat'] === "2"){
-                $value['jenis_diklat'] = "Diklatpim Tk II";
-            } else if ($value['jenis_diklat'] === "3"){
-                $value['jenis_diklat'] = "Diklatpim Tk III";
-            } else if ($value['jenis_diklat'] === "4"){
-                $value['jenis_diklat'] = "Diklatpim Tk IV";
-            } else {
-                $value['jenis_diklat'] = "Diklat Lain Yang Setara";
-            }
-            $convertTanggal = New Carbon($value['tanggal_mulai']);
-            $value['tanggal_mulai'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tanggal_mulai'] = date("d F Y", strtotime($value['tanggal_mulai']));
-            $convertTanggal = New Carbon($value['tanggal_selesai']);
-            $value['tanggal_selesai'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tanggal_selesai'] = date("d F Y", strtotime($value['tanggal_selesai']));
-        }
-
-        //riwayat diklat teknis
-        $data['diklat_teknis'] = DiklatTeknis::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
-        foreach ($data['diklat_teknis'] as $key => $value) {
-            if ($value['tempat_belajar'] === "1") {
-                $value['tempat_belajar'] = "Dalam Negeri";
-            } else {
-                $value['tempat_belajar'] = "Luar Negeri";
-            }
-            $convertTanggal = New Carbon($value['tanggal_mulai']);
-            $value['tanggal_mulai'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tanggal_mulai'] = date("d F Y", strtotime($value['tanggal_mulai']));
-            $convertTanggal = New Carbon($value['tanggal_selesai']);
-            $value['tanggal_selesai'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tanggal_selesai'] = date("d F Y", strtotime($value['tanggal_selesai']));
-        }
-
-        //riwayat kepangkatan
-        $data['kepangkatan'] = Kepangkatan::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
-        foreach ($data['kepangkatan'] as $key => $value) {
-            $convertTanggal = New Carbon($value['tmt_golongan']);
-            $value['tmt_golongan'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tmt_golongan'] = date("d F Y", strtotime($value['tmt_golongan']));
-            $convertTanggal = New Carbon($value['tanggal_sk']);
-            $value['tanggal_sk'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tanggal_sk'] = date("d F Y", strtotime($value['tanggal_sk']));
         }
 
         //riwayat jabatan struktural
