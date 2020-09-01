@@ -107,8 +107,40 @@ class adminPegawaiController extends Controller
 
     public function riwayatPendidikanFormalDeta($id)
     {
-        //
-        return view('admin/content/pegawai/show_partial/riwayatPendidikanFormal');
+        //riwayat pendidikan formal
+        $data['pendidikan_formal'] = PendidikanFormal::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
+        foreach ($data['pendidikan_formal'] as $key => $value) {
+            if ($value['tingkat_pendidikan'] === "01") {
+                $value['tingkat_pendidikan'] = "S3 (Setara)";
+            } else if ($value['tingkat_pendidikan'] === "02") {
+                $value['tingkat_pendidikan'] = "S2 (Setara)";
+            } else if ($value['tingkat_pendidikan'] === "03") {
+                $value['tingkat_pendidikan'] = "S1 (Setara)";
+            } else if ($value['tingkat_pendidikan'] === "04") {
+                $value['tingkat_pendidikan'] = "D4";
+            } else if ($value['tingkat_pendidikan'] === "05") {
+                $value['tingkat_pendidikan'] = "SM";
+            } else if ($value['tingkat_pendidikan'] === "06") {
+                $value['tingkat_pendidikan'] = "D3";
+            } else if ($value['tingkat_pendidikan'] === "07") {
+                $value['tingkat_pendidikan'] = "D2";
+            } else if ($value['tingkat_pendidikan'] === "08") {
+                $value['tingkat_pendidikan'] = "D1";
+            } else if ($value['tingkat_pendidikan'] === "09") {
+                $value['tingkat_pendidikan'] = "SLTA";
+            } else if ($value['tingkat_pendidikan'] === "10") {
+                $value['tingkat_pendidikan'] = "SLTP";
+            } else {
+                $value['tingkat_pendidikan'] = "SD";
+            }
+            if ($value['tempat_belajar'] === "1") {
+                $value['tempat_belajar'] = "Dalam Negeri";
+            } else {
+                $value['tempat_belajar'] = "Luar Negeri";
+            }
+        }
+        dd($data['pendidikan_formal']);
+        return view('admin/content/pegawai/show_partial/riwayatPendidikanFormal',$data);
     }
 
     public function riwayatDiklatFungsionalDeta($id)
@@ -335,38 +367,7 @@ class adminPegawaiController extends Controller
             $data['pegawai']['taspen'] = "Belum";
         }
 
-        //riwayat pendidikan formal
-        $data['pendidikan_formal'] = PendidikanFormal::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
-        foreach ($data['pendidikan_formal'] as $key => $value) {
-            if ($value['tingkat_pendidikan'] === "01") {
-                $value['tingkat_pendidikan'] = "S3 (Setara)";
-            } else if ($value['tingkat_pendidikan'] === "02") {
-                $value['tingkat_pendidikan'] = "S2 (Setara)";
-            } else if ($value['tingkat_pendidikan'] === "03") {
-                $value['tingkat_pendidikan'] = "S1 (Setara)";
-            } else if ($value['tingkat_pendidikan'] === "04") {
-                $value['tingkat_pendidikan'] = "D4";
-            } else if ($value['tingkat_pendidikan'] === "05") {
-                $value['tingkat_pendidikan'] = "SM";
-            } else if ($value['tingkat_pendidikan'] === "06") {
-                $value['tingkat_pendidikan'] = "D3";
-            } else if ($value['tingkat_pendidikan'] === "07") {
-                $value['tingkat_pendidikan'] = "D2";
-            } else if ($value['tingkat_pendidikan'] === "08") {
-                $value['tingkat_pendidikan'] = "D1";
-            } else if ($value['tingkat_pendidikan'] === "09") {
-                $value['tingkat_pendidikan'] = "SLTA";
-            } else if ($value['tingkat_pendidikan'] === "10") {
-                $value['tingkat_pendidikan'] = "SLTP";
-            } else {
-                $value['tingkat_pendidikan'] = "SD";
-            }
-            if ($value['tempat_belajar'] === "1") {
-                $value['tempat_belajar'] = "Dalam Negeri";
-            } else {
-                $value['tempat_belajar'] = "Luar Negeri";
-            }
-        }
+
 
 
         //riwayat diklat fungsional
