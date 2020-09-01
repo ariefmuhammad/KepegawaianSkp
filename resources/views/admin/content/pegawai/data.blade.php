@@ -8,6 +8,7 @@
             <th class="width100px text-center">Ruangan</th>
             <th class="text-center">Aksi</th>
         </tr>
+    </thead>
     <tbody>
         @foreach ($pegawai as $no => $item)
             <tr>

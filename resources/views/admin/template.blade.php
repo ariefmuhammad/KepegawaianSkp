@@ -17,9 +17,7 @@
                     <div class="content-i masariuman-minheight100vh">
                         <div class="content-box">
                             <div class="element-wrapper">
-                                <div class="element-box">
-                                    @yield('content')
-                                </div>
+                                @yield('content')
                             </div>
                             {{-- mode malam --}}
                             <div class="floated-colors-btn floated-chat-btn">

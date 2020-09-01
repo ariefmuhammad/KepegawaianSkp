@@ -36,210 +36,212 @@
 
 
 @section('content')
-<div class="text-center">
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info active" id="dasarB" data="{{$pegawai}}">Dasar</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_pendidikan_formalB" data="{{$pegawai}}">Riwayat Pendidikan Formal</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_diklat_fungsionalB" data="{{$pegawai}}">Riwayat Diktal Fungsional</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_diklat_teknisB" data="{{$pegawai}}">Riwayat Diklat Teknis</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_diklat_penjenjanganB" data="{{$pegawai}}">Riwayat Diklat Penjenjangan</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_kepangkatanB" data="{{$pegawai}}">Riwayat Kepangkatan</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_jabatan_strukturalB" data="{{$pegawai}}">Riwayat Jabatan Struktural</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_jabatan_fungsionalB" data="{{$pegawai}}">Riwayat Jabatan Fungsional</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_pekerjaanB" data="{{$pegawai}}">Riwayat Pekerjaan/Jabatan Teknis</button>
-    @if ($pegawai->jenis_kelamin === 'W')
-        <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="pasanganB" data="{{$pegawai}}">Suami</button>
-    @else
-        <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="pasanganB" data="{{$pegawai}}">Istri</button>
-    @endif
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="anakB" data="{{$pegawai}}">Anak</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="seminarB" data="{{$pegawai}}">Seminar/Lokakarya/Simposium</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="jasaB" data="{{$pegawai}}">Tanda Jasa/Penghargaan</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="hukumB" data="{{$pegawai}}">Hukuman Disiplin</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="organisasiB" data="{{$pegawai}}">Keanggotaan Organisasi</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="keluargaB" data="{{$pegawai}}">Keluarga</button>
-    <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info">SKP</button>
-</div>
-<hr />
-<div>
-    <table class="masariuman-width100percent">
-        <tr>
-            <td class="masariuman-width40percent masariuman-verticalAlignBaseline">
-                <div class="masariuman-nameNip text-center">
-                    <p style="margin-bottom: 0;">{{$pegawai->user->name}}</p>
-                    <p>NIP : {{$pegawai->nip_baru}}</p>
-                </div>
-                <div class="masariuman-photoProfile" style="background-image: url('/iniTemplate/gambar/chonk.jpg')"></div>
-            </td>
-            <td>
-                <div id="benda">
-                    <div class="text-center masariuman-titleTable">Data Pegawai</div>
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <tbody>
-                                <tr>
-                                    <td class="masariuman-tdBgBlack">ESELON I</td>
-                                    <td>{{$pegawai->eselon_1}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">ESELON II</th>
-                                    <td>{{$pegawai->eselon_2}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">ESELON III</th>
-                                    <td>{{$pegawai->eselon_3}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">ESELON IV</th>
-                                    <td>{{$pegawai->eselon_4}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">NIP BARU</th>
-                                    <td>{{$pegawai->nip_baru}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">NIP LAMA</th>
-                                    <td>{{$pegawai->nip_lama}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">NAMA PEGAWAI</th>
-                                    <td>{{$pegawai->nama_pegawai}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">GELAR DEPAN</th>
-                                    <td>{{$pegawai->gelar_depan}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">GELAR BELAKANG</th>
-                                    <td>{{$pegawai->gelar_belakang}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">TANGGAL LAHIR</th>
-                                    <td>{{$pegawai->tanggal_lahir}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">TEMPAT LAHIR</th>
-                                    <td>{{$pegawai->tempat_lahir}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">JENIS KELAMIN</th>
-                                    <td>{{$pegawai->jenis_kelamin}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">STATUS KELUARGA</th>
-                                    <td>{{$pegawai->status_keluarga}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">AGAMA</th>
-                                    <td>{{$pegawai->agama}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">PENDIDIKAN AKHIR</th>
-                                    <td>{{$pegawai->pendidikan_akhir}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">NAMA SEKOLAH/TAHUN LULUS</th>
-                                    <td>{{$pegawai->nama_sekolah}}/{{$pegawai->tahun_lulus}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">JURUSAN / PROGRAM STUDI</th>
-                                    <td>{{$pegawai->jurusan_prodi}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">STATUS KEPEGAWAIAN</th>
-                                    <td>{{$pegawai->status_kepegawaian}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">INSTANSI ASAL</th>
-                                    <td>{{$pegawai->instansi_asal}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">TMT CALON PEGAWAI NEGERI SIPIL</th>
-                                    <td>{{$pegawai->tmt_cpns}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">GOLONGAN/RUANG TERAKHIR</th>
-                                    <td>{{$pegawai->golongan}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">TMT Golongan</th>
-                                    <td>{{$pegawai->tmt_golongan}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">NAMA JABATAN</th>
-                                    <td>{{$pegawai->nama_jabatan}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">NOMOR KARPEG</th>
-                                    <td>{{$pegawai->nomor_karpeg}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">TASPEN</th>
-                                    <td>{{$pegawai->taspen}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">NOMOR NPWP</th>
-                                    <td>{{$pegawai->nomor_npwp}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">ALAMAT RUMAH</th>
-                                    <td>{{$pegawai->alamat_rumah}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">KOTA</th>
-                                    <td>{{$pegawai->kota}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">KODE POS</th>
-                                    <td>{{$pegawai->kode_pos}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">NOMOR TELEPON</th>
-                                    <td>
-                                        @if (!empty($pegawai->telepon->telepon))
-                                            {{$pegawai->telepon->telepon}}
-                                        @endif
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">NOMOR STR (SURAT TANDA REGISTRASI)</th>
-                                    <td>{{$pegawai->str}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">MASA BERLAKU STR</th>
-                                    <td>{{$pegawai->masa_str}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">NOMOR SIKP (SURAT IZIN KERJA PERAWAT)</th>
-                                    <td>{{$pegawai->sikp}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">MASA BERLAKU SIKP</th>
-                                    <td>{{$pegawai->masa_sikp}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">NOMOR SPK (SURAT PENUGASAAN KEWENANGAN KLINIS)</th>
-                                    <td>{{$pegawai->spk}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">MASA BERLAKU SPK</th>
-                                    <td>{{$pegawai->masa_spk}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">NOMOR RKK (RINCIAN KEWENANGAN KLINIS)</th>
-                                    <td>{{$pegawai->rkk}}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" class="masariuman-tdBgBlack">MASA BERLAKU RKK</th>
-                                    <td>{{$pegawai->masa_rkk}}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </td>
-        </tr>
-    </table>
-</div>
+    <div class="element-box">
+        <div class="text-center">
+            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info active" id="dasarB" data="{{$pegawai}}">Dasar</button>
+            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_pendidikan_formalB" data="{{$pegawai}}">Riwayat Pendidikan Formal</button>
+            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_diklat_fungsionalB" data="{{$pegawai}}">Riwayat Diktal Fungsional</button>
+            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_diklat_teknisB" data="{{$pegawai}}">Riwayat Diklat Teknis</button>
+            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_diklat_penjenjanganB" data="{{$pegawai}}">Riwayat Diklat Penjenjangan</button>
+            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_kepangkatanB" data="{{$pegawai}}">Riwayat Kepangkatan</button>
+            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_jabatan_strukturalB" data="{{$pegawai}}">Riwayat Jabatan Struktural</button>
+            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_jabatan_fungsionalB" data="{{$pegawai}}">Riwayat Jabatan Fungsional</button>
+            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="riwayat_pekerjaanB" data="{{$pegawai}}">Riwayat Pekerjaan/Jabatan Teknis</button>
+            @if ($pegawai->jenis_kelamin === 'W')
+                <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="pasanganB" data="{{$pegawai}}">Suami</button>
+            @else
+                <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="pasanganB" data="{{$pegawai}}">Istri</button>
+            @endif
+            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="anakB" data="{{$pegawai}}">Anak</button>
+            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="seminarB" data="{{$pegawai}}">Seminar/Lokakarya/Simposium</button>
+            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="jasaB" data="{{$pegawai}}">Tanda Jasa/Penghargaan</button>
+            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="hukumB" data="{{$pegawai}}">Hukuman Disiplin</button>
+            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="organisasiB" data="{{$pegawai}}">Keanggotaan Organisasi</button>
+            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" id="keluargaB" data="{{$pegawai}}">Keluarga</button>
+            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info">SKP</button>
+        </div>
+        <hr />
+        <div>
+            <table class="masariuman-width100percent">
+                <tr>
+                    <td class="masariuman-width40percent masariuman-verticalAlignBaseline">
+                        <div class="masariuman-nameNip text-center">
+                            <p style="margin-bottom: 0;">{{$pegawai->user->name}}</p>
+                            <p>NIP : {{$pegawai->nip_baru}}</p>
+                        </div>
+                        <div class="masariuman-photoProfile" style="background-image: url('/iniTemplate/gambar/chonk.jpg')"></div>
+                    </td>
+                    <td>
+                        <div id="benda">
+                            <div class="text-center masariuman-titleTable">Data Pegawai</div>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td class="masariuman-tdBgBlack">ESELON I</td>
+                                            <td>{{$pegawai->eselon_1}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">ESELON II</th>
+                                            <td>{{$pegawai->eselon_2}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">ESELON III</th>
+                                            <td>{{$pegawai->eselon_3}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">ESELON IV</th>
+                                            <td>{{$pegawai->eselon_4}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">NIP BARU</th>
+                                            <td>{{$pegawai->nip_baru}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">NIP LAMA</th>
+                                            <td>{{$pegawai->nip_lama}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">NAMA PEGAWAI</th>
+                                            <td>{{$pegawai->nama_pegawai}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">GELAR DEPAN</th>
+                                            <td>{{$pegawai->gelar_depan}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">GELAR BELAKANG</th>
+                                            <td>{{$pegawai->gelar_belakang}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">TANGGAL LAHIR</th>
+                                            <td>{{$pegawai->tanggal_lahir}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">TEMPAT LAHIR</th>
+                                            <td>{{$pegawai->tempat_lahir}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">JENIS KELAMIN</th>
+                                            <td>{{$pegawai->jenis_kelamin}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">STATUS KELUARGA</th>
+                                            <td>{{$pegawai->status_keluarga}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">AGAMA</th>
+                                            <td>{{$pegawai->agama}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">PENDIDIKAN AKHIR</th>
+                                            <td>{{$pegawai->pendidikan_akhir}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">NAMA SEKOLAH/TAHUN LULUS</th>
+                                            <td>{{$pegawai->nama_sekolah}}/{{$pegawai->tahun_lulus}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">JURUSAN / PROGRAM STUDI</th>
+                                            <td>{{$pegawai->jurusan_prodi}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">STATUS KEPEGAWAIAN</th>
+                                            <td>{{$pegawai->status_kepegawaian}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">INSTANSI ASAL</th>
+                                            <td>{{$pegawai->instansi_asal}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">TMT CALON PEGAWAI NEGERI SIPIL</th>
+                                            <td>{{$pegawai->tmt_cpns}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">GOLONGAN/RUANG TERAKHIR</th>
+                                            <td>{{$pegawai->golongan}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">TMT Golongan</th>
+                                            <td>{{$pegawai->tmt_golongan}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">NAMA JABATAN</th>
+                                            <td>{{$pegawai->nama_jabatan}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">NOMOR KARPEG</th>
+                                            <td>{{$pegawai->nomor_karpeg}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">TASPEN</th>
+                                            <td>{{$pegawai->taspen}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">NOMOR NPWP</th>
+                                            <td>{{$pegawai->nomor_npwp}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">ALAMAT RUMAH</th>
+                                            <td>{{$pegawai->alamat_rumah}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">KOTA</th>
+                                            <td>{{$pegawai->kota}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">KODE POS</th>
+                                            <td>{{$pegawai->kode_pos}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">NOMOR TELEPON</th>
+                                            <td>
+                                                @if (!empty($pegawai->telepon->telepon))
+                                                    {{$pegawai->telepon->telepon}}
+                                                @endif
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">NOMOR STR (SURAT TANDA REGISTRASI)</th>
+                                            <td>{{$pegawai->str}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">MASA BERLAKU STR</th>
+                                            <td>{{$pegawai->masa_str}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">NOMOR SIKP (SURAT IZIN KERJA PERAWAT)</th>
+                                            <td>{{$pegawai->sikp}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">MASA BERLAKU SIKP</th>
+                                            <td>{{$pegawai->masa_sikp}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">NOMOR SPK (SURAT PENUGASAAN KEWENANGAN KLINIS)</th>
+                                            <td>{{$pegawai->spk}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">MASA BERLAKU SPK</th>
+                                            <td>{{$pegawai->masa_spk}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">NOMOR RKK (RINCIAN KEWENANGAN KLINIS)</th>
+                                            <td>{{$pegawai->rkk}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="masariuman-tdBgBlack">MASA BERLAKU RKK</th>
+                                            <td>{{$pegawai->masa_rkk}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 @endsection
 
 

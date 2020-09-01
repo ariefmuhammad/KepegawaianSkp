@@ -5,6 +5,7 @@
             <th>Ruangan</th>
             <th>Aksi</th>
         </tr>
+    </thead>
     <tbody>
         @foreach ( $ruangan as $no => $data )
             <tr>
