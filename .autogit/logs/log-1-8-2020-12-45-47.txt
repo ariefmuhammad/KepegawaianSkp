@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Tue Sep 01 2020 12:45:47 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/template_partial/sidebar.blade.php
+
+
+Created files:
+* .autogit/logs/log-1-8-2020-12-35-43.txt
+
+
+Deleted files:
+
+
+Renamed files:
