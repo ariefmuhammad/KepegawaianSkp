@@ -14,6 +14,15 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+Route::get('dasar_pegawai', function() {
+    return view('pegawai/content/dasar_pegawai/index');
+});
+
+Route::get('riwayat_pendidikan_formal_demo', function() {
+    return view('pegawai/content/riwayat_pendidikan_formal/index');
+});
+
+
 Route::group(['middleware'=>['auth','checkRole:PEGAWAI']], function () {
     Route::get('/', 'dasarPegawaiController@index')->name('dasar_pegawai');
     Route::get('/dasar_pegawai/baru', 'dasarPegawaiController@create');
