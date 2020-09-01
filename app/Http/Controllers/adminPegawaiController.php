@@ -311,6 +311,7 @@ class adminPegawaiController extends Controller
     public function pasanganDeta($id)
     {
         //istri suami
+        $data['pegawai'] = Pegawai::findOrFail($id);
         $data['istri_suami'] = IstriSuami::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
         foreach ($data['istri_suami'] as $key => $value) {
             $convertTanggal = New Carbon($value['tanggal_lahir']);
