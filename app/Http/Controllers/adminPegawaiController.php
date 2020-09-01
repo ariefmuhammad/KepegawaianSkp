@@ -250,63 +250,343 @@ class adminPegawaiController extends Controller
 
     public function riwayatJabatanStrukturalDeta($id)
     {
-        //
-        return view('admin/content/pegawai/show_partial/riwayatJabatanStruktural');
+        //riwayat jabatan struktural
+        $data['jabatan_struktural'] = JabatanStruktural::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
+        foreach ($data['jabatan_struktural'] as $key => $value) {
+            $convertTanggal = New Carbon($value['tmt_jabatan']);
+            $value['tmt_jabatan'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tmt_jabatan'] = date("d F Y", strtotime($value['tmt_jabatan']));
+            $convertTanggal = New Carbon($value['tanggal_sk']);
+            $value['tanggal_sk'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tanggal_sk'] = date("d F Y", strtotime($value['tanggal_sk']));
+        }
+        if (empty($data['jabatan_struktural'][0])) {
+            $data['ketersediaan'] = 0;
+        } else {
+            $data['ketersediaan'] = 1;
+        }
+        return view('admin/content/pegawai/show_partial/riwayatJabatanStruktural',$data);
     }
 
     public function riwayatJabatanFungsionalDeta($id)
     {
-        //
-        return view('admin/content/pegawai/show_partial/riwayatJabatanFungsional');
+        //riwayat jabatan fungsional
+        $data['jabatan_fungsional'] = JabatanFungsional::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
+        foreach ($data['jabatan_fungsional'] as $key => $value) {
+            $convertTanggal = New Carbon($value['tmt_jabatan']);
+            $value['tmt_jabatan'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tmt_jabatan'] = date("d F Y", strtotime($value['tmt_jabatan']));
+            $convertTanggal = New Carbon($value['tanggal_sk']);
+            $value['tanggal_sk'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tanggal_sk'] = date("d F Y", strtotime($value['tanggal_sk']));
+        }
+        if (empty($data['jabatan_fungsional'][0])) {
+            $data['ketersediaan'] = 0;
+        } else {
+            $data['ketersediaan'] = 1;
+        }
+        return view('admin/content/pegawai/show_partial/riwayatJabatanFungsional',$data);
     }
 
     public function riwayatPekerjaanDeta($id)
     {
-        //
-        return view('admin/content/pegawai/show_partial/riwayatJabatanTeknis');
+        //pekerjaan jabatan
+        $data['pekerjaan_jabatan'] = PekerjaanJabatan::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
+        foreach ($data['pekerjaan_jabatan'] as $key => $value) {
+            $convertTanggal = New Carbon($value['tmt_jabatan']);
+            $value['tmt_jabatan'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tmt_jabatan'] = date("d F Y", strtotime($value['tmt_jabatan']));
+            $convertTanggal = New Carbon($value['tanggal_sk']);
+            $value['tanggal_sk'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tanggal_sk'] = date("d F Y", strtotime($value['tanggal_sk']));
+        }
+        if (empty($data['pekerjaan_jabatan'][0])) {
+            $data['ketersediaan'] = 0;
+        } else {
+            $data['ketersediaan'] = 1;
+        }
+        return view('admin/content/pegawai/show_partial/riwayatJabatanTeknis',$data);
     }
 
     public function pasanganDeta($id)
     {
-        //
-        return view('admin/content/pegawai/show_partial/pasangan');
+        //istri suami
+        $data['istri_suami'] = IstriSuami::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
+        foreach ($data['istri_suami'] as $key => $value) {
+            $convertTanggal = New Carbon($value['tanggal_lahir']);
+            $value['tanggal_lahir'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tanggal_lahir'] = date("d F Y", strtotime($value['tanggal_lahir']));
+            $convertTanggal = New Carbon($value['tanggal_nikah']);
+            $value['tanggal_nikah'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tanggal_nikah'] = date("d F Y", strtotime($value['tanggal_nikah']));
+            if ($value['tingkat_pendidikan'] === "01") {
+                $value['tingkat_pendidikan'] = "S3 (Setara)";
+            } else if ($value['tingkat_pendidikan'] === "02") {
+                $value['tingkat_pendidikan'] = "S2 (Setara)";
+            } else if ($value['tingkat_pendidikan'] === "03") {
+                $value['tingkat_pendidikan'] = "S1 (Setara)";
+            } else if ($value['tingkat_pendidikan'] === "04") {
+                $value['tingkat_pendidikan'] = "D4";
+            } else if ($value['tingkat_pendidikan'] === "05") {
+                $value['tingkat_pendidikan'] = "SM";
+            } else if ($value['tingkat_pendidikan'] === "06") {
+                $value['tingkat_pendidikan'] = "D3";
+            } else if ($value['tingkat_pendidikan'] === "07") {
+                $value['tingkat_pendidikan'] = "D2";
+            } else if ($value['tingkat_pendidikan'] === "08") {
+                $value['tingkat_pendidikan'] = "D1";
+            } else if ($value['tingkat_pendidikan'] === "09") {
+                $value['tingkat_pendidikan'] = "SLTA";
+            } else if ($value['tingkat_pendidikan'] === "10") {
+                $value['tingkat_pendidikan'] = "SLTP";
+            } else {
+                $value['tingkat_pendidikan'] = "SD";
+            }
+            if ($value['status_suami_istri'] === "1") {
+                if ($data['pegawai']['jenis_kelamin'] === "Perempuan") {
+                    $value['status_suami_istri'] = "Suami Saat ini";
+                } else {
+                    $value['status_suami_istri'] = "Istri Saat ini";
+                }
+            } else if ($value['status_suami_istri'] === "2") {
+                $value['status_suami_istri'] = "Telah Meninggal Dunia";
+            } else {
+                $value['status_suami_istri'] = "Cerai";
+            }
+        }
+        if (empty($data['istri_suami'][0])) {
+            $data['ketersediaan'] = 0;
+        } else {
+            $data['ketersediaan'] = 1;
+        }
+        return view('admin/content/pegawai/show_partial/pasangan',$data);
     }
 
     public function anakDeta($id)
     {
-        //
-        return view('admin/content/pegawai/show_partial/anak');
+        //anak
+        $data['anak'] = Anak::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
+        foreach ($data['anak'] as $key => $value) {
+            if ($value['jenis_kelamin'] === "W") {
+                $value['jenis_kelamin'] = "Perempuan";
+            } else {
+                $value['jenis_kelamin'] = "Laki-Laki";
+            }
+            $convertTanggal = New Carbon($value['tanggal_lahir']);
+            $value['tanggal_lahir'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tanggal_lahir'] = date("d F Y", strtotime($value['tanggal_lahir']));
+            if ($value['anak'] === "1") {
+                $value['anak'] = "Anak Kandung";
+            } else if ($value['anak'] === "2") {
+                $value['anak'] = "Anak Tiri";
+            } else {
+                $value['anak'] = "Anak Angkat";
+            }
+            if ($value['pendidikan'] === "01") {
+                $value['pendidikan'] = "S3 (Setara)";
+            } else if ($value['pendidikan'] === "02") {
+                $value['pendidikan'] = "S2 (Setara)";
+            } else if ($value['pendidikan'] === "03") {
+                $value['pendidikan'] = "S1 (Setara)";
+            } else if ($value['pendidikan'] === "04") {
+                $value['pendidikan'] = "D4";
+            } else if ($value['pendidikan'] === "05") {
+                $value['pendidikan'] = "SM";
+            } else if ($value['pendidikan'] === "06") {
+                $value['pendidikan'] = "D3";
+            } else if ($value['pendidikan'] === "07") {
+                $value['pendidikan'] = "D2";
+            } else if ($value['pendidikan'] === "08") {
+                $value['pendidikan'] = "D1";
+            } else if ($value['pendidikan'] === "09") {
+                $value['pendidikan'] = "SLTA";
+            } else if ($value['pendidikan'] === "10") {
+                $value['pendidikan'] = "SLTP";
+            } else if ($value['pendidikan'] === "11") {
+                $value['pendidikan'] = "SD";
+            } else {
+                $value['pendidikan'] = "Belum Sekolah";
+            }
+        }
+        if (empty($data['anak'][0])) {
+            $data['ketersediaan'] = 0;
+        } else {
+            $data['ketersediaan'] = 1;
+        }
+        return view('admin/content/pegawai/show_partial/anak',$data);
     }
 
     public function seminarDeta($id)
     {
-        //
-        return view('admin/content/pegawai/show_partial/seminar');
+        //seminar
+        $data['seminar'] = Seminar::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
+        foreach ($data['seminar'] as $key => $value) {
+            if ($value['tempat_kegiatan'] === "1") {
+                $value['tempat_kegiatan'] = "Dalam Negeri";
+            } else {
+                $value['tempat_kegiatan'] = "Luar Negeri";
+            }
+            if ($value['kedudukan_dalam_seminar'] === "1") {
+                $value['kedudukan_dalam_seminar'] = "Peserta";
+            } else if ($value['kedudukan_dalam_seminar'] === "2") {
+                $value['kedudukan_dalam_seminar'] = "Moderator";
+            } else if ($value['kedudukan_dalam_seminar'] === "3") {
+                $value['kedudukan_dalam_seminar'] = "Pembahas";
+            } else if ($value['kedudukan_dalam_seminar'] === "4") {
+                $value['kedudukan_dalam_seminar'] = "Pembawa Makalah";
+            } else {
+                $value['kedudukan_dalam_seminar'] = "Panitia";
+            }
+        }
+        if (empty($data['seminar'][0])) {
+            $data['ketersediaan'] = 0;
+        } else {
+            $data['ketersediaan'] = 1;
+        }
+        return view('admin/content/pegawai/show_partial/seminar',$data);
     }
 
     public function jasaDeta($id)
     {
-        //
-        return view('admin/content/pegawai/show_partial/jasa');
+        //penghargaan
+        $data['penghargaan'] = Penghargaan::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
+        foreach ($data['penghargaan'] as $key => $value) {
+            $convertTanggal = New Carbon($value['tanggal_perolehan']);
+            $value['tanggal_perolehan'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tanggal_perolehan'] = date("d F Y", strtotime($value['tanggal_perolehan']));
+        }
+        if (empty($data['penghargaan'][0])) {
+            $data['ketersediaan'] = 0;
+        } else {
+            $data['ketersediaan'] = 1;
+        }
+        return view('admin/content/pegawai/show_partial/jasa',$data);
     }
 
     public function hukumDeta($id)
     {
-        //
-        return view('admin/content/pegawai/show_partial/hukuman');
+        //hukuman
+        $data['hukuman'] = Hukuman::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
+        foreach ($data['hukuman'] as $key => $value) {
+            if ($value['kode_hukuman'] === "11") {
+                $value['kode_hukuman'] = "11 (Hukuman Ringan Teguran Lisan)";
+            } else if ($value['kode_hukuman'] === "12") {
+                $value['kode_hukuman'] = "12 (Hukuman Ringan Teguran Tertulis)";
+            } else if ($value['kode_hukuman'] === "13") {
+                $value['kode_hukuman'] = "13 (Hukuman Ringan Melalui Pernyataan Tidak Puas Secara Tertulis)";
+            } else if ($value['kode_hukuman'] === "21") {
+                $value['kode_hukuman'] = "21 (Hukuman Sedang Penundaan Kenaikan Gaji Berkala Paling Lama 1 Tahun)";
+            } else if ($value['kode_hukuman'] === "22") {
+                $value['kode_hukuman'] = "22 (Hukuman Sedang Penurunan Gaji Sebesar 1x Kenaikan Gaji Berkala Paling Lama 1 Tahun)";
+            } else if ($value['kode_hukuman'] === "23") {
+                $value['kode_hukuman'] = "23 (Hukuman Sedang Penundaan Kenaikan Pangkat Paling Lama 1 Tahun)";
+            } else if ($value['kode_hukuman'] === "31") {
+                $value['kode_hukuman'] = "31 (Hukuman Berat Penurunan Pangkat Setingkat Lebih Rendah Paling Lama 1 Tahun)";
+            } else {
+                $value['kode_hukuman'] = "32 (Hukuman Berat Pembebasan Dari Jabatan)";
+            }
+            $convertTanggal = New Carbon($value['tanggal_sk']);
+            $value['tanggal_sk'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tanggal_sk'] = date("d F Y", strtotime($value['tanggal_sk']));
+            $convertTanggal = New Carbon($value['tmt_berlaku']);
+            $value['tmt_berlaku'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tmt_berlaku'] = date("d F Y", strtotime($value['tmt_berlaku']));
+        }
+        if (empty($data['hukuman'][0])) {
+            $data['ketersediaan'] = 0;
+        } else {
+            $data['ketersediaan'] = 1;
+        }
+        return view('admin/content/pegawai/show_partial/hukuman',$data);
     }
 
     public function organisasiDeta($id)
     {
-        //
-        return view('admin/content/pegawai/show_partial/organisasi');
+        //organisasi
+        $data['organisasi'] = Organisasi::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
+        foreach ($data['organisasi'] as $key => $value) {
+            $convertTanggal = New Carbon($value['tanggal_mulai']);
+            $value['tanggal_mulai'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tanggal_mulai'] = date("d F Y", strtotime($value['tanggal_mulai']));
+            $convertTanggal = New Carbon($value['tanggal_selesai']);
+            $value['tanggal_selesai'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tanggal_selesai'] = date("d F Y", strtotime($value['tanggal_selesai']));
+        }
+        if (empty($data['organisasi'][0])) {
+            $data['ketersediaan'] = 0;
+        } else {
+            $data['ketersediaan'] = 1;
+        }
+        return view('admin/content/pegawai/show_partial/organisasi',$data);
     }
 
 
     public function keluargaDeta($id)
     {
-        //
-        return view('admin/content/pegawai/show_partial/keluarga');
+        //keluarga kandung
+        $data['keluarga_kandung'] = KeluargaKandung::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
+        foreach ($data['keluarga_kandung'] as $key => $value) {
+            if ($value['hubungan'] === "1") {
+                $value['hubungan'] = "Ayah";
+            } else if ($value['hubungan'] === "2") {
+                $value['hubungan'] = "Ibu";
+            } else if ($value['hubungan'] === "3") {
+                $value['hubungan'] = "Kakak";
+            } else {
+                $value['hubungan'] = "Adik";
+            }
+            if ($value['jenis_kelamin'] === "P") {
+                $value['jenis_kelamin'] = "Perempuan";
+            } else {
+                $value['jenis_kelamin'] = "Laki-Laki";
+            }
+            $convertTanggal = New Carbon($value['tanggal_lahir']);
+            $value['tanggal_lahir'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tanggal_lahir'] = date("d F Y", strtotime($value['tanggal_lahir']));
+            if ($value['kondisi'] === "1") {
+                $value['kondisi'] = "Masih Hidup";
+            } else {
+                $value['kondisi'] = "Almarhum";
+            }
+        }
+
+        //keluarga istri suami
+        $data['keluarga_istri_suami'] = KeluargaIstriSuami::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
+        foreach ($data['keluarga_istri_suami'] as $key => $value) {
+            if ($value['hubungan'] === "1") {
+                $value['hubungan'] = "Ayah";
+            } else if ($value['hubungan'] === "2") {
+                $value['hubungan'] = "Ibu";
+            } else if ($value['hubungan'] === "3") {
+                $value['hubungan'] = "Kakak";
+            } else {
+                $value['hubungan'] = "Adik";
+            }
+            if ($value['jenis_kelamin'] === "P") {
+                $value['jenis_kelamin'] = "Perempuan";
+            } else {
+                $value['jenis_kelamin'] = "Laki-Laki";
+            }
+            $convertTanggal = New Carbon($value['tanggal_lahir']);
+            $value['tanggal_lahir'] = $convertTanggal->translatedFormat('d F Y');
+            // $value['tanggal_lahir'] = date("d F Y", strtotime($value['tanggal_lahir']));
+            if ($value['kondisi'] === "1") {
+                $value['kondisi'] = "Masih Hidup";
+            } else {
+                $value['kondisi'] = "Almarhum";
+            }
+        }
+        if (empty($data['keluarga_kandung'][0])) {
+            $data['ketersediaanKandung'] = 0;
+        } else {
+            $data['ketersediaanKandung'] = 1;
+        }
+        if (empty($data['keluarga_istri_suami'][0])) {
+            $data['ketersediaanPasangan'] = 0;
+        } else {
+            $data['ketersediaanPasangan'] = 1;
+        }
+        return view('admin/content/pegawai/show_partial/keluarga',$data);
     }
 
 
@@ -446,251 +726,6 @@ class adminPegawaiController extends Controller
             $data['pegawai']['taspen'] = "Sudah";
         }else {
             $data['pegawai']['taspen'] = "Belum";
-        }
-
-        //riwayat jabatan struktural
-        $data['jabatan_struktural'] = JabatanStruktural::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
-        foreach ($data['jabatan_struktural'] as $key => $value) {
-            $convertTanggal = New Carbon($value['tmt_jabatan']);
-            $value['tmt_jabatan'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tmt_jabatan'] = date("d F Y", strtotime($value['tmt_jabatan']));
-            $convertTanggal = New Carbon($value['tanggal_sk']);
-            $value['tanggal_sk'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tanggal_sk'] = date("d F Y", strtotime($value['tanggal_sk']));
-        }
-
-        //riwayat jabatan fungsional
-        $data['jabatan_fungsional'] = JabatanFungsional::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
-        foreach ($data['jabatan_fungsional'] as $key => $value) {
-            $convertTanggal = New Carbon($value['tmt_jabatan']);
-            $value['tmt_jabatan'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tmt_jabatan'] = date("d F Y", strtotime($value['tmt_jabatan']));
-            $convertTanggal = New Carbon($value['tanggal_sk']);
-            $value['tanggal_sk'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tanggal_sk'] = date("d F Y", strtotime($value['tanggal_sk']));
-        }
-
-        //pekerjaan jabatan
-        $data['pekerjaan_jabatan'] = PekerjaanJabatan::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
-        foreach ($data['pekerjaan_jabatan'] as $key => $value) {
-            $convertTanggal = New Carbon($value['tmt_jabatan']);
-            $value['tmt_jabatan'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tmt_jabatan'] = date("d F Y", strtotime($value['tmt_jabatan']));
-            $convertTanggal = New Carbon($value['tanggal_sk']);
-            $value['tanggal_sk'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tanggal_sk'] = date("d F Y", strtotime($value['tanggal_sk']));
-        }
-
-        //istri suami
-        $data['istri_suami'] = IstriSuami::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
-        foreach ($data['istri_suami'] as $key => $value) {
-            $convertTanggal = New Carbon($value['tanggal_lahir']);
-            $value['tanggal_lahir'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tanggal_lahir'] = date("d F Y", strtotime($value['tanggal_lahir']));
-            $convertTanggal = New Carbon($value['tanggal_nikah']);
-            $value['tanggal_nikah'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tanggal_nikah'] = date("d F Y", strtotime($value['tanggal_nikah']));
-            if ($value['tingkat_pendidikan'] === "01") {
-                $value['tingkat_pendidikan'] = "S3 (Setara)";
-            } else if ($value['tingkat_pendidikan'] === "02") {
-                $value['tingkat_pendidikan'] = "S2 (Setara)";
-            } else if ($value['tingkat_pendidikan'] === "03") {
-                $value['tingkat_pendidikan'] = "S1 (Setara)";
-            } else if ($value['tingkat_pendidikan'] === "04") {
-                $value['tingkat_pendidikan'] = "D4";
-            } else if ($value['tingkat_pendidikan'] === "05") {
-                $value['tingkat_pendidikan'] = "SM";
-            } else if ($value['tingkat_pendidikan'] === "06") {
-                $value['tingkat_pendidikan'] = "D3";
-            } else if ($value['tingkat_pendidikan'] === "07") {
-                $value['tingkat_pendidikan'] = "D2";
-            } else if ($value['tingkat_pendidikan'] === "08") {
-                $value['tingkat_pendidikan'] = "D1";
-            } else if ($value['tingkat_pendidikan'] === "09") {
-                $value['tingkat_pendidikan'] = "SLTA";
-            } else if ($value['tingkat_pendidikan'] === "10") {
-                $value['tingkat_pendidikan'] = "SLTP";
-            } else {
-                $value['tingkat_pendidikan'] = "SD";
-            }
-            if ($value['status_suami_istri'] === "1") {
-                if ($data['pegawai']['jenis_kelamin'] === "Perempuan") {
-                    $value['status_suami_istri'] = "Suami Saat ini";
-                } else {
-                    $value['status_suami_istri'] = "Istri Saat ini";
-                }
-            } else if ($value['status_suami_istri'] === "2") {
-                $value['status_suami_istri'] = "Telah Meninggal Dunia";
-            } else {
-                $value['status_suami_istri'] = "Cerai";
-            }
-        }
-
-        //anak
-        $data['anak'] = Anak::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
-        foreach ($data['anak'] as $key => $value) {
-            if ($value['jenis_kelamin'] === "W") {
-                $value['jenis_kelamin'] = "Perempuan";
-            } else {
-                $value['jenis_kelamin'] = "Laki-Laki";
-            }
-            $convertTanggal = New Carbon($value['tanggal_lahir']);
-            $value['tanggal_lahir'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tanggal_lahir'] = date("d F Y", strtotime($value['tanggal_lahir']));
-            if ($value['anak'] === "1") {
-                $value['anak'] = "Anak Kandung";
-            } else if ($value['anak'] === "2") {
-                $value['anak'] = "Anak Tiri";
-            } else {
-                $value['anak'] = "Anak Angkat";
-            }
-            if ($value['pendidikan'] === "01") {
-                $value['pendidikan'] = "S3 (Setara)";
-            } else if ($value['pendidikan'] === "02") {
-                $value['pendidikan'] = "S2 (Setara)";
-            } else if ($value['pendidikan'] === "03") {
-                $value['pendidikan'] = "S1 (Setara)";
-            } else if ($value['pendidikan'] === "04") {
-                $value['pendidikan'] = "D4";
-            } else if ($value['pendidikan'] === "05") {
-                $value['pendidikan'] = "SM";
-            } else if ($value['pendidikan'] === "06") {
-                $value['pendidikan'] = "D3";
-            } else if ($value['pendidikan'] === "07") {
-                $value['pendidikan'] = "D2";
-            } else if ($value['pendidikan'] === "08") {
-                $value['pendidikan'] = "D1";
-            } else if ($value['pendidikan'] === "09") {
-                $value['pendidikan'] = "SLTA";
-            } else if ($value['pendidikan'] === "10") {
-                $value['pendidikan'] = "SLTP";
-            } else if ($value['pendidikan'] === "11") {
-                $value['pendidikan'] = "SD";
-            } else {
-                $value['pendidikan'] = "Belum Sekolah";
-            }
-        }
-
-        //seminar
-        $data['seminar'] = Seminar::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
-        foreach ($data['seminar'] as $key => $value) {
-            if ($value['tempat_kegiatan'] === "1") {
-                $value['tempat_kegiatan'] = "Dalam Negeri";
-            } else {
-                $value['tempat_kegiatan'] = "Luar Negeri";
-            }
-            if ($value['kedudukan_dalam_seminar'] === "1") {
-                $value['kedudukan_dalam_seminar'] = "Peserta";
-            } else if ($value['kedudukan_dalam_seminar'] === "2") {
-                $value['kedudukan_dalam_seminar'] = "Moderator";
-            } else if ($value['kedudukan_dalam_seminar'] === "3") {
-                $value['kedudukan_dalam_seminar'] = "Pembahas";
-            } else if ($value['kedudukan_dalam_seminar'] === "4") {
-                $value['kedudukan_dalam_seminar'] = "Pembawa Makalah";
-            } else {
-                $value['kedudukan_dalam_seminar'] = "Panitia";
-            }
-        }
-
-        //penghargaan
-        $data['penghargaan'] = Penghargaan::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
-        foreach ($data['penghargaan'] as $key => $value) {
-            $convertTanggal = New Carbon($value['tanggal_perolehan']);
-            $value['tanggal_perolehan'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tanggal_perolehan'] = date("d F Y", strtotime($value['tanggal_perolehan']));
-        }
-
-        //hukuman
-        $data['hukuman'] = Hukuman::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
-        foreach ($data['hukuman'] as $key => $value) {
-            if ($value['kode_hukuman'] === "11") {
-                $value['kode_hukuman'] = "11 (Hukuman Ringan Teguran Lisan)";
-            } else if ($value['kode_hukuman'] === "12") {
-                $value['kode_hukuman'] = "12 (Hukuman Ringan Teguran Tertulis)";
-            } else if ($value['kode_hukuman'] === "13") {
-                $value['kode_hukuman'] = "13 (Hukuman Ringan Melalui Pernyataan Tidak Puas Secara Tertulis)";
-            } else if ($value['kode_hukuman'] === "21") {
-                $value['kode_hukuman'] = "21 (Hukuman Sedang Penundaan Kenaikan Gaji Berkala Paling Lama 1 Tahun)";
-            } else if ($value['kode_hukuman'] === "22") {
-                $value['kode_hukuman'] = "22 (Hukuman Sedang Penurunan Gaji Sebesar 1x Kenaikan Gaji Berkala Paling Lama 1 Tahun)";
-            } else if ($value['kode_hukuman'] === "23") {
-                $value['kode_hukuman'] = "23 (Hukuman Sedang Penundaan Kenaikan Pangkat Paling Lama 1 Tahun)";
-            } else if ($value['kode_hukuman'] === "31") {
-                $value['kode_hukuman'] = "31 (Hukuman Berat Penurunan Pangkat Setingkat Lebih Rendah Paling Lama 1 Tahun)";
-            } else {
-                $value['kode_hukuman'] = "32 (Hukuman Berat Pembebasan Dari Jabatan)";
-            }
-            $convertTanggal = New Carbon($value['tanggal_sk']);
-            $value['tanggal_sk'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tanggal_sk'] = date("d F Y", strtotime($value['tanggal_sk']));
-            $convertTanggal = New Carbon($value['tmt_berlaku']);
-            $value['tmt_berlaku'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tmt_berlaku'] = date("d F Y", strtotime($value['tmt_berlaku']));
-        }
-
-        //organisasi
-        $data['organisasi'] = Organisasi::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
-        foreach ($data['organisasi'] as $key => $value) {
-            $convertTanggal = New Carbon($value['tanggal_mulai']);
-            $value['tanggal_mulai'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tanggal_mulai'] = date("d F Y", strtotime($value['tanggal_mulai']));
-            $convertTanggal = New Carbon($value['tanggal_selesai']);
-            $value['tanggal_selesai'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tanggal_selesai'] = date("d F Y", strtotime($value['tanggal_selesai']));
-        }
-
-        //keluarga kandung
-        $data['keluarga_kandung'] = KeluargaKandung::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
-        foreach ($data['keluarga_kandung'] as $key => $value) {
-            if ($value['hubungan'] === "1") {
-                $value['hubungan'] = "Ayah";
-            } else if ($value['hubungan'] === "2") {
-                $value['hubungan'] = "Ibu";
-            } else if ($value['hubungan'] === "3") {
-                $value['hubungan'] = "Kakak";
-            } else {
-                $value['hubungan'] = "Adik";
-            }
-            if ($value['jenis_kelamin'] === "P") {
-                $value['jenis_kelamin'] = "Perempuan";
-            } else {
-                $value['jenis_kelamin'] = "Laki-Laki";
-            }
-            $convertTanggal = New Carbon($value['tanggal_lahir']);
-            $value['tanggal_lahir'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tanggal_lahir'] = date("d F Y", strtotime($value['tanggal_lahir']));
-            if ($value['kondisi'] === "1") {
-                $value['kondisi'] = "Masih Hidup";
-            } else {
-                $value['kondisi'] = "Almarhum";
-            }
-        }
-
-        //keluarga istri suami
-        $data['keluarga_istri_suami'] = KeluargaIstriSuami::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
-        foreach ($data['keluarga_istri_suami'] as $key => $value) {
-            if ($value['hubungan'] === "1") {
-                $value['hubungan'] = "Ayah";
-            } else if ($value['hubungan'] === "2") {
-                $value['hubungan'] = "Ibu";
-            } else if ($value['hubungan'] === "3") {
-                $value['hubungan'] = "Kakak";
-            } else {
-                $value['hubungan'] = "Adik";
-            }
-            if ($value['jenis_kelamin'] === "P") {
-                $value['jenis_kelamin'] = "Perempuan";
-            } else {
-                $value['jenis_kelamin'] = "Laki-Laki";
-            }
-            $convertTanggal = New Carbon($value['tanggal_lahir']);
-            $value['tanggal_lahir'] = $convertTanggal->translatedFormat('d F Y');
-            // $value['tanggal_lahir'] = date("d F Y", strtotime($value['tanggal_lahir']));
-            if ($value['kondisi'] === "1") {
-                $value['kondisi'] = "Masih Hidup";
-            } else {
-                $value['kondisi'] = "Almarhum";
-            }
         }
 
         return view('admin/content/pegawai/show',$data);
