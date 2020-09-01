@@ -524,6 +524,8 @@ class adminPegawaiController extends Controller
 
     public function keluargaDeta($id)
     {
+        $data['pegawai'] = Pegawai::findOrFail($id);
+
         //keluarga kandung
         $data['keluarga_kandung'] = KeluargaKandung::where('pegawai_id',$id)->where('active','1')->orderBy('id','DESC')->get();
         foreach ($data['keluarga_kandung'] as $key => $value) {

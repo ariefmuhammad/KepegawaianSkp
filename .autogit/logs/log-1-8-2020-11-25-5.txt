@@ -1,0 +1,22 @@
+-------------------- Auto-Git Log --------------------
+		Tue Sep 01 2020 11:25:05 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/content/pegawai/show_partial/anak.blade.php
+* resources/views/admin/content/pegawai/show_partial/hukuman.blade.php
+* resources/views/admin/content/pegawai/show_partial/jasa.blade.php
+* resources/views/admin/content/pegawai/show_partial/keluarga.blade.php
+* resources/views/admin/content/pegawai/show_partial/organisasi.blade.php
+* resources/views/admin/content/pegawai/show_partial/pasangan.blade.php
+* resources/views/admin/content/pegawai/show_partial/seminar.blade.php
+
+
+Created files:
+* .autogit/logs/log-1-8-2020-11-14-59.txt
+
+
+Deleted files:
+
+
+Renamed files:

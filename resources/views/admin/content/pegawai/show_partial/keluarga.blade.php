@@ -30,10 +30,11 @@
     </div>
 @endif
 
+<hr />
 
-<div class="text-center masariuman-titleTable">Data keluarga kandung</div>
-@if ($ketersediaanKandung === 0)
-    <div class="text-center masariuman-titleTable">Tidak Ada Data keluarga kandung</div>
+<div class="text-center masariuman-titleTable">Data keluarga {{ $pegawai->jenis_kelamin === 'W' ? 'Suami' : 'Istri' }}</div>
+@if ($ketersediaanPasangan === 0)
+    <div class="text-center masariuman-titleTable">Tidak Ada Data keluarga {{ $pegawai->jenis_kelamin === 'W' ? 'Suami' : 'Istri' }}</div>
 @else
     <div class="table-responsive">
         <table class="table table-striped">
@@ -47,14 +48,14 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($keluarga_kandung as $no => $item)
+                @foreach ($keluarga_istri_suami as $no => $item)
                     <tr>
                         <th class="text-center">{{$no+1}}</th>
                         <td class="text-center">{{$item->nama}}</td>
                         <td class="text-center">{{$item->hubungan}}</td>
                         <td class="text-center">{{$item->pekerjaan}}</td>
                         <td class="text-center">
-                            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" title="Lihat Data" data-toggle="modal" data-target="#keluarga_kandung_show_{{$item->id}}"><i class="fa fa-eye"></i></button>
+                            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info" title="Lihat Data" data-toggle="modal" data-target="#keluarga_suami_show"><i class="fa fa-eye"></i></button>
                         </td>
                     </tr>
                 @endforeach
