@@ -62,48 +62,50 @@
             <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span class="close-label">Tutup</span><span class="os-icon os-icon-close"></span></button>
             <div class="onboarding-side-by-side">
               <div class="onboarding-media">
-                <img alt="" src="/iniTemplate/dist/iconModal/ruanganAdd.png" width="200px">
+                <img alt="" src="/iniTemplate/dist/iconModal/toga.png" width="200px">
               </div>
               <div class="onboarding-content with-gradient masariuman-width1000px">
                 <h4 class="onboarding-title">
                     Detail Data Pendidikan Formal
                 </h4>
-                <table class="mb-0 table table-striped">
-                    <tbody>
-                    <tr>
-                    <th scope="row" class="masariuman-tdBgBlack">TINGKAT PENDIDIKAN</th>
-                    <td id="tingkatPendidikan"></td>
-                    </tr>
-                    <tr>
-                    <th scope="row" class="masariuman-tdBgBlack">NAMA SEKOLAH/UNIVERSITAS</th>
-                    <td id="namaSekolah"></td>
-                    </tr>
-                    <tr>
-                    <th scope="row" class="masariuman-tdBgBlack">JURUSAN/PROGRAM STUDI</th>
-                    <td id="jurusan"></td>
-                    </tr>
-                    <tr>
-                    <th scope="row" class="masariuman-tdBgBlack">TAHUN MASUK</th>
-                    <td id="tahunMasuk"></td>
-                    </tr>
-                    <tr>
-                    <th scope="row" class="masariuman-tdBgBlack">TAHUN LULUS</th>
-                    <td id="tahunLulus"></td>
-                    </tr>
-                    <tr>
-                    <th scope="row" class="masariuman-tdBgBlack">TEMPAT BELAJAR</th>
-                    <td id="tempatBelajar"></td>
-                    </tr>
-                    <tr>
-                    <th scope="row" class="masariuman-tdBgBlack">LOKASI</th>
-                    <td id="lokasi"></td>
-                    </tr>
-                    <tr>
-                    <th scope="row" class="masariuman-tdBgBlack">NOMOR IJAZAH</th>
-                    <td id="nomorIjazah"></td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div class="onboarding-text">
+                    <table class="mb-0 table table-striped">
+                        <tbody>
+                        <tr>
+                        <th scope="row" class="masariuman-tdBgBlack">TINGKAT PENDIDIKAN</th>
+                        <td id="tingkatPendidikan"></td>
+                        </tr>
+                        <tr>
+                        <th scope="row" class="masariuman-tdBgBlack">NAMA SEKOLAH/UNIVERSITAS</th>
+                        <td id="namaSekolah"></td>
+                        </tr>
+                        <tr>
+                        <th scope="row" class="masariuman-tdBgBlack">JURUSAN/PROGRAM STUDI</th>
+                        <td id="jurusan"></td>
+                        </tr>
+                        <tr>
+                        <th scope="row" class="masariuman-tdBgBlack">TAHUN MASUK</th>
+                        <td id="tahunMasuk"></td>
+                        </tr>
+                        <tr>
+                        <th scope="row" class="masariuman-tdBgBlack">TAHUN LULUS</th>
+                        <td id="tahunLulus"></td>
+                        </tr>
+                        <tr>
+                        <th scope="row" class="masariuman-tdBgBlack">TEMPAT BELAJAR</th>
+                        <td id="tempatBelajar"></td>
+                        </tr>
+                        <tr>
+                        <th scope="row" class="masariuman-tdBgBlack">LOKASI</th>
+                        <td id="lokasi"></td>
+                        </tr>
+                        <tr>
+                        <th scope="row" class="masariuman-tdBgBlack">NOMOR IJAZAH</th>
+                        <td id="nomorIjazah"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
               </div>
             </div>
           </div>
