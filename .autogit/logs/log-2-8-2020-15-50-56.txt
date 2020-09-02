@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Wed Sep 02 2020 15:50:56 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/content/pegawai/show_partial/riwayatDiklatKepangkatan.blade.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
