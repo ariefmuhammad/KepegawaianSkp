@@ -19,7 +19,7 @@
                         <td class="text-center">{{$item->tingkat_pendidikan}}</td>
                         <td class="text-center">{{$item->nama_sekolah}}</td>
                         <td class="text-center">
-                            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info modalTrigger" title="Lihat Data" data-target="#showDetail" data-toggle="modal"><i class="fa fa-eye"></i></button>
+                            <button class="mb-2 mr-2 border-0 btn-transition btn btn-outline-info modalTrigger" title="Lihat Data" data="{{$item}}"><i class="fa fa-eye"></i></button>
                         </td>
                     </tr>
                 @endforeach
@@ -27,6 +27,30 @@
         </table>
     </div>
 @endif
+
+
+
+
+
+<script>
+    $(document).ready(function() {
+        $('.modalTrigger').on('click',function() {
+            $('#showDetail').modal('show');
+            var data = JSON.parse($(this).attr("data"));
+            $("#tingkatPendidikan").html(data.tingkat_pendidikan);
+            $("#namaSekolah").html(data.nama_sekolah);
+            $("#jurusan").html(data.jurusan_prodi);
+            $("#tahunMasuk").html(data.tahun_masuk);
+            $("#tahunLulus").html(data.tahun_lulus);
+            $("#tempatBelajar").html(data.tempat_belajar);
+            $("#lokasi").html(data.lokasi);
+            $("#nomorIjazah").html(data.nomor_ijazah);
+        });
+    });
+</script>
+
+
+
 
 
 
@@ -48,35 +72,35 @@
                     <tbody>
                     <tr>
                     <th scope="row" class="masariuman-tdBgBlack">TINGKAT PENDIDIKAN</th>
-                    <td id="tingkatPendidikan">x</td>
+                    <td id="tingkatPendidikan"></td>
                     </tr>
                     <tr>
                     <th scope="row" class="masariuman-tdBgBlack">NAMA SEKOLAH/UNIVERSITAS</th>
-                    <td id="namaSekolah">x</td>
+                    <td id="namaSekolah"></td>
                     </tr>
                     <tr>
                     <th scope="row" class="masariuman-tdBgBlack">JURUSAN/PROGRAM STUDI</th>
-                    <td id="jurusan">x</td>
+                    <td id="jurusan"></td>
                     </tr>
                     <tr>
                     <th scope="row" class="masariuman-tdBgBlack">TAHUN MASUK</th>
-                    <td id="tahunMasuk">x</td>
+                    <td id="tahunMasuk"></td>
                     </tr>
                     <tr>
                     <th scope="row" class="masariuman-tdBgBlack">TAHUN LULUS</th>
-                    <td id="tahunLulus">x</td>
+                    <td id="tahunLulus"></td>
                     </tr>
                     <tr>
                     <th scope="row" class="masariuman-tdBgBlack">TEMPAT BELAJAR</th>
-                    <td id="tempatBelajar">x</td>
+                    <td id="tempatBelajar"></td>
                     </tr>
                     <tr>
                     <th scope="row" class="masariuman-tdBgBlack">LOKASI</th>
-                    <td id="lokasi">x</td>
+                    <td id="lokasi"></td>
                     </tr>
                     <tr>
                     <th scope="row" class="masariuman-tdBgBlack">NOMOR IJAZAH</th>
-                    <td id="nomorIjazah">x</td>
+                    <td id="nomorIjazah"></td>
                     </tr>
                     </tbody>
                 </table>
