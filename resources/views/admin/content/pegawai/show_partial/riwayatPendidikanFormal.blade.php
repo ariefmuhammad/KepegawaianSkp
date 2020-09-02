@@ -42,26 +42,44 @@
               </div>
               <div class="onboarding-content with-gradient">
                 <h4 class="onboarding-title">
-                  Tambah Ruangan Baru
+                    Detail Data Pendidikan Formal
                 </h4>
-                <div class="onboarding-text">
-                  Masukkan nama ruangan baru yang ingin ditambahkan kedalam aplikasi.
-                </div>
-                <form id="addForm">
-                  @csrf
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <div class="form-group">
-                          <input name="ruangan" id="inputAddRuangan" title="Nama Ruangan" placeholder="Masukkan Nama Ruangan Baru.." type="text" class="form-control" />
-                      </div>
-                    </div>
-                    <div class="col-sm-12">
-                      <div class="form-group text-center">
-                          <button class="mr-2 mb-2 btn btn-primary" data-target="#onboardingWideFormModal" data-toggle="modal" type="submit">Tambah Ruangan Baru</button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
+                <table class="mb-0 table table-striped">
+                    <tbody>
+                    <tr>
+                    <th scope="row" class="masariuman-tdBgBlack">TINGKAT PENDIDIKAN</th>
+                    <td>x</td>
+                    </tr>
+                    <tr>
+                    <th scope="row" class="masariuman-tdBgBlack">NAMA SEKOLAH/UNIVERSITAS</th>
+                    <td>x</td>
+                    </tr>
+                    <tr>
+                    <th scope="row" class="masariuman-tdBgBlack">JURUSAN/PROGRAM STUDI</th>
+                    <td>x</td>
+                    </tr>
+                    <tr>
+                    <th scope="row" class="masariuman-tdBgBlack">TAHUN MASUK</th>
+                    <td>x</td>
+                    </tr>
+                    <tr>
+                    <th scope="row" class="masariuman-tdBgBlack">TAHUN LULUS</th>
+                    <td>x</td>
+                    </tr>
+                    <tr>
+                    <th scope="row" class="masariuman-tdBgBlack">TEMPAT BELAJAR</th>
+                    <td>x</td>
+                    </tr>
+                    <tr>
+                    <th scope="row" class="masariuman-tdBgBlack">LOKASI</th>
+                    <td>x</td>
+                    </tr>
+                    <tr>
+                    <th scope="row" class="masariuman-tdBgBlack">NOMOR IJAZAH</th>
+                    <td>x</td>
+                    </tr>
+                    </tbody>
+                </table>
               </div>
             </div>
           </div>
