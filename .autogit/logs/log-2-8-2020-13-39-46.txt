@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Wed Sep 02 2020 13:39:46 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/content/pegawai/show_partial/riwayatPendidikanFormal.blade.php
+
+
+Created files:
+* .autogit/logs/log-2-8-2020-13-29-38.txt
+
+
+Deleted files:
+
+
+Renamed files:

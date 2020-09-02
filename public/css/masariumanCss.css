@@ -120,3 +120,13 @@
     margin-top: 40px;
     margin-bottom: 40px;
 }
+
+.masariuman-width1000px {
+    width: 1000px;
+}
+
+@media (min-width: 992px) {
+    .masariuman-maxWidth1300px {
+        max-width: 1300px;
+    }
+}

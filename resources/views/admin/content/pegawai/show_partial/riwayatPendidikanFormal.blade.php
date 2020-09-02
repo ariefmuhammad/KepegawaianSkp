@@ -33,14 +33,14 @@
 
 {{-- modal --}}
     <div aria-hidden="true" class="onboarding-modal modal fade animated" id="showDetail" role="dialog" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-centered" role="document">
+        <div class="modal-dialog modal-lg modal-centered masariuman-maxWidth1300px" role="document">
           <div class="modal-content text-center">
             <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span class="close-label">Tutup</span><span class="os-icon os-icon-close"></span></button>
             <div class="onboarding-side-by-side">
               <div class="onboarding-media">
                 <img alt="" src="/iniTemplate/dist/iconModal/ruanganAdd.png" width="200px">
               </div>
-              <div class="onboarding-content with-gradient">
+              <div class="onboarding-content with-gradient masariuman-width1000px">
                 <h4 class="onboarding-title">
                     Detail Data Pendidikan Formal
                 </h4>
@@ -48,35 +48,35 @@
                     <tbody>
                     <tr>
                     <th scope="row" class="masariuman-tdBgBlack">TINGKAT PENDIDIKAN</th>
-                    <td>x</td>
+                    <td id="tingkatPendidikan">x</td>
                     </tr>
                     <tr>
                     <th scope="row" class="masariuman-tdBgBlack">NAMA SEKOLAH/UNIVERSITAS</th>
-                    <td>x</td>
+                    <td id="namaSekolah">x</td>
                     </tr>
                     <tr>
                     <th scope="row" class="masariuman-tdBgBlack">JURUSAN/PROGRAM STUDI</th>
-                    <td>x</td>
+                    <td id="jurusan">x</td>
                     </tr>
                     <tr>
                     <th scope="row" class="masariuman-tdBgBlack">TAHUN MASUK</th>
-                    <td>x</td>
+                    <td id="tahunMasuk">x</td>
                     </tr>
                     <tr>
                     <th scope="row" class="masariuman-tdBgBlack">TAHUN LULUS</th>
-                    <td>x</td>
+                    <td id="tahunLulus">x</td>
                     </tr>
                     <tr>
                     <th scope="row" class="masariuman-tdBgBlack">TEMPAT BELAJAR</th>
-                    <td>x</td>
+                    <td id="tempatBelajar">x</td>
                     </tr>
                     <tr>
                     <th scope="row" class="masariuman-tdBgBlack">LOKASI</th>
-                    <td>x</td>
+                    <td id="lokasi">x</td>
                     </tr>
                     <tr>
                     <th scope="row" class="masariuman-tdBgBlack">NOMOR IJAZAH</th>
-                    <td>x</td>
+                    <td id="nomorIjazah">x</td>
                     </tr>
                     </tbody>
                 </table>
