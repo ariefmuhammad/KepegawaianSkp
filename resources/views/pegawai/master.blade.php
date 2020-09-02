@@ -153,3 +153,4 @@
     @include('pegawai.part.js')
   </body>
 </html>
+@yield('modal')
