@@ -35,11 +35,13 @@
         $('.modalTrigger').on('click',function() {
             $('#showDetail').modal('show');
             var data = JSON.parse($(this).attr("data"));
-            $("#golongan").html(data.golongan);
-            $("#tmtGolongan").html(data.tmt_golongan);
-            $("#pejabatPenandatanganSk").html(data.pejabat_penandatangan_sk);
+            $("#eselon").html(data.eselon);
+            $("#namaJabatan").html(data.nama_jabatan);
+            $("#unitKerja").html(data.unit_kerja);
+            $("#tmtJabatan").html(data.tmt_jabatan);
             $("#nomorSk").html(data.nomor_sk);
             $("#tanggalSk").html(data.tanggal_sk);
+            $("#pejabatPenandatanganSk").html(data.pejabat_penandatangan_sk);
         });
     });
 </script>
@@ -67,16 +69,20 @@
                     <table class="mb-0 table table-striped">
                         <tbody>
                         <tr>
-                        <th scope="row" class="masariuman-tdBgBlack">GOLONGAN/RUANG</th>
-                        <td id="golongan"></td>
+                        <th scope="row" class="masariuman-tdBgBlack">ESELON</th>
+                        <td id="eselon"></td>
                         </tr>
                         <tr>
-                        <th scope="row" class="masariuman-tdBgBlack">TMT GOLONGAN/RUANG</th>
-                        <td id="tmtGolongan"></td>
+                        <th scope="row" class="masariuman-tdBgBlack">NAMA JABATAN</th>
+                        <td id="namaJabatan"></td>
                         </tr>
                         <tr>
-                        <th scope="row" class="masariuman-tdBgBlack">PEJABAT PENANDATANGAN SK</th>
-                        <td id="pejabatPenandatanganSk"></td>
+                        <th scope="row" class="masariuman-tdBgBlack">UNIT KERJA</th>
+                        <td id="unitKerja"></td>
+                        </tr>
+                        <tr>
+                        <th scope="row" class="masariuman-tdBgBlack">TMT JABATAN</th>
+                        <td id="tmtJabatan"></td>
                         </tr>
                         <tr>
                         <th scope="row" class="masariuman-tdBgBlack">NOMOR SK</th>
@@ -85,6 +91,10 @@
                         <tr>
                         <th scope="row" class="masariuman-tdBgBlack">TANGGAL SK</th>
                         <td id="tanggalSk"></td>
+                        </tr>
+                        <tr>
+                        <th scope="row" class="masariuman-tdBgBlack">PEJABAT PENANDATANGAN SK</th>
+                        <td id="pejabatPenandatanganSk"></td>
                         </tr>
                         </tbody>
                     </table>
