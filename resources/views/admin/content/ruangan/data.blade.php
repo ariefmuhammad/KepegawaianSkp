@@ -173,7 +173,7 @@
           <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span class="close-label">Tutup</span><span class="os-icon os-icon-close"></span></button>
           <div class="onboarding-side-by-side">
             <div class="onboarding-media">
-              <img alt="" src="/iniTemplate/dist/iconModal/ruanganAdd.png" width="200px">
+              <img alt="" src="/iconModal/ruanganAdd.png" width="200px">
             </div>
             <div class="onboarding-content with-gradient">
               <h4 class="onboarding-title">
@@ -211,7 +211,7 @@
             <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span class="close-label">Tutup</span><span class="os-icon os-icon-close"></span></button>
             <div class="onboarding-side-by-side">
               <div class="onboarding-media">
-                <img alt="" src="/iniTemplate/dist/iconModal/ruanganAdd.png" width="200px">
+                <img alt="" src="/iconModal/ruanganAdd.png" width="200px">
               </div>
               <div class="onboarding-content with-gradient">
                 <h4 class="onboarding-title">
@@ -251,7 +251,7 @@
             <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span class="close-label">Tutup</span><span class="os-icon os-icon-close"></span></button>
             <div class="onboarding-side-by-side">
               <div class="onboarding-media">
-                <img alt="" src="/iniTemplate/dist/iconModal/ruanganAdd.png" width="200px">
+                <img alt="" src="/iconModal/ruanganAdd.png" width="200px">
               </div>
               <div class="onboarding-content with-gradient">
                 <h4 class="onboarding-title">

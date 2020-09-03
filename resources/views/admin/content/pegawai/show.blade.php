@@ -69,7 +69,7 @@
                             <p style="margin-bottom: 0;">{{$pegawai->user->name}}</p>
                             <p>NIP : {{$pegawai->nip_baru}}</p>
                         </div>
-                        <div class="masariuman-photoProfile" style="background-image: url('/iniTemplate/gambar/chonk.jpg')"></div>
+                        <div class="masariuman-photoProfile" style="background-image: url('/gambar/chonk.jpg')"></div>
                     </td>
                     <td>
                         <div id="benda">
@@ -279,7 +279,7 @@
           <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span class="close-label">Tutup</span><span class="os-icon os-icon-close"></span></button>
           <div class="onboarding-side-by-side">
             <div class="onboarding-media">
-              <img alt="" src="/iniTemplate/dist/iconModal/pegawaiAdd.png" width="200px">
+              <img alt="" src="/iconModal/pegawaiAdd.png" width="200px">
             </div>
             <div class="onboarding-content with-gradient">
               <h4 class="onboarding-title">
