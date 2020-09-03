@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Thu Sep 03 2020 13:22:09 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/content/pegawai/show_partial/jasa.blade.php
+* resources/views/admin/content/pegawai/show_partial/seminar.blade.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
