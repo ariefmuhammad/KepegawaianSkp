@@ -64,7 +64,7 @@
               </div>
               <div class="onboarding-content with-gradient masariuman-width1000px">
                 <h4 class="onboarding-title">
-                    Detail Data Riwayat Pekerjaan/Jabatan
+                    Detail Data Seminar/Lokakarya/Simposium
                 </h4>
                 <div class="onboarding-text">
                     <table class="mb-0 table table-striped">
