@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Thu Sep 03 2020 11:10:59 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/content/pegawai/show_partial/pasangan.blade.php
+
+
+Created files:
+* .autogit/logs/log-3-8-2020-11-0-58.txt
+
+
+Deleted files:
+
+
+Renamed files:
