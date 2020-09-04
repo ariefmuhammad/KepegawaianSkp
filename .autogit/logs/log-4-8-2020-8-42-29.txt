@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Fri Sep 04 2020 08:42:29 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/content/pegawai/show_partial/keluarga.blade.php
+* resources/views/admin/content/pegawai/show_partial/organisasi.blade.php
+
+
+Created files:
+* .autogit/logs/log-4-8-2020-8-32-20.txt
+
+
+Deleted files:
+
+
+Renamed files:
