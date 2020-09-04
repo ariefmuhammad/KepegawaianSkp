@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Fri Sep 04 2020 09:02:37 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/content/pegawai/show_partial/hukuman.blade.php
+* resources/views/admin/content/pegawai/show_partial/keluarga.blade.php
+* resources/views/admin/content/pegawai/show_partial/organisasi.blade.php
+
+
+Created files:
+* .autogit/logs/log-4-8-2020-8-52-31.txt
+* public/iconModal/family.png
+* public/iconModal/organization.png
+* public/iconModal/punishment.png
+
+
+Deleted files:
+
+
+Renamed files:
