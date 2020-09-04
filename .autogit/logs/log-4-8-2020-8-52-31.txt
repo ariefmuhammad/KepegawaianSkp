@@ -1,0 +1,25 @@
+-------------------- Auto-Git Log --------------------
+		Fri Sep 04 2020 08:52:31 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* public/iconModal/rank.png
+* public/iconModal/userCertificate.png
+* resources/views/admin/content/pegawai/show_partial/anak.blade.php
+* resources/views/admin/content/pegawai/show_partial/jasa.blade.php
+* resources/views/admin/content/pegawai/show_partial/pasangan.blade.php
+* resources/views/admin/content/pegawai/show_partial/seminar.blade.php
+
+
+Created files:
+* .autogit/logs/log-4-8-2020-8-42-29.txt
+* public/iconModal/achievement.png
+* public/iconModal/couple.png
+* public/iconModal/kid.png
+* public/iconModal/seminar.png
+
+
+Deleted files:
+
+
+Renamed files:
