@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Fri Sep 04 2020 08:32:20 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/content/pegawai/show_partial/hukuman.blade.php
+
+
+Created files:
+* .autogit/logs/log-3-8-2020-15-53-29.txt
+
+
+Deleted files:
+
+
+Renamed files:
