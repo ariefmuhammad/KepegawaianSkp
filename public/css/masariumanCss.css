@@ -130,3 +130,7 @@
         max-width: 1300px;
     }
 }
+
+
+body.color-scheme-dark .table th, body.color-scheme-dark .table td, .content-panel.color-scheme-dark .table th, .content-panel.color-scheme-dark .table td { color: #fff; }
+
