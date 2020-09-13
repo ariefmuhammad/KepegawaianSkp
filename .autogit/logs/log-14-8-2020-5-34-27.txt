@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 14 2020 05:34:27 GMT+0700 (Western Indonesia Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/logs/log-14-8-2020-5-24-22.txt
+
+
+Deleted files:
+
+
+Renamed files:
