@@ -15,9 +15,11 @@ class organisasiController extends Controller
      */
     public function index()
     {
-        $keanggotaan_organisasi = Organisasi::where('active', '1')->get();
+        // $keanggotaan_organisasi = Organisasi::where('active', '1')->get();
 
-        return view('keanggotaan_organisasi', compact('keanggotaan_organisasi'));
+        // return view('keanggotaan_organisasi', compact('keanggotaan_organisasi'));
+
+        return view('pegawai.content.keanggotaan_organisasi.index');
     }
 
     /**
@@ -53,7 +55,7 @@ class organisasiController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data keanggotaan organisasi berhasil ditambahkan');
+        // \Session::flash('Berhasil', 'Data keanggotaan organisasi berhasil ditambahkan');
 
         return back();
     }
@@ -104,7 +106,7 @@ class organisasiController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data keanggotaan organisasi berhasil diubah');
+        // \Session::flash('Berhasil', 'Data keanggotaan organisasi berhasil diubah');
 
         return back();
     }
@@ -118,8 +120,8 @@ class organisasiController extends Controller
     public function destroy($id)
     {
         $keanggotaan_organisasi = Organisasi::where('id', $id)->delete();
-        
-        \Session::flash('Berhasil', 'Data keanggotaan organisasi berhasil dihapus');
+
+        // \Session::flash('Berhasil', 'Data keanggotaan organisasi berhasil dihapus');
 
         return back();
     }

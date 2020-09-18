@@ -15,11 +15,13 @@ class istriSuamiController extends Controller
      */
     public function index()
     {
-        $pegawai_id = Pegawai::where('id', Auth()->user()->id)->first();
+        // $pegawai_id = Pegawai::where('id', Auth()->user()->id)->first();
 
-        $istri_suami = IstriSuami::where('active', '1')->get();
+        // $istri_suami = IstriSuami::where('active', '1')->get();
 
-        return view('istri-suami', compact(['istri_suami', 'pegawai_id']));
+        // return view('istri-suami', compact(['istri_suami', 'pegawai_id']));
+
+        return view('pegawai.content.istri_suami.index');
     }
 
     /**
@@ -55,7 +57,7 @@ class istriSuamiController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data istri suami berhasil ditambahkan');
+        // \Session::flash('Berhasil', 'Data istri suami berhasil ditambahkan');
 
         return back();
     }
@@ -106,7 +108,7 @@ class istriSuamiController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data istri suami berhasil diubah');
+        // \Session::flash('Berhasil', 'Data istri suami berhasil diubah');
 
         return back();
     }
@@ -121,7 +123,7 @@ class istriSuamiController extends Controller
     {
         $istri_suami = IstriSuami::where('id', $id)->delete();
 
-        \Session::flash('Berhasil', 'Data istri suami berhasil dihapus');
+        // \Session::flash('Berhasil', 'Data istri suami berhasil dihapus');
 
         return back();
     }

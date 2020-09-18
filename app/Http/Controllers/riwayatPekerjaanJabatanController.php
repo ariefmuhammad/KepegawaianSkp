@@ -15,8 +15,12 @@ class riwayatPekerjaanJabatanController extends Controller
      */
     public function index()
     {
-        $riwayat_pekerjaan_jabatan = PekerjaanJabatan::where('active', '1')->get();
-        return view('riwayat_pekerjaan-jabatan', compact('riwayat_pekerjaan_jabatan'));
+        // $riwayat_pekerjaan_jabatan = PekerjaanJabatan::where('active', '1')->get();
+        // return view('riwayat_pekerjaan-jabatan', compact('riwayat_pekerjaan_jabatan'));
+
+        return view('pegawai.content.riwayat_kepangkatan.index');
+
+
     }
 
     /**
@@ -54,7 +58,7 @@ class riwayatPekerjaanJabatanController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data riwayat pekerjaaan / jabatan berhasil ditambahkan');
+        // \Session::flash('Berhasil', 'Data riwayat pekerjaaan / jabatan berhasil ditambahkan');
 
         return back();
     }
@@ -107,7 +111,7 @@ class riwayatPekerjaanJabatanController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data riwayat pekerjaaan / jabatan berhasil diubah');
+        // \Session::flash('Berhasil', 'Data riwayat pekerjaaan / jabatan berhasil diubah');
 
         return back();
     }
@@ -122,7 +126,7 @@ class riwayatPekerjaanJabatanController extends Controller
     {
         $riwayat_pekerjaan_jabatan = PekerjaanJabatan::where('id', $id)->delete();
 
-        \Session::flash('Berhasil', 'Data riwayat pekerjaaan / jabatan berhasil dihapus');
+        // \Session::flash('Berhasil', 'Data riwayat pekerjaaan / jabatan berhasil dihapus');
 
         return back();
     }

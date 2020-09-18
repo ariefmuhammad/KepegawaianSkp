@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Pegawai;
 use App\Hukuman;
 
+
 class hukumanController extends Controller
 {
     /**
@@ -15,9 +16,11 @@ class hukumanController extends Controller
      */
     public function index()
     {
-        $hukum_disiplin = Hukuman::where('active', '1')->get();
+        // $hukum_disiplin = Hukuman::where('active', '1')->get();
 
-        return view('hukum_disiplin', compact('hukum_disiplin'));
+        // return view('hukum_disiplin', compact('hukum_disiplin'));
+
+        return view('pegawai.content.hukum_disiplin.index');
     }
 
     /**
@@ -51,7 +54,7 @@ class hukumanController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data hukuman disiplin berhasil ditambahkan');
+        // Session::flash('Berhasil', 'Data hukuman disiplin berhasil ditambahkan');
 
         return back();
     }
@@ -100,7 +103,7 @@ class hukumanController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data hukuman disiplin berhasil diubah');
+        // Session::flash('Berhasil', 'Data hukuman disiplin berhasil diubah');
 
         return back();
     }
@@ -114,8 +117,8 @@ class hukumanController extends Controller
     public function destroy($id)
     {
         $hukum_disiplin = Hukuman::where('id', $id)->delete();
-        
-        \Session::flash('Berhasil', 'Data hukuman disiplin berhasil dihapus');
+
+        // Session::flash('Berhasil', 'Data hukuman disiplin berhasil dihapus');
 
         return back();
     }

@@ -16,9 +16,11 @@ class seminarController extends Controller
      */
     public function index()
     {
-        $seminar_lokakarya_simposium = Seminar::where('active', '1')->get();
+        // $seminar_lokakarya_simposium = Seminar::where('active', '1')->get();
 
-        return view('seminar-lokakarya-simposium', compact('seminar_lokakarya_simposium'));
+        // return view('seminar-lokakarya-simposium', compact('seminar_lokakarya_simposium'));
+
+        return view('pegawai.content.seminar_lokakarya_simposium.index');
     }
 
     /**
@@ -55,7 +57,7 @@ class seminarController extends Controller
             'updated_at' => \Carbon\Carbon::now(),
         ]);
 
-        \Session::flash('Berhasil', 'Data seminar / lokakarya / simposium berhasil ditambahkan');
+        // \Session::flash('Berhasil', 'Data seminar / lokakarya / simposium berhasil ditambahkan');
 
         return back();
     }
@@ -107,7 +109,7 @@ class seminarController extends Controller
             'updated_at' => \Carbon\Carbon::now(),
         ]);
 
-        \Session::flash('Berhasil', 'Data seminar / lokakarya / simposium  berhasil diubah');
+        // \Session::flash('Berhasil', 'Data seminar / lokakarya / simposium  berhasil diubah');
 
         return back();
     }
@@ -122,7 +124,7 @@ class seminarController extends Controller
     {
         $seminar_lokakarya_simposium = Seminar::where('id', $id)->delete();
 
-        \Session::flash('Berhasil', 'Data seminar / lokakarya / simposium  berhasil dihapus');
+        // \Session::flash('Berhasil', 'Data seminar / lokakarya / simposium  berhasil dihapus');
 
         return back();
     }

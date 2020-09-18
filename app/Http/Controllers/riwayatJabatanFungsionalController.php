@@ -15,9 +15,11 @@ class riwayatJabatanFungsionalController extends Controller
      */
     public function index()
     {
-        $riwayat_jabatan_fungsional = JabatanFungsional::where('active', '1')->get();
+        // $riwayat_jabatan_fungsional = JabatanFungsional::where('active', '1')->get();
 
-        return view('riwayat_jabatan_fungsional', compact('riwayat_jabatan_fungsional'));
+        // return view('riwayat_jabatan_fungsional', compact('riwayat_jabatan_fungsional'));
+
+        return view('pegawai.content.riwayat_jabatan_fungsional.index');
     }
 
     /**
@@ -52,7 +54,7 @@ class riwayatJabatanFungsionalController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data riwayat jabatan fungsional berhasil ditambahkan');
+        // \Session::flash('Berhasil', 'Data riwayat jabatan fungsional berhasil ditambahkan');
 
         return back();
     }
@@ -102,7 +104,7 @@ class riwayatJabatanFungsionalController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data riwayat jabatan fungsional berhasil diubah');
+        // \Session::flash('Berhasil', 'Data riwayat jabatan fungsional berhasil diubah');
 
         return back();
     }
@@ -117,7 +119,7 @@ class riwayatJabatanFungsionalController extends Controller
     {
         $riwayat_jabatan_fungsional = JabatanFungsional::where('id', $id)->delete();
 
-        \Session::flash('Berhasil', 'Data riwayat jabatan fungsional berhasil dihapus');
+        // \Session::flash('Berhasil', 'Data riwayat jabatan fungsional berhasil dihapus');
 
         return back();
     }

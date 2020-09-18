@@ -257,7 +257,7 @@
                 <span>SELAMAT DATANG</span>
               </li>
               <li class="selected has-sub-menu">
-                <a href="index.html">
+                <a href="#">
                   <div class="icon-w">
                     <div class="os-icon os-icon-layout"></div>
                   </div>
@@ -272,14 +272,14 @@
                   <div class="sub-menu-i">
                     <ul class="sub-menu">
                       <li>
-                        <a href="index.html">Dasar Pegawai</a>
+                        <a href="{{route('dasar_pegawai.index')}}" class="{{ Request::is('/dasar_pegawai') ? 'mm-active' : '' }}">Dasar Pegawai</a>
                       </li>
                     </ul>
                   </div>
                 </div>
               </li>
               <li class=" has-sub-menu">
-                <a href="layouts_menu_top_image.html">
+                <a href="#">
                   <div class="icon-w">
                     <div class="os-icon os-icon-layers"></div>
                   </div>
@@ -294,36 +294,36 @@
                   <div class="sub-menu-i">
                     <ul class="sub-menu">
                       <li>
-                        <a href="layouts_menu_side_full.html">Pendidikan Formal</a>
+                        <a href="{{route('riwayat_pendidikan_formal.index')}}" class="{{ Request::is('/riwayat_pendidikan_formal') ? 'mm-active' : '' }}">Pendidikan Formal</a>
                       </li>
                       <li>
-                        <a href="layouts_menu_side_full_dark.html">Diklat Fungsional</a>
+                        <a href="{{route('riwayat_diklat_fungsional.index')}}" class="{{ Request::is('/riwayat_diklat_fungsional') ? 'mm-active' : '' }}">Diklat Fungsional</a>
                       </li>
                       <li>
-                        <a href="layouts_menu_side_transparent.html">Diklat Teknis</a>
+                        <a href="{{route('riwayat_diklat_teknis.index')}}" class="{{ Request::is('/riwayat_diklat_teknis') ? 'mm-active' : '' }}">Diklat Teknis</a>
                       </li>
                       <li>
-                        <a href="apps_pipeline.html">Diklat Penjenjang / Struktural</a>
+                        <a href="{{route('riwayat_diklat_penjenjangan.index')}}" class="{{ Request::is('/riwayat_diklat_penjenjangan') ? 'mm-active' : '' }}">Diklat Penjenjang / Struktural</a>
                       </li>
                       </ul><ul class="sub-menu">
                       <li>
-                        <a href="apps_projects.html">Kepangkatan</a>
+                        <a href="{{route('riwayat_kepangkatan.index')}}" class="{{ Request::is('/riwayat_kepangkatan') ? 'mm-active' : '' }}">Kepangkatan</a>
                       </li>
                       <li>
-                        <a href="layouts_menu_side_mini.html">Jabatan Struktural</a>
+                        <a href="{{route('riwayat_jabatan_struktural.index')}}" class="{{ Request::is('/riwayat_jabatan_struktural') ? 'mm-active' : '' }}">Jabatan Struktural</a>
                       </li>
                       <li>
-                        <a href="layouts_menu_side_mini_dark.html">Jabatan Fungsional</a>
+                        <a href="{{route('riwayat_jabatan_fungsional.index')}}" class="{{ Request::is('/riwayat_jabatan_fungsional') ? 'mm-active' : '' }}">Jabatan Fungsional</a>
                       </li>
                       <li>
-                        <a href="layouts_menu_side_compact.html">Perkerjaan / Jabatan</a>
+                        <a href="{{route('riwayat_pekerjaan_jabatan.index')}}" class="{{ Request::is('/riwayat_pekerjaan_jabatan') ? 'mm-active' : '' }}">Perkerjaan / Jabatan</a>
                       </li>
                       </ul>
                   </div>
                 </div>
               </li>
               <li class=" has-sub-menu">
-                <a href="layouts_menu_top_image.html">
+                <a href="#">
                   <div class="icon-w">
                     <div class="os-icon os-icon-layers"></div>
                   </div>
@@ -338,14 +338,14 @@
                   <div class="sub-menu-i">
                     <ul class="sub-menu">
                       <li>
-                        <a href="layouts_menu_side_full.html">Data Suami</a>
+                        <a href="{{route('istri_suami.index')}}" class="{{ Request::is('/istri_suami') ? 'mm-active' : '' }}">Data Suami</a>
                       </li>
                       </ul>
                   </div>
                 </div>
               </li>
               <li class=" has-sub-menu">
-                <a href="layouts_menu_top_image.html">
+                <a href="#">
                   <div class="icon-w">
                     <div class="os-icon os-icon-layers"></div>
                   </div>
@@ -360,14 +360,14 @@
                   <div class="sub-menu-i">
                     <ul class="sub-menu">
                       <li>
-                        <a href="layouts_menu_side_full.html">Data Istri</a>
+                        <a href="{{route('istri_suami.index')}}" class="{{ Request::is('/istri_suami') ? 'mm-active' : '' }}">Data Istri</a>
                       </li>
                       </ul>
                   </div>
                 </div>
               </li>
               <li class=" has-sub-menu">
-                <a href="layouts_menu_top_image.html">
+                <a href="#">
                   <div class="icon-w">
                     <div class="os-icon os-icon-layers"></div>
                   </div>
@@ -382,20 +382,20 @@
                   <div class="sub-menu-i">
                     <ul class="sub-menu">
                       <li>
-                        <a href="layouts_menu_side_full.html">Kandung</a>
+                        <a href="{{route('keluarga_kandung.index')}}" class="{{ Request::is('/keluarga_kandung') ? 'mm-active' : '' }}">Kandung</a>
                       </li>
                       <li>
-                        <a href="layouts_menu_side_full.html">Suami</a>
+                        <a href="{{route('keluarga_istri_suami.index')}}" class="{{ Request::is('/keluarga_istri_suami') ? 'mm-active' : '' }}s">Suami</a>
                       </li>
                       <li>
-                        <a href="layouts_menu_side_full.html">Istri</a>
+                        <a href="{{route('keluarga_istri_suami.index')}}" class="{{ Request::is('/keluarga_istri_suami') ? 'mm-active' : '' }}">Istri</a>
                       </li>
                       </ul>
                   </div>
                 </div>
               </li>
               <li class=" has-sub-menu">
-                <a href="layouts_menu_top_image.html">
+                <a href="#">
                   <div class="icon-w">
                     <div class="os-icon os-icon-layers"></div>
                   </div>
@@ -410,26 +410,26 @@
                   <div class="sub-menu-i">
                     <ul class="sub-menu">
                       <li>
-                        <a href="layouts_menu_side_full.html">Data SKP</a>
+                        <a href="#">Data SKP</a>
                       </li>
                       <li>
-                        <a href="layouts_menu_side_full.html">Form SKP</a>
+                        <a href="#">Form SKP</a>
                       </li>
                       <li>
-                        <a href="layouts_menu_side_full.html">Pengukuran</a>
+                        <a href="#">Pengukuran</a>
                       </li>
                       <li>
-                        <a href="layouts_menu_side_full.html">Perilaku Kerja</a>
+                        <a href="#">Perilaku Kerja</a>
                       </li>
                       <li>
-                        <a href="layouts_menu_side_full.html">Penilaian</a>
+                        <a href="#">Penilaian</a>
                       </li>
                       </ul>
                   </div>
                 </div>
               </li>
               <li class=" has-sub-menu">
-                <a href="layouts_menu_top_image.html">
+                <a href="#">
                   <div class="icon-w">
                     <div class="os-icon os-icon-layers"></div>
                   </div>
@@ -444,14 +444,14 @@
                   <div class="sub-menu-i">
                     <ul class="sub-menu">
                       <li>
-                        <a href="layouts_menu_side_full.html">Data Seminar / Lokakarya / Simposium</a>
+                        <a href="{{route('seminar_lokakarya_simposium.index')}}" class="{{ Request::is('/seminar_lokakarya_simposium') ? 'mm-active' : '' }}">Data Seminar / Lokakarya / Simposium</a>
                       </li>
                       </ul>
                   </div>
                 </div>
               </li>
               <li class=" has-sub-menu">
-                <a href="layouts_menu_top_image.html">
+                <a href="#">
                   <div class="icon-w">
                     <div class="os-icon os-icon-layers"></div>
                   </div>
@@ -466,14 +466,14 @@
                   <div class="sub-menu-i">
                     <ul class="sub-menu">
                       <li>
-                        <a href="layouts_menu_side_full.html">Data Tanda Jasa / Penghargaan</a>
+                        <a href="{{route('tanda_jasa_penghargaan.index')}}" class="{{ Request::is('/tanda_jasa_penghargaan') ? 'mm-active' : '' }}">Data Tanda Jasa / Penghargaan</a>
                       </li>
                       </ul>
                   </div>
                 </div>
               </li>
               <li class=" has-sub-menu">
-                <a href="layouts_menu_top_image.html">
+                <a href="#">
                   <div class="icon-w">
                     <div class="os-icon os-icon-layers"></div>
                   </div>
@@ -488,14 +488,14 @@
                   <div class="sub-menu-i">
                     <ul class="sub-menu">
                       <li>
-                        <a href="layouts_menu_side_full.html">Data Hukum Disiplin</a>
+                        <a href="{{route('hukum_disiplin.index')}}" class="{{ Request::is('/hukum_disiplin') ? 'mm-active' : '' }}">Data Hukum Disiplin</a>
                       </li>
                       </ul>
                   </div>
                 </div>
               </li>
               <li class=" has-sub-menu">
-                <a href="layouts_menu_top_image.html">
+                <a href="#">
                   <div class="icon-w">
                     <div class="os-icon os-icon-layers"></div>
                   </div>
@@ -510,7 +510,7 @@
                   <div class="sub-menu-i">
                     <ul class="sub-menu">
                       <li>
-                        <a href="layouts_menu_side_full.html">Data Keanggotaan Organisasi</a>
+                        <a href="{{route('keanggotaan_organisasi.index')}}" class="{{ Request::is('/keanggotaan_organisasi') ? 'mm-active' : '' }}">Data Keanggotaan Organisasi</a>
                       </li>
                       </ul>
                   </div>

@@ -15,8 +15,10 @@ class riwayatDiklatTeknisController extends Controller
      */
     public function index()
     {
-        $riwayat_diklat_teknis = DiklatTeknis::where('active', '1')->get(); 
-        return view('riwayat_diklat_teknis', compact('riwayat_diklat_teknis'));
+        // $riwayat_diklat_teknis = DiklatTeknis::where('active', '1')->get();
+        // return view('riwayat_diklat_teknis', compact('riwayat_diklat_teknis'));
+
+        return view('pegawai.content.riwayat_diklat_teknis.index');
     }
 
     /**
@@ -52,7 +54,7 @@ class riwayatDiklatTeknisController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data diklat teknis berhasil ditambahkan');
+        // \Session::flash('Berhasil', 'Data diklat teknis berhasil ditambahkan');
 
         return back();
     }
@@ -103,7 +105,7 @@ class riwayatDiklatTeknisController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data diklat Teknis berhasil diubah');
+        // \Session::flash('Berhasil', 'Data diklat Teknis berhasil diubah');
 
         return back();
     }
@@ -118,7 +120,7 @@ class riwayatDiklatTeknisController extends Controller
     {
         $riwayat_diklat_teknis = DiklatTeknis::where('id', $id)->delete();
 
-        \Session::flash('Berhasil', 'Data diklat Teknis berhasil dihapus');
+        // \Session::flash('Berhasil', 'Data diklat Teknis berhasil dihapus');
 
         return back();
     }

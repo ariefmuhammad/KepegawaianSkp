@@ -15,11 +15,13 @@ class riwayatPendidikanFormalController extends Controller
      */
     public function index()
     {
-        $riwayat_pendidikan_formal = PendidikanFormal::where('active', '1')->get();
+        // $riwayat_pendidikan_formal = PendidikanFormal::where('active', '1')->get();
 
-        // return $pendidikan_formal;
+        // // return $pendidikan_formal;
 
-        return view('riwayat_pendidikan_formal', compact('riwayat_pendidikan_formal'));
+        // return view('riwayat_pendidikan_formal', compact('riwayat_pendidikan_formal'));
+
+        return view('pegawai.content.riwayat_kepangkatan.index');
     }
 
     /**
@@ -59,7 +61,7 @@ class riwayatPendidikanFormalController extends Controller
 
         // dd($pendidikan_formal);
 
-        \Session::flash('Berhasil', 'Data riwayat pendidikan formal berhasil ditambahkan');
+        // \Session::flash('Berhasil', 'Data riwayat pendidikan formal berhasil ditambahkan');
 
         return back();
 
@@ -114,7 +116,7 @@ class riwayatPendidikanFormalController extends Controller
 
         // dd($pendidikan_formal);
 
-        \Session::flash('Berhasil', 'Data riwayat pendidikan formal berhasil diubah');
+        // \Session::flash('Berhasil', 'Data riwayat pendidikan formal berhasil diubah');
 
         return back();
     }
@@ -129,7 +131,7 @@ class riwayatPendidikanFormalController extends Controller
     {
         $riwayat_pendidikan_formal = PendidikanFormal::where('id', $id)->delete();
 
-        \Session::flash('Berhasil', 'Data riwayat pendidikan formal berhasil dihapus');
+        // \Session::flash('Berhasil', 'Data riwayat pendidikan formal berhasil dihapus');
 
         return back();
     }

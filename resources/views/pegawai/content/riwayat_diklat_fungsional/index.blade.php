@@ -5,7 +5,7 @@
 
 
 @section('title')
-    Riwayat Pendidikan Formal
+    Riwayat Diklat Fungsional
 @endsection
 
 
@@ -14,14 +14,14 @@
     <div class="content-box">
       <div class="element-wrapper">
         <h6 class="element-header">
-          Riwayat Pendidikan Formal
+          Riwayat Diklat Fungsional
         </h6>
         <div class="element-box">
           <h5 class="form-header">
-            Data Riwayat Pendidikan Formal
+            Data Riwayat Diklat Fungsional
           </h5>
           <div class="form-desc">
-            Ini adalah data riwayat pendidikan formal anda, Silahkan di isi dengan lengkap.
+            Ini adalah data riwayat diklat fungsional anda, Silahkan di isi dengan lengkap.
           </div>
           <div class="table-responsive">
             <button class="mr-2 mb-2 btn btn-outline-success btn-lg btn-block" data-target="#addOnboardingFormModal" data-toggle="modal" type="button"><i class="os-icon os-icon-plus"></i> Tambah Data</button>
@@ -29,8 +29,8 @@
                 <thead>
                     <tr>
                     <th>No</th>
-                    <th>Tingkat Pendidikan</th>
-                    <th>Nama Sekolah/Universitas</th>
+                    <th>Nama Diklat</th>
+                    <th>Lokasi</th>
                     <th>Aksi</th>
                     </tr>
                 </thead>
@@ -288,84 +288,16 @@
         </div>
         <div class="onboarding-content with-gradient">
           <h4 class="onboarding-title">
-            Tambah Data Riwayat Pendidikan Formal
+            Tambah Data Riwayat Diklat Fungsional
           </h4>
           <div class="onboarding-text">
-            Tambahkan Data Riwayat Pendidikan Formal Anda Disini Dengan Lengkap.
+            Tambahkan Data Riwayat Diklat Funsional Anda Disini Dengan Lengkap.
           </div>
           <form>
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Tingkat Pendidikan</label><select class="form-control" required="required">
-                      <option selected disabled>
-                        -Pilih Tingkat Pendidikan-
-                      </option>
-                      <option>
-                        S3 (Setara)
-                      </option>
-                      <option>
-                        S2 (Setara)
-                      </option>
-                      <option>
-                        S1 (Setara)
-                      </option>
-                      <option>
-                        D4
-                      </option>
-                      <option>
-                        SM
-                      </option>
-                      <option>
-                        D3
-                      </option>
-                      <option>
-                        D2
-                      </option>
-                      <option>
-                        D1
-                      </option>
-                      <option>
-                        SLTA
-                      </option>
-                      <option>
-                        SLTP
-                      </option>
-                      <option>
-                        SD
-                      </option>
-                    </select>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Nama Sekolah / Universitas</label><input class="form-control" placeholder="Masukan Nama Sekolah / Universitas..." type="text" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Jurusan / Program Studi</label><input class="form-control" placeholder="Masukan Jurusan / Program Studi..." type="text" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Tahun Masuk</label><input class="form-control" placeholder="Masukan Tahun Masuk..." type="number" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Tahun Lulus</label><input class="form-control" placeholder="Masukan Tahun Lulus..." type="number" value="" required="required">
+                    <label for="">Nama Diklat</label><input class="form-control" placeholder="Masukan Nama Diklat..." type="text" value="" required="required">
                     <div class="help-block form-text with-errors form-control-feedback"></div>
                   </div>
                 </div>
@@ -375,7 +307,7 @@
                   <div class="form-group">
                     <label for="">Tempat Belajar</label><select class="form-control" required="required">
                       <option selected disabled>
-                        -Pilih Jenis Kelamin-
+                        -Pilih Tempat Belajar-
                       </option>
                       <option>
                         Dalam Negeri
@@ -386,7 +318,7 @@
                     </select>
                   </div>
                 </div>
-              </div>
+            </div>
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
@@ -398,7 +330,35 @@
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Nomor Ijazah</label><input class="form-control" placeholder="Masukan Nomor Ijazah..." type="number" value="" required="required">
+                    <label for="">Tanggal Mulai</label>
+                    <div class="date-input">
+                      <input class="single-daterange form-control" placeholder="Masukan Tanggal Mulai..." type="text" value="04/12/1978" required="required">
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Tanggal Selesai</label>
+                    <div class="date-input">
+                      <input class="single-daterange form-control" placeholder="Masukan Tanggal Selesai..." type="text" value="04/12/1978" required="required">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Jumlah Jam</label><input class="form-control" placeholder="Masukan Jumlah Jam..." type="number" value="" required="required">
+                    <div class="help-block form-text with-errors form-control-feedback"></div>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Penyelenggara</label><input class="form-control" placeholder="Masukan Penyelenggara..." type="text" value="" required="required">
                     <div class="help-block form-text with-errors form-control-feedback"></div>
                   </div>
                 </div>
@@ -423,84 +383,16 @@
         </div>
         <div class="onboarding-content with-gradient">
           <h4 class="onboarding-title">
-            Ubah Data Riwayat Pendidikan Formal
+            Ubah Data Riwayat Diklat Fungsional
           </h4>
           <div class="onboarding-text">
-            Ubah Data Riwayat Pendidikan Formal Anda Yang Ingin Anda Ubah.
+            Ubah Data Riwayat Diklat Fungsional Anda Yang Ingin Anda Ubah.
           </div>
           <form>
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Tingkat Pendidikan</label><select class="form-control" required="required">
-                      <option selected disabled>
-                        -Pilih Tingkat Pendidikan-
-                      </option>
-                      <option>
-                        S3 (Setara)
-                      </option>
-                      <option>
-                        S2 (Setara)
-                      </option>
-                      <option>
-                        S1 (Setara)
-                      </option>
-                      <option>
-                        D4
-                      </option>
-                      <option>
-                        SM
-                      </option>
-                      <option>
-                        D3
-                      </option>
-                      <option>
-                        D2
-                      </option>
-                      <option>
-                        D1
-                      </option>
-                      <option>
-                        SLTA
-                      </option>
-                      <option>
-                        SLTP
-                      </option>
-                      <option>
-                        SD
-                      </option>
-                    </select>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Nama Sekolah / Universitas</label><input class="form-control" placeholder="Masukan Nama Sekolah / Universitas..." type="text" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Jurusan / Program Studi</label><input class="form-control" placeholder="Masukan Jurusan / Program Studi..." type="text" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Tahun Masuk</label><input class="form-control" placeholder="Masukan Tahun Masuk..." type="number" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Tahun Lulus</label><input class="form-control" placeholder="Masukan Tahun Lulus..." type="number" value="" required="required">
+                    <label for="">Nama Diklat</label><input class="form-control" placeholder="Masukan Nama Diklat..." type="text" value="" required="required">
                     <div class="help-block form-text with-errors form-control-feedback"></div>
                   </div>
                 </div>
@@ -510,7 +402,7 @@
                   <div class="form-group">
                     <label for="">Tempat Belajar</label><select class="form-control" required="required">
                       <option selected disabled>
-                        -Pilih Jenis Kelamin-
+                        -Pilih Tempat Belajar-
                       </option>
                       <option>
                         Dalam Negeri
@@ -521,7 +413,7 @@
                     </select>
                   </div>
                 </div>
-              </div>
+            </div>
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
@@ -533,13 +425,41 @@
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Nomor Ijazah</label><input class="form-control" placeholder="Masukan Nomor Ijazah..." type="number" value="" required="required">
+                    <label for="">Tanggal Mulai</label>
+                    <div class="date-input">
+                      <input class="single-daterange form-control" placeholder="Masukan Tanggal Mulai..." type="text" value="04/12/1978" required="required">
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Tanggal Selesai</label>
+                    <div class="date-input">
+                      <input class="single-daterange form-control" placeholder="Masukan Tanggal Selesai..." type="text" value="04/12/1978" required="required">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Jumlah Jam</label><input class="form-control" placeholder="Masukan Jumlah Jam..." type="number" value="" required="required">
+                    <div class="help-block form-text with-errors form-control-feedback"></div>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Penyelenggara</label><input class="form-control" placeholder="Masukan Penyelenggara..." type="text" value="" required="required">
                     <div class="help-block form-text with-errors form-control-feedback"></div>
                   </div>
                 </div>
             </div>
             <div class="form-buttons-w">
-              <button class="btn btn-warning" type="submit"><i class="os-icon os-icon-edit"></i> Ubah</button>
+               <button class="btn btn-warning" type="submit"><i class="os-icon os-icon-edit"></i> Ubah</button>
             </div>
           </form>
         </div>
@@ -558,7 +478,7 @@
       </div>
       <div class="onboarding-content with-gradient">
         <h4 class="onboarding-title">
-          Hapus Data Riwayat Pendidikan Formal
+          Hapus Data Riwayat Diklaat Fungsional
         </h4>
         <div class="onboarding-text">
            Apakah anda ingin menghapus data ini ?

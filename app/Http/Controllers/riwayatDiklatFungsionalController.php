@@ -15,9 +15,11 @@ class riwayatDiklatFungsionalController extends Controller
      */
     public function index()
     {
-        $riwayat_diklat_fungsional = DiklatFungsional::where('active', '1')->get();
-    
-        return view('riwayat_diklat_fungsional', compact('riwayat_diklat_fungsional'));
+        // $riwayat_diklat_fungsional = DiklatFungsional::where('active', '1')->get();
+
+        // return view('riwayat_diklat_fungsional', compact('riwayat_diklat_fungsional'));
+
+        return view('pegawai.content.riwayat_diklat_fungsional.index');
     }
 
     /**
@@ -54,7 +56,7 @@ class riwayatDiklatFungsionalController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data diklat fungsional berhasil ditambahkan');
+        // \Session::flash('Berhasil', 'Data diklat fungsional berhasil ditambahkan');
 
         return back();
     }
@@ -105,7 +107,7 @@ class riwayatDiklatFungsionalController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data diklat fungsional berhasil diubah');
+        // \Session::flash('Berhasil', 'Data diklat fungsional berhasil diubah');
 
         return back();
     }
@@ -120,7 +122,7 @@ class riwayatDiklatFungsionalController extends Controller
     {
         $riwayat_diklat_fungsional = DiklatFungsional::where('id', $id)->delete();
 
-        \Session::flash('Berhasil', 'Data diklat fungsional berhasil dihapus');
+        // \Session::flash('Berhasil', 'Data diklat fungsional berhasil dihapus');
 
         return back();
     }

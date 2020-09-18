@@ -15,9 +15,11 @@ class penghargaanController extends Controller
      */
     public function index()
     {
-        $tanda_jasa_penghargaan = Penghargaan::where('active', '1')->get();
+        // $tanda_jasa_penghargaan = Penghargaan::where('active', '1')->get();
 
-        return view('tanda_jasa-penghargaan', compact('tanda_jasa_penghargaan'));
+        // return view('tanda_jasa-penghargaan', compact('tanda_jasa_penghargaan'));
+
+        return view('pegawai.content.tanda_jasa_penghargaan.index');
     }
 
     /**
@@ -51,7 +53,7 @@ class penghargaanController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data tanda jasa / penghargaan berhasil ditambahkan');
+        // \Session::flash('Berhasil', 'Data tanda jasa / penghargaan berhasil ditambahkan');
 
         return back();
     }
@@ -100,7 +102,7 @@ class penghargaanController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data tanda jasa / penghargaan berhasil diubah');
+        // \Session::flash('Berhasil', 'Data tanda jasa / penghargaan berhasil diubah');
 
         return back();
     }
@@ -114,9 +116,9 @@ class penghargaanController extends Controller
     public function destroy($id)
     {
         $tanda_jasa_penghargaan = Penghargaan::where('id', $id)->delete();
-   
-        \Session::flash('Berhasil', 'Data tanda jasa / penghargaan berhasil dihapus');
 
-        return back();    
+        // \Session::flash('Berhasil', 'Data tanda jasa / penghargaan berhasil dihapus');
+
+        return back();
     }
 }

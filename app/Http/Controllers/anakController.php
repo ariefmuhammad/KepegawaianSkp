@@ -15,29 +15,31 @@ class anakController extends Controller
      */
     public function index()
     {
-        $anak = Anak::where('active', '1')->get();
-        return view('anak', compact('anak'));
+        // $anak = Anak::where('active', '1')->get();
+        // return view('anak', compact('anak'));
+
+        return view('pegawai.content.anak.index');
     }
 
     public function getTable()
     {
 
-        $anak = Anak::where('active', '1')->get();
-        return DataTables::of($anak)
-        ->addColumn('aksi', function ($anak) {
-            '<button class="mb-2 mr-2 btn btn-light" data-toggle="modal" data-target="#exampleModalLargeDetail-{{$anaks->id}}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use address-card"></i> Lihat
-            </button>||&nbsp;
-            <button class="mb-2 mr-2 btn btn-light" data-toggle="modal" data-target="#exampleModalLargeUbah-{{$anaks->id}}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Ubah
-            </button>||&nbsp;
-            <button class="mb-2 mr-2 btn btn-light" data-toggle="modal" data-target=".bd-example-modal-sm-delete-{{$anaks->id}}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Hapus
-            </button>||&nbsp';
-        })
-        ->addIndexColumn()
-        ->rawColumns('aksi')
-        ->make(true);
+        // $anak = Anak::where('active', '1')->get();
+        // return DataTables::of($anak)
+        // ->addColumn('aksi', function ($anak) {
+        //     '<button class="mb-2 mr-2 btn btn-light" data-toggle="modal" data-target="#exampleModalLargeDetail-{{$anaks->id}}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use address-card"></i> Lihat
+        //     </button>||&nbsp;
+        //     <button class="mb-2 mr-2 btn btn-light" data-toggle="modal" data-target="#exampleModalLargeUbah-{{$anaks->id}}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Ubah
+        //     </button>||&nbsp;
+        //     <button class="mb-2 mr-2 btn btn-light" data-toggle="modal" data-target=".bd-example-modal-sm-delete-{{$anaks->id}}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Hapus
+        //     </button>||&nbsp';
+        // })
+        // ->addIndexColumn()
+        // ->rawColumns('aksi')
+        // ->make(true);
 
 
-                   
+
 
 
 
@@ -100,7 +102,7 @@ class anakController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data anak berhasil ditambah');
+        // \Session::flash('Berhasil', 'Data anak berhasil ditambah');
 
         return back();
     }
@@ -151,7 +153,7 @@ class anakController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data anak berhasil diubah');
+        // \Session::flash('Berhasil', 'Data anak berhasil diubah');
 
         return back();
     }
@@ -165,8 +167,8 @@ class anakController extends Controller
     public function destroy($id)
     {
         $anak = Anak::where('id', $id)->delete();
-        
-        \Session::flash('Berhasil', 'Data anak berhasil dihapus');
+
+        // \Session::flash('Berhasil', 'Data anak berhasil dihapus');
 
         return back();
 

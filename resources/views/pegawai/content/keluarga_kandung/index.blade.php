@@ -5,7 +5,7 @@
 
 
 @section('title')
-    Riwayat Pendidikan Formal
+    Keluarga Kandung
 @endsection
 
 
@@ -14,14 +14,14 @@
     <div class="content-box">
       <div class="element-wrapper">
         <h6 class="element-header">
-          Riwayat Pendidikan Formal
+          Keluarga Kandung
         </h6>
         <div class="element-box">
           <h5 class="form-header">
-            Data Riwayat Pendidikan Formal
+            Data Keluarga Kandung
           </h5>
           <div class="form-desc">
-            Ini adalah data riwayat pendidikan formal anda, Silahkan di isi dengan lengkap.
+            Ini adalah data keluarga kandung anda, Silahkan di isi dengan lengkap.
           </div>
           <div class="table-responsive">
             <button class="mr-2 mb-2 btn btn-outline-success btn-lg btn-block" data-target="#addOnboardingFormModal" data-toggle="modal" type="button"><i class="os-icon os-icon-plus"></i> Tambah Data</button>
@@ -29,8 +29,8 @@
                 <thead>
                     <tr>
                     <th>No</th>
-                    <th>Tingkat Pendidikan</th>
-                    <th>Nama Sekolah/Universitas</th>
+                    <th>Nama</th>
+                    <th>Hubungan</th>
                     <th>Aksi</th>
                     </tr>
                 </thead>
@@ -40,10 +40,10 @@
                         1
                     </td>
                     <td>
-                        SMA
+                        Sukijan
                     </td>
                     <td>
-                        SMA KATEDRAL 1
+                        ibu
                     </td>
                     <td>
                         <button class="mr-2 mb-2 btn btn-warning" data-target="#editOnboardingFormModal" data-toggle="modal" type="button"> Edit</button><button class="mr-2 mb-2 btn btn-danger" data-target="#deleteOnboardingTextModal" data-toggle="modal" type="button"> Hapus</button>
@@ -288,51 +288,38 @@
         </div>
         <div class="onboarding-content with-gradient">
           <h4 class="onboarding-title">
-            Tambah Data Riwayat Pendidikan Formal
+            Tambah Data Keluarga Kandung
           </h4>
           <div class="onboarding-text">
-            Tambahkan Data Riwayat Pendidikan Formal Anda Disini Dengan Lengkap.
+            Tambahkan Data Keluarga Kandung Anda Disini Dengan Lengkap.
           </div>
           <form>
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Tingkat Pendidikan</label><select class="form-control" required="required">
+                    <label for="">Nama</label><input class="form-control" placeholder="Masukan Nama..." type="text" value="" required="required">
+                    <div class="help-block form-text with-errors form-control-feedback"></div>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Hubungan</label><select class="form-control" required="required">
                       <option selected disabled>
-                        -Pilih Tingkat Pendidikan-
+                        -Pilih Hubungan-
                       </option>
                       <option>
-                        S3 (Setara)
+                        Ayah
                       </option>
                       <option>
-                        S2 (Setara)
+                        Ibu
                       </option>
                       <option>
-                        S1 (Setara)
+                        Kakak
                       </option>
                       <option>
-                        D4
-                      </option>
-                      <option>
-                        SM
-                      </option>
-                      <option>
-                        D3
-                      </option>
-                      <option>
-                        D2
-                      </option>
-                      <option>
-                        D1
-                      </option>
-                      <option>
-                        SLTA
-                      </option>
-                      <option>
-                        SLTP
-                      </option>
-                      <option>
-                        SD
+                        Adik
                       </option>
                     </select>
                   </div>
@@ -341,7 +328,7 @@
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Nama Sekolah / Universitas</label><input class="form-control" placeholder="Masukan Nama Sekolah / Universitas..." type="text" value="" required="required">
+                    <label for="">Pekerjaan</label><input class="form-control" placeholder="Masukan Pekerjaan..." type="text" value="" required="required">
                     <div class="help-block form-text with-errors form-control-feedback"></div>
                   </div>
                 </div>
@@ -349,57 +336,44 @@
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Jurusan / Program Studi</label><input class="form-control" placeholder="Masukan Jurusan / Program Studi..." type="text" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
+                    <label for="">Tanggal Lahir</label>
+                    <div class="date-input">
+                      <input class="single-daterange form-control" placeholder="Masukan Tanggal Lahir..." type="text" value="04/12/1978" required="required">
+                    </div>
                   </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Tahun Masuk</label><input class="form-control" placeholder="Masukan Tahun Masuk..." type="number" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Tahun Lulus</label><input class="form-control" placeholder="Masukan Tahun Lulus..." type="number" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Tempat Belajar</label><select class="form-control" required="required">
+                    <label for="">Jenis Kelamin</label><select class="form-control" required="required">
                       <option selected disabled>
                         -Pilih Jenis Kelamin-
                       </option>
                       <option>
-                        Dalam Negeri
+                        Laki-laki
                       </option>
                       <option>
-                        Luar Negeri
+                        Perempuan
                       </option>
                     </select>
-                  </div>
-                </div>
-              </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Lokasi</label><input class="form-control" placeholder="Masukan Lokasi..." type="text" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
                   </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Nomor Ijazah</label><input class="form-control" placeholder="Masukan Nomor Ijazah..." type="number" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
+                    <label for="">Kondisi</label><select class="form-control" required="required">
+                      <option selected disabled>
+                        -Pilih Kondisi-
+                      </option>
+                      <option>
+                        Masih Hidup
+                      </option>
+                      <option>
+                        Almarhum
+                      </option>
+                    </select>
                   </div>
                 </div>
             </div>
@@ -423,51 +397,38 @@
         </div>
         <div class="onboarding-content with-gradient">
           <h4 class="onboarding-title">
-            Ubah Data Riwayat Pendidikan Formal
+            Ubah Data Keluarga Kandung
           </h4>
           <div class="onboarding-text">
-            Ubah Data Riwayat Pendidikan Formal Anda Yang Ingin Anda Ubah.
+            Ubah Data Keluarga Kandung Anda Yang Ingin Anda Ubah.
           </div>
           <form>
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Tingkat Pendidikan</label><select class="form-control" required="required">
+                    <label for="">Nama</label><input class="form-control" placeholder="Masukan Nama..." type="text" value="" required="required">
+                    <div class="help-block form-text with-errors form-control-feedback"></div>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Hubungan</label><select class="form-control" required="required">
                       <option selected disabled>
-                        -Pilih Tingkat Pendidikan-
+                        -Pilih Hubungan-
                       </option>
                       <option>
-                        S3 (Setara)
+                        Ayah
                       </option>
                       <option>
-                        S2 (Setara)
+                        Ibu
                       </option>
                       <option>
-                        S1 (Setara)
+                        Kakak
                       </option>
                       <option>
-                        D4
-                      </option>
-                      <option>
-                        SM
-                      </option>
-                      <option>
-                        D3
-                      </option>
-                      <option>
-                        D2
-                      </option>
-                      <option>
-                        D1
-                      </option>
-                      <option>
-                        SLTA
-                      </option>
-                      <option>
-                        SLTP
-                      </option>
-                      <option>
-                        SD
+                        Adik
                       </option>
                     </select>
                   </div>
@@ -476,7 +437,7 @@
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Nama Sekolah / Universitas</label><input class="form-control" placeholder="Masukan Nama Sekolah / Universitas..." type="text" value="" required="required">
+                    <label for="">Pekerjaan</label><input class="form-control" placeholder="Masukan Pekerjaan..." type="text" value="" required="required">
                     <div class="help-block form-text with-errors form-control-feedback"></div>
                   </div>
                 </div>
@@ -484,57 +445,44 @@
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Jurusan / Program Studi</label><input class="form-control" placeholder="Masukan Jurusan / Program Studi..." type="text" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
+                    <label for="">Tanggal Lahir</label>
+                    <div class="date-input">
+                      <input class="single-daterange form-control" placeholder="Masukan Tanggal Lahir..." type="text" value="04/12/1978" required="required">
+                    </div>
                   </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Tahun Masuk</label><input class="form-control" placeholder="Masukan Tahun Masuk..." type="number" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Tahun Lulus</label><input class="form-control" placeholder="Masukan Tahun Lulus..." type="number" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Tempat Belajar</label><select class="form-control" required="required">
+                    <label for="">Jenis Kelamin</label><select class="form-control" required="required">
                       <option selected disabled>
                         -Pilih Jenis Kelamin-
                       </option>
                       <option>
-                        Dalam Negeri
+                        Laki-laki
                       </option>
                       <option>
-                        Luar Negeri
+                        Perempuan
                       </option>
                     </select>
-                  </div>
-                </div>
-              </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Lokasi</label><input class="form-control" placeholder="Masukan Lokasi..." type="text" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
                   </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Nomor Ijazah</label><input class="form-control" placeholder="Masukan Nomor Ijazah..." type="number" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
+                    <label for="">Kondisi</label><select class="form-control" required="required">
+                      <option selected disabled>
+                        -Pilih Kondisi-
+                      </option>
+                      <option>
+                        Masih Hidup
+                      </option>
+                      <option>
+                        Almarhum
+                      </option>
+                    </select>
                   </div>
                 </div>
             </div>
@@ -558,7 +506,7 @@
       </div>
       <div class="onboarding-content with-gradient">
         <h4 class="onboarding-title">
-          Hapus Data Riwayat Pendidikan Formal
+           Hapus Data Keluarga Kandung
         </h4>
         <div class="onboarding-text">
            Apakah anda ingin menghapus data ini ?

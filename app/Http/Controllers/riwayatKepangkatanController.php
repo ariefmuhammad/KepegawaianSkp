@@ -15,9 +15,11 @@ class riwayatKepangkatanController extends Controller
      */
     public function index()
     {
-        $riwayat_kepangkatan = Kepangkatan::where('active', '1')->get();
+        // $riwayat_kepangkatan = Kepangkatan::where('active', '1')->get();
 
-        return view('riwayat_kepangkatan', compact('riwayat_kepangkatan'));
+        // return view('riwayat_kepangkatan', compact('riwayat_kepangkatan'));
+
+        return view('pegawai.content.riwayat_kepangkatan.index');
     }
 
     /**
@@ -51,7 +53,7 @@ class riwayatKepangkatanController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data riwayat kepangkatan berhasil ditambahkan');
+        // \Session::flash('Berhasil', 'Data riwayat kepangkatan berhasil ditambahkan');
 
         return back();
     }
@@ -100,7 +102,7 @@ class riwayatKepangkatanController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data riwayat kepangkatan berhasil diubah');
+        // \Session::flash('Berhasil', 'Data riwayat kepangkatan berhasil diubah');
 
         return back();
     }
@@ -115,7 +117,7 @@ class riwayatKepangkatanController extends Controller
     {
         $riwayat_kepangkatan = Kepangkatan::where('id', $id)->delete();
 
-        \Session::flash('Berhasil', 'Data riwayat kepangkatan berhasil dihapus');
+        // \Session::flash('Berhasil', 'Data riwayat kepangkatan berhasil dihapus');
 
         return back();
     }

@@ -15,9 +15,11 @@ class riwayatDiklatPenjenjanganStrukturalController extends Controller
      */
     public function index()
     {
-        $riwayat_diklat_penjenjangan_struktural = DiklatPenjenjangan::where('active', '1')->get();
-        
-        return view('riwayat_diklat_penjenjangan-struktural', compact('riwayat_diklat_penjenjangan_struktural'));
+        // $riwayat_diklat_penjenjangan_struktural = DiklatPenjenjangan::where('active', '1')->get();
+
+        // return view('riwayat_diklat_penjenjangan-struktural', compact('riwayat_diklat_penjenjangan_struktural'));
+
+        return view('pegawai.content.riwayat_diklat_penjenjangan.index');
     }
 
     /**
@@ -54,7 +56,7 @@ class riwayatDiklatPenjenjanganStrukturalController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data diklat perjenjangan struktural berhasil ditambahkan');
+        // \Session::flash('Berhasil', 'Data diklat perjenjangan struktural berhasil ditambahkan');
 
         return back();
     }
@@ -106,7 +108,7 @@ class riwayatDiklatPenjenjanganStrukturalController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data diklat perjenjangan struktural berhasil diubah');
+        // \Session::flash('Berhasil', 'Data diklat perjenjangan struktural berhasil diubah');
 
         return back();
     }
@@ -121,7 +123,7 @@ class riwayatDiklatPenjenjanganStrukturalController extends Controller
     {
         $riwayat_diklat_penjenjangan_struktural = DiklatPenjenjangan::where('id', $id)->delete();
 
-        \Session::flash('Berhasil', 'Data diklat perjenjangan struktural berhasil dihapus');
+        // \Session::flash('Berhasil', 'Data diklat perjenjangan struktural berhasil dihapus');
 
         return back();
     }

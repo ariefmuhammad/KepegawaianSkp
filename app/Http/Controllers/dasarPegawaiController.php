@@ -17,15 +17,17 @@ class dasarPegawaiController extends Controller
     public function index()
     {
 
-        $pegawai_id = Pegawai::where('id', Auth()->user()->id)->first();
+        // $pegawai_id = Pegawai::where('id', Auth()->user()->id)->first();
 
-        $pegawai = Pegawai::where('active', '1')->get();
-        
-        $dasar_pegawai = Dasar::where('active', '1')->get();
+        // $pegawai = Pegawai::where('active', '1')->get();
 
-        $data_telepon = Telepon::where('active', '1')->get();
-        
-        return view('dasar_pegawai', compact(['pegawai', 'dasar_pegawai', 'data_telepon', 'pegawai_id']));
+        // $dasar_pegawai = Dasar::where('active', '1')->get();
+
+        // $data_telepon = Telepon::where('active', '1')->get();
+
+        // return view('pegawai.content.dasar_pegawai.index', compact(['pegawai', 'dasar_pegawai', 'data_telepon', 'pegawai_id']));
+
+        return view('pegawai.content.dasar_pegawai.index');
     }
 
     /**
@@ -48,7 +50,7 @@ class dasarPegawaiController extends Controller
     public function store(Request $request)
     {
 
-       
+
 
         $pegawai = Pegawai::create([
             'eselon_1' => $request->eselon_1,
@@ -147,8 +149,8 @@ class dasarPegawaiController extends Controller
             'telepon' => $request->telepon,
         ]);
 
-    
-        \Session::flash('Berhasil', 'Data dasar pegawai berhasil ditambahkan');
+
+        // \Session::flash('Berhasil', 'Data dasar pegawai berhasil ditambahkan');
 
         return back();
     }
@@ -278,7 +280,7 @@ class dasarPegawaiController extends Controller
         ]);
 
 
-        \Session::flash('Berhasil', 'Data dasar pegawai berhasil diupdate');
+        // \Session::flash('Berhasil', 'Data dasar pegawai berhasil diupdate');
 
         return back();
     }
@@ -293,7 +295,7 @@ class dasarPegawaiController extends Controller
     {
         $pegawai = Pegawai::where('id', $id)->delete();
 
-        \Session::flash('Berhasil', 'Data dasar pegawai berhasil dihapus');
+        // \Session::flash('Berhasil', 'Data dasar pegawai berhasil dihapus');
 
         return back();
     }

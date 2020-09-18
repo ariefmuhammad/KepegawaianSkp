@@ -15,9 +15,11 @@ class keluargaKandungController extends Controller
      */
     public function index()
     {
-        $keluarga_kandung = KeluargaKandung::where('active', '1')->get();
+        // $keluarga_kandung = KeluargaKandung::where('active', '1')->get();
 
-        return view('keluarga_kandung', compact('keluarga_kandung'));
+        // return view('keluarga_kandung', compact('keluarga_kandung'));
+
+        return view('pegawai.content.keluarga_kandung.index');
     }
 
     /**
@@ -52,7 +54,7 @@ class keluargaKandungController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data keluarga kandung berhasil ditambahkan');
+        // \Session::flash('Berhasil', 'Data keluarga kandung berhasil ditambahkan');
 
         return back();
     }
@@ -102,7 +104,7 @@ class keluargaKandungController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data keluarga kandung berhasil diubah');
+        // \Session::flash('Berhasil', 'Data keluarga kandung berhasil diubah');
 
         return back();
     }
@@ -117,7 +119,7 @@ class keluargaKandungController extends Controller
     {
         $keluarga_kandung = KeluargaKandung::where('id', $id)->delete();
 
-        \Session::flash('Berhasil', 'Data keluarga kandung berhasil dihapus');
+        // \Session::flash('Berhasil', 'Data keluarga kandung berhasil dihapus');
 
         return back();
     }

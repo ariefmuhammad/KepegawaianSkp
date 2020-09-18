@@ -5,7 +5,7 @@
 
 
 @section('title')
-    Riwayat Pendidikan Formal
+    Istri / Suami
 @endsection
 
 
@@ -14,14 +14,14 @@
     <div class="content-box">
       <div class="element-wrapper">
         <h6 class="element-header">
-          Riwayat Pendidikan Formal
+          Istri / Suami
         </h6>
         <div class="element-box">
           <h5 class="form-header">
-            Data Riwayat Pendidikan Formal
+            Data Istri / Suami
           </h5>
           <div class="form-desc">
-            Ini adalah data riwayat pendidikan formal anda, Silahkan di isi dengan lengkap.
+            Ini adalah data istri / suami anda, Silahkan di isi dengan lengkap.
           </div>
           <div class="table-responsive">
             <button class="mr-2 mb-2 btn btn-outline-success btn-lg btn-block" data-target="#addOnboardingFormModal" data-toggle="modal" type="button"><i class="os-icon os-icon-plus"></i> Tambah Data</button>
@@ -29,8 +29,8 @@
                 <thead>
                     <tr>
                     <th>No</th>
-                    <th>Tingkat Pendidikan</th>
-                    <th>Nama Sekolah/Universitas</th>
+                    <th>Nama</th>
+                    <th>Status Istri / Suami</th>
                     <th>Aksi</th>
                     </tr>
                 </thead>
@@ -40,10 +40,10 @@
                         1
                     </td>
                     <td>
-                        SMA
+                        Amarullah
                     </td>
                     <td>
-                        SMA KATEDRAL 1
+                        masih
                     </td>
                     <td>
                         <button class="mr-2 mb-2 btn btn-warning" data-target="#editOnboardingFormModal" data-toggle="modal" type="button"> Edit</button><button class="mr-2 mb-2 btn btn-danger" data-target="#deleteOnboardingTextModal" data-toggle="modal" type="button"> Hapus</button>
@@ -288,18 +288,54 @@
         </div>
         <div class="onboarding-content with-gradient">
           <h4 class="onboarding-title">
-            Tambah Data Riwayat Pendidikan Formal
+            Tambah Data Istri / Suami
           </h4>
           <div class="onboarding-text">
-            Tambahkan Data Riwayat Pendidikan Formal Anda Disini Dengan Lengkap.
+            Tambahkan Data Istri / Suami Anda Disini Dengan Lengkap.
           </div>
           <form>
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Tingkat Pendidikan</label><select class="form-control" required="required">
+                    <label for="">Nama Istri / Suami</label><input class="form-control" placeholder="Masukan Nama Istri / Suami..." type="text" value="" required="required">
+                    <div class="help-block form-text with-errors form-control-feedback"></div>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Nomor Karsi / Karsu (Istri / Suami)</label><input class="form-control" placeholder="Masukan Nomor Karis / Karsu (Istri / Suami)..." type="number" value="" required="required">
+                    <div class="help-block form-text with-errors form-control-feedback"></div>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Tanggal Lahir Istri / Suami</label>
+                    <div class="date-input">
+                      <input class="single-daterange form-control" placeholder="Masukan Tanggal Lahir Istri / Suami..." type="text" value="04/12/1978" required="required">
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Tanggal Nikah</label>
+                    <div class="date-input">
+                      <input class="single-daterange form-control" placeholder="Masukan Tanggal Nikah..." type="text" value="04/12/1978" required="required">
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Tingkat Pendidikan Istri / Suami</label><select class="form-control" required="required">
                       <option selected disabled>
-                        -Pilih Tingkat Pendidikan-
+                        -Pilih Tingkat Pendidikan Istri / Suami-
                       </option>
                       <option>
                         S3 (Setara)
@@ -341,7 +377,7 @@
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Nama Sekolah / Universitas</label><input class="form-control" placeholder="Masukan Nama Sekolah / Universitas..." type="text" value="" required="required">
+                    <label for="">Pekerjaan Istri / Suami</label><input class="form-control" placeholder="Masukan Pekerjaan Istri / Suami..." type="text" value="" required="required">
                     <div class="help-block form-text with-errors form-control-feedback"></div>
                   </div>
                 </div>
@@ -349,57 +385,20 @@
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Jurusan / Program Studi</label><input class="form-control" placeholder="Masukan Jurusan / Program Studi..." type="text" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Tahun Masuk</label><input class="form-control" placeholder="Masukan Tahun Masuk..." type="number" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Tahun Lulus</label><input class="form-control" placeholder="Masukan Tahun Lulus..." type="number" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Tempat Belajar</label><select class="form-control" required="required">
+                    <label for="">Status Istri / Suami</label><select class="form-control" required="required">
                       <option selected disabled>
-                        -Pilih Jenis Kelamin-
+                        -Pilih Status Istri / Suami-
                       </option>
                       <option>
-                        Dalam Negeri
+                        Istri / Suami Saat Ini
                       </option>
                       <option>
-                        Luar Negeri
+                        Telah MeninggaL Dunia
+                      </option>
+                      <option>
+                        Cerai
                       </option>
                     </select>
-                  </div>
-                </div>
-              </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Lokasi</label><input class="form-control" placeholder="Masukan Lokasi..." type="text" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Nomor Ijazah</label><input class="form-control" placeholder="Masukan Nomor Ijazah..." type="number" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
                   </div>
                 </div>
             </div>
@@ -423,18 +422,54 @@
         </div>
         <div class="onboarding-content with-gradient">
           <h4 class="onboarding-title">
-            Ubah Data Riwayat Pendidikan Formal
+            Ubah Data Istri / Suami
           </h4>
           <div class="onboarding-text">
-            Ubah Data Riwayat Pendidikan Formal Anda Yang Ingin Anda Ubah.
+            Ubah Data Istri / Suami Anda Yang Ingin Anda Ubah.
           </div>
           <form>
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Tingkat Pendidikan</label><select class="form-control" required="required">
+                    <label for="">Nama Istri / Suami</label><input class="form-control" placeholder="Masukan Nama Istri / Suami..." type="text" value="" required="required">
+                    <div class="help-block form-text with-errors form-control-feedback"></div>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Nomor Karsi / Karsu (Istri / Suami)</label><input class="form-control" placeholder="Masukan Nomor Karis / Karsu (Istri / Suami)..." type="number" value="" required="required">
+                    <div class="help-block form-text with-errors form-control-feedback"></div>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Tanggal Lahir Istri / Suami</label>
+                    <div class="date-input">
+                      <input class="single-daterange form-control" placeholder="Masukan Tanggal Lahir Istri / Suami..." type="text" value="04/12/1978" required="required">
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Tanggal Nikah</label>
+                    <div class="date-input">
+                      <input class="single-daterange form-control" placeholder="Masukan Tanggal Nikah..." type="text" value="04/12/1978" required="required">
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="">Tingkat Pendidikan Istri / Suami</label><select class="form-control" required="required">
                       <option selected disabled>
-                        -Pilih Tingkat Pendidikan-
+                        -Pilih Tingkat Pendidikan Istri / Suami-
                       </option>
                       <option>
                         S3 (Setara)
@@ -476,7 +511,7 @@
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Nama Sekolah / Universitas</label><input class="form-control" placeholder="Masukan Nama Sekolah / Universitas..." type="text" value="" required="required">
+                    <label for="">Pekerjaan Istri / Suami</label><input class="form-control" placeholder="Masukan Pekerjaan Istri / Suami..." type="text" value="" required="required">
                     <div class="help-block form-text with-errors form-control-feedback"></div>
                   </div>
                 </div>
@@ -484,57 +519,20 @@
             <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label for="">Jurusan / Program Studi</label><input class="form-control" placeholder="Masukan Jurusan / Program Studi..." type="text" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Tahun Masuk</label><input class="form-control" placeholder="Masukan Tahun Masuk..." type="number" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Tahun Lulus</label><input class="form-control" placeholder="Masukan Tahun Lulus..." type="number" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Tempat Belajar</label><select class="form-control" required="required">
+                    <label for="">Status Istri / Suami</label><select class="form-control" required="required">
                       <option selected disabled>
-                        -Pilih Jenis Kelamin-
+                        -Pilih Status Istri / Suami-
                       </option>
                       <option>
-                        Dalam Negeri
+                        Istri / Suami Saat Ini
                       </option>
                       <option>
-                        Luar Negeri
+                        Telah MeninggaL Dunia
+                      </option>
+                      <option>
+                        Cerai
                       </option>
                     </select>
-                  </div>
-                </div>
-              </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Lokasi</label><input class="form-control" placeholder="Masukan Lokasi..." type="text" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label for="">Nomor Ijazah</label><input class="form-control" placeholder="Masukan Nomor Ijazah..." type="number" value="" required="required">
-                    <div class="help-block form-text with-errors form-control-feedback"></div>
                   </div>
                 </div>
             </div>
@@ -558,7 +556,7 @@
       </div>
       <div class="onboarding-content with-gradient">
         <h4 class="onboarding-title">
-          Hapus Data Riwayat Pendidikan Formal
+          Hapus Data Istri / Suami
         </h4>
         <div class="onboarding-text">
            Apakah anda ingin menghapus data ini ?

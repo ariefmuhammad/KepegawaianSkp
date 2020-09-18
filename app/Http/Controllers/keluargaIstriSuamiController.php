@@ -16,11 +16,13 @@ class keluargaIstriSuamiController extends Controller
     public function index()
     {
 
-        $pegawai_id = Pegawai::where('id', Auth()->user()->id)->first();
+        // $pegawai_id = Pegawai::where('id', Auth()->user()->id)->first();
 
-        $keluarga_istri_suami = KeluargaIstriSuami::where('active', '1')->get();
-       
-        return view('keluarga_istri-suami', compact(['keluarga_istri_suami', 'pegawai_id']));
+        // $keluarga_istri_suami = KeluargaIstriSuami::where('active', '1')->get();
+
+        // return view('keluarga_istri-suami', compact(['keluarga_istri_suami', 'pegawai_id']));
+
+        return view('pegawai.content.keluarga_istri_suami.index');
     }
 
     /**
@@ -55,7 +57,7 @@ class keluargaIstriSuamiController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data keluarga istri suami berhasil ditambahkan');
+        // \Session::flash('Berhasil', 'Data keluarga istri suami berhasil ditambahkan');
 
         return back();
     }
@@ -105,7 +107,7 @@ class keluargaIstriSuamiController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data keluarga istri suami berhasil diubah');
+        // \Session::flash('Berhasil', 'Data keluarga istri suami berhasil diubah');
 
         return back();
     }
@@ -119,8 +121,8 @@ class keluargaIstriSuamiController extends Controller
     public function destroy($id)
     {
         $keluarga_istri_suami = KeluargaIstriSuami::where('id', $id)->delete();
-   
-        \Session::flash('Berhasil', 'Data keluarga istri suami berhasil dihapus');
+
+        // \Session::flash('Berhasil', 'Data keluarga istri suami berhasil dihapus');
 
         return back();
     }

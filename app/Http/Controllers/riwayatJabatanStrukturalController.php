@@ -15,8 +15,10 @@ class riwayatJabatanStrukturalController extends Controller
      */
     public function index()
     {
-        $riwayat_jabatan_struktural = JabatanStruktural::where('active', '1')->get();
-        return view('riwayat_jabatan_struktural', compact('riwayat_jabatan_struktural'));
+        // $riwayat_jabatan_struktural = JabatanStruktural::where('active', '1')->get();
+        // return view('riwayat_jabatan_struktural', compact('riwayat_jabatan_struktural'));
+
+        return view('pegawai.content.riwayat_jabatan_struktural.index');
     }
 
     /**
@@ -52,7 +54,7 @@ class riwayatJabatanStrukturalController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data riwayat jabatan struktural berhasil ditambahkan');
+        // \Session::flash('Berhasil', 'Data riwayat jabatan struktural berhasil ditambahkan');
 
         return back();
     }
@@ -103,7 +105,7 @@ class riwayatJabatanStrukturalController extends Controller
             'active' => $request->input('active', 1),
         ]);
 
-        \Session::flash('Berhasil', 'Data riwayat jabatan struktural berhasil diubah');
+        // \Session::flash('Berhasil', 'Data riwayat jabatan struktural berhasil diubah');
 
         return back();
     }
@@ -118,7 +120,7 @@ class riwayatJabatanStrukturalController extends Controller
     {
         $riwayat_jabatan_struktural = JabatanStruktural::where('id', $id)->delete();
 
-        \Session::flash('Berhasil', 'Data riwayat jabatan struktural berhasil dihapus');
+        // \Session::flash('Berhasil', 'Data riwayat jabatan struktural berhasil dihapus');
 
         return back();
     }
